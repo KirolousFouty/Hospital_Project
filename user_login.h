@@ -14,12 +14,12 @@ protected:
 	string password;
 public:
     UserLogin();
-    UserLogin(string US, string P);
+    UserLogin(string User, string Pass);
 
     string getusername();
     string getpassword();
 
-    void setusername(string US);
+    void setusername(string U);
     void setpassword(string P);
 
 	void login();
