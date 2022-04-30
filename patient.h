@@ -47,7 +47,8 @@ public:
 			//dateTime : DateAndTime) ma3rash meen 3amel deeh
 	bool getInsuranceApproval();
 	long cancelReservation(int reservationID);
-	//getShortestPath(pos:pair<double, double>)
+	//getShortestPath(pos:pair<double, double>;
+	//vector<double, double>:: getShortestPath;
 };
 
 #endif // !patient_H

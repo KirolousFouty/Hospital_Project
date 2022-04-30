@@ -94,11 +94,18 @@ void Patient::update_history()
 }
 void Patient::patient_request()
 {
-	bool request;
-	if (request == true)
-	{
-		cout << "what is your request" << endl;
-		//patient gets a choice, either to submit a booking into the hospital or update history
-		//
-	}
+	
 }
+string Patient::searchForDoctor(string specialization)
+{
+	/////////////////////////////////////////
+}
+bool Patient::getInsuranceApproval()
+{
+	//////////////////////////////////////////
+}
+long Patient::cancelReservation(int reservationID)
+{
+	///////////////////////////////////////////
+}
+//MISSING: getshortestpath 
