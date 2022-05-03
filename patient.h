@@ -48,9 +48,9 @@ public:
 	string searchForDoctor(string specialization);
 	// dateTime : DateAndTime) ma3rash meen 3amel deeh
 	bool getInsuranceApproval();
-	long cancelReservation(int reservationID);
-	// getShortestPath(pos:pair<double, double>;
-	// vector<double, double>:: getShortestPath;
+	long cancelReservation(int reservationID); // How does cancel reservation return long?
+											   // getShortestPath(pos:pair<double, double>;
+											   // vector<double, double>:: getShortestPath;
 };
 
 #endif // !patient_H

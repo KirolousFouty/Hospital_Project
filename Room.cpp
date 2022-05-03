@@ -43,12 +43,15 @@ void Room::check_availability()
 string Room::book_room()
 {
     ////////////////////////////////
+    return "";
 }
 int Room::remaining_rooms()
 {
     ////////////////////////////////
+    return -1;
 }
 int Room::booked_rooms()
 {
     ////////////////////////////////
+    return -1;
 }

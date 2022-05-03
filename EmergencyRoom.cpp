@@ -56,8 +56,10 @@ string EmergencyRoom::book_room() //////////////////////// 7ad yerage3 el kalam 
 int EmergencyRoom::remaining_rooms()
 {
 	/////////////////////////////////
+	return -1;
 }
 int EmergencyRoom::booked_rooms()
 {
 	//////////////////////////////////
+	return -1;
 }

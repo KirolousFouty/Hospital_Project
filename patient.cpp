@@ -95,13 +95,16 @@ void Patient::patient_request()
 string Patient::searchForDoctor(string specialization)
 {
 	/////////////////////////////////////////
+	return "";
 }
 bool Patient::getInsuranceApproval()
 {
 	//////////////////////////////////////////
+	return true;
 }
-long Patient::cancelReservation(int reservationID)
+long Patient::cancelReservation(int reservationID)  // How does cancel reservation return long?
 {
 	///////////////////////////////////////////
+	return -1;
 }
 // MISSING: getshortestpath
