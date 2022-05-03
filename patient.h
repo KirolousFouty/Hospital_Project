@@ -12,6 +12,7 @@ private:
 	QString medical_history;
 
 protected:
+	QString name;
 	int points;
 	int patientID;
 	int age;
@@ -25,6 +26,7 @@ public:
 	Patient();
 	Patient(QString MH, int P, int PID, int A, QString G, QString BT, QString All, bool INS);
 
+	QString getName();
 	QString getMedicalHistory();
 	int getPoints();
 	int getpatientID();

@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "userloginwindow.h"
+#include "showpatientinformation.h"
+
 #include "DateAndTime.h"
 #include "UserLogin.h"
 #include "HomeVisit.h"
@@ -30,6 +33,10 @@ public:
 
 private slots:
     void on_startButton_clicked();
+
+    void on_loginButton_clicked();
+
+    void on_showPatientInformationButton_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -20,7 +20,9 @@ SOURCES += \
     UserLogin.cpp \
     main.cpp \
     mainwindow.cpp \
-    patient.cpp
+    patient.cpp \
+    showpatientinformation.cpp \
+    userloginwindow.cpp
 
 HEADERS += \
     DateAndTime.h \
@@ -33,10 +35,14 @@ HEADERS += \
     Room.h \
     UserLogin.h \
     mainwindow.h \
-    patient.h
+    patient.h \
+    showpatientinformation.h \
+    userloginwindow.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    showpatientinformation.ui \
+    userloginwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

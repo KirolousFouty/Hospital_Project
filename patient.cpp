@@ -22,6 +22,12 @@ Patient::Patient(QString MH, int P, int PID, int A, QString G, QString BT, QStri
 	allergies = All;
 	insured = INS;
 }
+
+QString Patient::getName()
+{
+	return name;
+}
+
 QString Patient::getMedicalHistory()
 {
 	return medical_history;
@@ -102,7 +108,7 @@ bool Patient::getInsuranceApproval()
 	//////////////////////////////////////////
 	return true;
 }
-long Patient::cancelReservation(int reservationID)  // How does cancel reservation return long?
+long Patient::cancelReservation(int reservationID) // How does cancel reservation return long?
 {
 	///////////////////////////////////////////
 	return 0;

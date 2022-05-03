@@ -18,3 +18,18 @@ void MainWindow::on_startButton_clicked()
 }
 
 
+void MainWindow::on_loginButton_clicked()
+{
+    UserLoginWindow userloginwin;
+    userloginwin.setModal(true);
+    userloginwin.exec();
+}
+
+
+void MainWindow::on_showPatientInformationButton_clicked()
+{
+    ShowPatientInformation showpatientinfo;
+    showpatientinfo.setModal(true);
+    showpatientinfo.exec();
+}
+
