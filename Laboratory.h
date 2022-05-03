@@ -9,15 +9,15 @@ using namespace std;
 class Laboratory
 {
 private:
-Qstring type_of_test;
+    QString type_of_test;
 
 public:
-Laboratory();
-Laboratory(Qstring T);
-void setTest(Qstring T);
-Qstring getTest();
+    Laboratory();
+    Laboratory(QString T);
+    void setTest(QString T);
+    QString getTest();
 
-Qstring test_results();
+    QString test_results();
 };
 
 #endif

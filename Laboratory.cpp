@@ -1,22 +1,26 @@
 #include "Laboratory.h"
 
-Laboratory ::Laboratory()
+Laboratory::Laboratory()
 {
-    type_of_test=" ";
+    type_of_test = " ";
 }
-Laboratory ::Laboratory(Qstring T)
+
+Laboratory::Laboratory(QString T)
 {
-    type_of_test=T;
+    type_of_test = T;
 }
-Laboratory::setTest(Qstring T)
+
+void Laboratory::setTest(QString T)
 {
-    type_of_test=T;
+    type_of_test = T;
 }
-Laboratory::getTest()
+
+QString Laboratory::getTest()
 {
     return type_of_test;
 }
-Laboratory::test_results()
+
+QString Laboratory::test_results()
 {
     ////////////////////////
 }
