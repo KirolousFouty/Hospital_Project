@@ -9,7 +9,8 @@ using namespace std;
 class Doctor
 {
 protected:
-    int id;
+    int id[3]={1,2,3};
+    QByteArray name[3]={"Ahmed", "Adam", "Ayman"};
 
 private:
     double rating;

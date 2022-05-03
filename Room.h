@@ -29,9 +29,9 @@ public:
     void setfloor(int F);
     void setroom_type(QString RT);
 
-    void check_availability();
+    bool check_availability();
     QString book_room();
-    int remaining_rooms();
-    int booked_rooms();
+    //int remaining_rooms();
+    //int booked_rooms();
 };
 #endif

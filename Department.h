@@ -5,10 +5,11 @@
 #include <QString>
 #include "DateAndTime.h"
 #include "Room.h"
+#include "Doctor.h"
 
 using namespace std;
 
-class Department : public DateAndTime
+class Department : public DateAndTime :public Doctor
 {
 protected:
     QString department_type;

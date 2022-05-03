@@ -36,22 +36,34 @@ void Room::setroom_type(QString RT)
 {
     room_type = RT;
 }
-void Room::check_availability()
+bool Room::check_availability()
 {
-    ////////////////////////////////
-}
+    if (getroom_number()==room_number[i])
+        {
+          ui->label->setText("this room is available");
+            return true;
+        }
+    else 
+        {
+            ui->label->setText("this room is not available");
+            return false;
+        }
 QString Room::book_room()
 {
-    ////////////////////////////////
-    return "";
+    if (check_availability()=true)
+    return "booked";
+    else 
+    return "booking unsuccessful";
 }
-int Room::remaining_rooms()
+/*int Room::remaining_rooms()
 {
     ////////////////////////////////
     return 0;
 }
-int Room::booked_rooms()
+*/
+/*int Room::booked_rooms()
 {
     ////////////////////////////////
     return 0;
 }
+*/

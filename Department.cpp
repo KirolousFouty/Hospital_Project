@@ -18,8 +18,18 @@ void Department::setdepartment_type(QString DT)
 }
 QString Department::assign_doctor()
 {
-    ///////////////////////////////////////////
-    return "";
+    //for(int i=0; i<3; i++)
+    //{
+        if (department_type=="cardiology")
+        return "Ahmad";
+    //}
+        if(department_type=="dermaotology")
+        return "Ayman";
+
+        if(department_typr=="neurology")
+        return "Adam";
+
+    
 }
 QString Department::assign_room()
 {
