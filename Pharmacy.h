@@ -18,6 +18,6 @@ void setMed(Qstring M);
 Qstring getMed();
 
 Qstring getMedicine_fromDoctor();
-}
+};
 
 #endif

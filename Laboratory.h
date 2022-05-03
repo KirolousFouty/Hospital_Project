@@ -18,6 +18,6 @@ void setTest(Qstring T);
 Qstring getTest();
 
 Qstring test_results();
-}
+};
 
 #endif

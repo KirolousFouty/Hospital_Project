@@ -17,6 +17,6 @@ void setPrice(double P);
 
 double getPrice();
 void Purchase();
-}
+};
 
 #endif
