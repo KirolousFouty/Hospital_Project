@@ -1,5 +1,5 @@
 #include "Doctor.h"
-
+#include "Laboratory.h"
 Doctor::Doctor()
 {
     id = 0;
@@ -38,12 +38,14 @@ void Doctor::setearliestdate(DateAndTime ED)
 }
 double Doctor::showrating()
 {
-    ///////////////////////////////////////
+    //ui->display->SetText("Rating: " + rating);
     return 0;
 }
 void Doctor::set_appointment()
 {
-    //////////////////////////////////////////
+    //need to know the database we will use
+    // use Department::assign_doctor()?
+
 }
 // void Doctor::examine()
 // {
@@ -52,5 +54,7 @@ void Doctor::set_appointment()
 
 void Doctor::requestBloodTest()
 {
-    ///////////////////////////
+    Laboratory BloodTest;
+    BloodTest.test_Results;
+
 }
