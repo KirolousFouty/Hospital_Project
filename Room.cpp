@@ -6,7 +6,7 @@ Room::Room()
     floor = 0;
     room_type = "VIP";
 }
-Room::Room(int RN, int F, string RT)
+Room::Room(int RN, int F, QString RT)
 {
     room_number = RN;
     floor = F;
@@ -20,7 +20,7 @@ int Room::getfloor()
 {
     return floor;
 }
-string Room::getroom_type()
+QString Room::getroom_type()
 {
     return room_type;
 }
@@ -32,7 +32,7 @@ void Room::setfloor(int F)
 {
     floor = F;
 }
-void Room::setroom_type(string RT)
+void Room::setroom_type(QString RT)
 {
     room_type = RT;
 }
@@ -40,7 +40,7 @@ void Room::check_availability()
 {
     ////////////////////////////////
 }
-string Room::book_room()
+QString Room::book_room()
 {
     ////////////////////////////////
     return "";
@@ -48,10 +48,10 @@ string Room::book_room()
 int Room::remaining_rooms()
 {
     ////////////////////////////////
-    return -1;
+    return 0;
 }
 int Room::booked_rooms()
 {
     ////////////////////////////////
-    return -1;
+    return 0;
 }

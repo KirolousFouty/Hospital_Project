@@ -2,6 +2,16 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "DateAndTime.h"
+#include "UserLogin.h"
+#include "HomeVisit.h"
+#include "EmergencyRoom.h"
+#include "EmergencyVisit.h"
+#include "Room.h"
+#include "Department.h"
+#include "Doctor.h"
+#include "Patient.h"
+#include "OutpatientClinic.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -19,7 +29,7 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_startButton_clicked();
 
 private:
     Ui::MainWindow *ui;

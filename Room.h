@@ -2,7 +2,7 @@
 #define ROOM_H
 
 #include <iostream>
-#include <string>
+#include <QString>
 #include "Patient.h"
 
 using namespace std;
@@ -15,22 +15,22 @@ protected:
 
 private:
     // Position:pair<x:double, y:double>
-    string room_type;
+    QString room_type;
 
 public:
     Room();
-    Room(int RN, int F, string RT);
+    Room(int RN, int F, QString RT);
 
     int getroom_number();
     int getfloor();
-    string getroom_type();
+    QString getroom_type();
 
     void setroom_number(int RN);
     void setfloor(int F);
-    void setroom_type(string RT);
+    void setroom_type(QString RT);
 
     void check_availability();
-    string book_room();
+    QString book_room();
     int remaining_rooms();
     int booked_rooms();
 };

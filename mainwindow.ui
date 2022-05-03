@@ -14,11 +14,11 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="startButton">
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>150</y>
+      <y>160</y>
       <width>83</width>
       <height>29</height>
      </rect>
@@ -27,7 +27,7 @@
      <string>Start</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="displayResult">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -38,6 +38,12 @@
     </property>
     <property name="text">
      <string>Not Clicked</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>

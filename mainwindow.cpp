@@ -12,8 +12,9 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_startButton_clicked()
 {
-    ui->lineEdit->setText("Clicked!");
+    ui->displayResult->setText("Clicked!");
 }
+
 

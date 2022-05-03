@@ -4,15 +4,15 @@ OutpatientClinic::OutpatientClinic()
 {
 	speciality = "cardio";
 }
-OutpatientClinic::OutpatientClinic(string S)
+OutpatientClinic::OutpatientClinic(QString S)
 {
 	speciality = S;
 }
-string OutpatientClinic::getspecialty()
+QString OutpatientClinic::getspecialty()
 {
 	return speciality;
 }
-void OutpatientClinic::setspeciality(string S)
+void OutpatientClinic::setspeciality(QString S)
 {
 	speciality = S;
 }

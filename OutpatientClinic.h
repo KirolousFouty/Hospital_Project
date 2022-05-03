@@ -2,7 +2,7 @@
 #define OUTPATIENTCLINIC_H
 
 #include <iostream>
-#include <string>
+#include <QString>
 
 using namespace std;
 
@@ -10,14 +10,14 @@ class OutpatientClinic
 {
 private:
 	//-Position : pair<x : double, y : double>
-	string speciality;
+	QString speciality;
 
 public:
 	OutpatientClinic();
-	OutpatientClinic(string S);
+	OutpatientClinic(QString S);
 
-	string getspecialty();
+	QString getspecialty();
 
-	void setspeciality(string S);
+	void setspeciality(QString S);
 };
 #endif // !outpatientclinic_H
