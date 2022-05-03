@@ -2,8 +2,8 @@
 #include <iostream>
 #include <string>
 using namespace std;
-#ifndef emergencyroom_H
-#define emergencyroom_H
+#ifndef EMERGENCYROOM_H
+#define EMERGENCYROOM_H
 class EmergencyRoom
 {
 protected:

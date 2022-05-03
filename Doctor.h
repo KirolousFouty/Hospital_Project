@@ -1,10 +1,10 @@
 #include <iostream>
 #include <QString>
-#inlcude "DateAndTime.h"
+#include "DateAndTime.h"
 using namespace std; 
 
-#ifndef doctor_H
-#define doctor_h
+#ifndef DOCTOR_H
+#define DOCTOR_H
 class Doctor
 {
 protected:

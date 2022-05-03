@@ -3,7 +3,7 @@ Doctor::Doctor()
 {
     id=0;
     rating=0.0;
-    earliestdate=0;
+//    earliestdate=0;
 }
 Doctor::Doctor(int ID, double R, DateAndTime ED)
 {
@@ -38,6 +38,7 @@ void Doctor::setearliestdate(DateAndTime ED)
 double Doctor::showrating()
 {
     ///////////////////////////////////////
+return 0;
 }
 void Doctor::set_appointment()
 {

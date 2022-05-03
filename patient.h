@@ -3,8 +3,8 @@
 #include <string>
 using namespace std;
 
-#ifndef patient_H
-#define patient_H
+#ifndef PATIENT_H
+#define PATIENT_H
 class Patient
 {
 private:

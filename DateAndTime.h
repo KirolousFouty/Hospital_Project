@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-#ifndef dateandtime_H
-#define dateandtime_H
+#ifndef DATEANDTIME_H
+#define DATEANDTIME_H
 
 class DateAndTime
 {

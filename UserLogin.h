@@ -5,8 +5,8 @@
 
 using namespace std;
 
-#ifndef userlogin_H
-#define userlogin_H
+#ifndef USERLOGIN_H
+#define USERLOGIN_H
 class UserLogin:public Patient
 {
 protected:

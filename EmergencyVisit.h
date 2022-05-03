@@ -3,8 +3,8 @@
 #include <QString>
 using namespace std; 
 
-#ifndef emergencyvisit_H
-#define emergencyvisit_H
+#ifndef EMERGENCYVISIT_H
+#define EMERGENCYVISIT_H
 class EmergencyVisit
 {
 protected:

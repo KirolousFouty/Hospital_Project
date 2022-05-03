@@ -52,7 +52,7 @@ string EmergencyRoom::book_room()//////////////////////// 7ad yerage3 el kalam d
 	if (check_availablilty() == true)
 		return book_room();
 	else
-		return false; //room is not booked
+        return "False: Room is not Booked."; //room is not booked
 }
 int EmergencyRoom::remaining_rooms()
 {

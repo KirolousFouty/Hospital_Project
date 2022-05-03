@@ -3,8 +3,8 @@
 #include "Patient.h"
 using namespace std;
 
-#ifndef room_H
-#define room_H
+#ifndef ROOM_H
+#define ROOM_H
 
 class Room:public Patient
 {

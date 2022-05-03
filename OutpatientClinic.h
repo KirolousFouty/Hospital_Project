@@ -3,8 +3,8 @@
 	#include <string>
 	using namespace std;
 
-	#ifndef outpatientclinic_H
-	#define outpatientcline_H
+    #ifndef OUTPATIENTCLINIC_H
+    #define OUTPATIENTCLINIC_H
 	class OutpatientClinic
 	{
 	private:

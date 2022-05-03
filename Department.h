@@ -3,8 +3,8 @@
 #include "DateAndTime.h"
 using namespace std;
 
-#ifndef deparment_H
-#define department_H
+#ifndef DEPARTMENT_H
+#define DEPARTMENT_H
 class Department:public DateAndTime
 {
     protected:
