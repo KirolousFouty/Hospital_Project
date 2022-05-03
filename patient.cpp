@@ -1,7 +1,6 @@
 #include "Patient.h"
-using namespace std; 
 
-Patient::Patient()//default constructor
+Patient::Patient() // default constructor
 {
 	medical_history = "unknown";
 	points = 0;
@@ -12,7 +11,7 @@ Patient::Patient()//default constructor
 	allergies = "none";
 	insured = false;
 }
-Patient::Patient(string MH, int P, int PID, int A, string G, string BT, string All, bool INS)//parameterized constructor
+Patient::Patient(QString MH, int P, int PID, int A, QString G, QString BT, QString All, bool INS) // parameterized constructor
 {
 	medical_history = MH;
 	points = P;
@@ -23,7 +22,13 @@ Patient::Patient(string MH, int P, int PID, int A, string G, string BT, string A
 	allergies = All;
 	insured = INS;
 }
-string Patient::getMedicalHistory()
+
+QString Patient::getName()
+{
+	return name;
+}
+
+QString Patient::getMedicalHistory()
 {
 	return medical_history;
 }
@@ -39,15 +44,15 @@ int Patient::getAge()
 {
 	return age;
 }
-string Patient::getGender()
+QString Patient::getGender()
 {
 	return gender;
 }
-string Patient::getBloodType()
+QString Patient::getBloodType()
 {
 	return bloodType;
 }
-string Patient::getAllergies()
+QString Patient::getAllergies()
 {
 	return allergies;
 }
@@ -55,7 +60,7 @@ bool Patient::getInsured()
 {
 	return insured;
 }
-void Patient::setMedicalHistory(string MH)
+void Patient::setMedicalHistory(QString MH)
 {
 	medical_history = MH;
 }
@@ -71,15 +76,15 @@ void Patient::setAge(int A)
 {
 	age = A;
 }
-void Patient::setGender(string G)
+void Patient::setGender(QString G)
 {
 	gender = G;
 }
-void Patient::setBloodType(string BT)
+void Patient::setBloodType(QString BT)
 {
 	bloodType = BT;
 }
-void Patient::setAllergies(string All)
+void Patient::setAllergies(QString All)
 {
 	allergies = All;
 }
@@ -89,23 +94,23 @@ void Patient::setInsured(bool INS)
 }
 void Patient::update_history()
 {
-	
-	
 }
 void Patient::patient_request()
 {
-	
 }
-string Patient::searchForDoctor(string specialization)
+QString Patient::searchForDoctor(QString specialization)
 {
 	/////////////////////////////////////////
+	return "";
 }
 bool Patient::getInsuranceApproval()
 {
 	//////////////////////////////////////////
+	return true;
 }
-long Patient::cancelReservation(int reservationID)
+long Patient::cancelReservation(int reservationID) // How does cancel reservation return long?
 {
 	///////////////////////////////////////////
+	return 0;
 }
-//MISSING: getshortestpath 
+// MISSING: getshortestpath

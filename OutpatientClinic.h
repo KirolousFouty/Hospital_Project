@@ -1,22 +1,23 @@
-	#pragma once
-	#include <iostream>
-	#include <string>
-	using namespace std;
+#ifndef OUTPATIENTCLINIC_H
+#define OUTPATIENTCLINIC_H
 
-	#ifndef outpatientclinic_H
-	#define outpatientcline_H
-	class OutpatientClinic
-	{
-	private:
-		//-Position : pair<x : double, y : double>
-		string speciality;
-	public:
-		OutpatientClinic();
-		OutpatientClinic(string S);
+#include <iostream>
+#include <QString>
 
-		string getspecialty();
+using namespace std;
 
-		void setspeciality(string S);
+class OutpatientClinic
+{
+private:
+	//-Position : pair<x : double, y : double>
+	QString speciality;
 
-	};
-	#endif // !outpatientclinic_H
+public:
+	OutpatientClinic();
+	OutpatientClinic(QString S);
+
+	QString getspecialty();
+
+	void setspeciality(QString S);
+};
+#endif // !outpatientclinic_H

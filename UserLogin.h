@@ -1,47 +1,30 @@
-#pragma once
+#ifndef USERLOGIN_H
+#define USERLOGIN_H
+
 #include <iostream>
-#include <string>
+#include <QString>
 #include "Patient.h"
 
 using namespace std;
 
-#ifndef userlogin_H
-#define userlogin_H
-class UserLogin:public Patient
+class UserLogin : public Patient
 {
 protected:
-	string username;
-	string password;
+    QString username;
+    QString password;
+
 public:
     UserLogin();
-    UserLogin(string User, string Pass);
+    UserLogin(QString User, QString Pass);
 
-    string getusername();
-    string getpassword();
+    QString getusername();
+    QString getpassword();
 
-    void setusername(string U);
-    void setpassword(string P);
+    void setusername(QString U);
+    void setpassword(QString P);
 
-	void login();
-	void user_information_getter();
-
+    void login();
+    void user_information_getter();
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #endif // !userlogin_H
-

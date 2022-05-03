@@ -1,29 +1,28 @@
 #include "UserLogin.h"
-using namespace std;
 
 UserLogin::UserLogin()
 {
 	username = "nour";
 	password = "selim";
 }
-UserLogin::UserLogin(string User, string Pass)
+UserLogin::UserLogin(QString User, QString Pass)
 {
 	username = User;
 	password = Pass;
 }
-string UserLogin::getusername()
+QString UserLogin::getusername()
 {
 	return username;
 }
-string UserLogin::getpassword()
+QString UserLogin::getpassword()
 {
 	return password;
 }
-void UserLogin::setusername(string U)
+void UserLogin::setusername(QString U)
 {
 	username = U;
 }
-void UserLogin::setpassword(string P)
+void UserLogin::setpassword(QString P)
 {
 	password = P;
 }

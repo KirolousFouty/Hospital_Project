@@ -1,5 +1,4 @@
 #include "EmergencyRoom.h"
-using namespace std;
 
 EmergencyRoom::EmergencyRoom()
 {
@@ -9,7 +8,7 @@ EmergencyRoom::EmergencyRoom()
 	available = true;
 	//- Position:pair<x:double, y:double>
 }
-EmergencyRoom::EmergencyRoom(int RN, int F, string RT, bool A)
+EmergencyRoom::EmergencyRoom(int RN, int F, QString RT, bool A)
 {
 	room_number = RN;
 	floor = F;
@@ -24,7 +23,7 @@ int EmergencyRoom::get_floor()
 {
 	return floor;
 }
-string EmergencyRoom::getroom_type()
+QString EmergencyRoom::getroom_type()
 {
 	return room_type;
 }
@@ -36,7 +35,7 @@ void EmergencyRoom::set_floor(int F)
 {
 	floor = F;
 }
-void EmergencyRoom::setroom_type(string RT)
+void EmergencyRoom::setroom_type(QString RT)
 {
 	room_type = RT;
 }
@@ -45,20 +44,22 @@ bool EmergencyRoom::check_availablilty()
 	if (available == true)
 		return true;
 	else
-		return false; 
+		return false;
 }
-string EmergencyRoom::book_room()//////////////////////// 7ad yerage3 el kalam da 
+QString EmergencyRoom::book_room() //////////////////////// 7ad yerage3 el kalam da
 {
 	if (check_availablilty() == true)
 		return book_room();
 	else
-		return false; //room is not booked
+		return "False: Room is not Booked."; // room is not booked
 }
 int EmergencyRoom::remaining_rooms()
 {
 	/////////////////////////////////
+	return 0;
 }
 int EmergencyRoom::booked_rooms()
 {
 	//////////////////////////////////
+	return 0;
 }

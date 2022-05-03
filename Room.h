@@ -1,35 +1,37 @@
+#ifndef ROOM_H
+#define ROOM_H
+
 #include <iostream>
-#include <string>
+#include <QString>
 #include "Patient.h"
+
 using namespace std;
 
-#ifndef room_H
-#define room_H
-
-class Room:public Patient
+class Room : public Patient
 {
-    protected:
+protected:
     int room_number;
     int floor;
-    private:
-    //Position:pair<x:double, y:double>
-    string room_type;
-    public:
+
+private:
+    // Position:pair<x:double, y:double>
+    QString room_type;
+
+public:
     Room();
-    Room(int RN, int F, string RT);
+    Room(int RN, int F, QString RT);
 
     int getroom_number();
     int getfloor();
-    string getroom_type();
+    QString getroom_type();
 
     void setroom_number(int RN);
     void setfloor(int F);
-    void setroom_type(string RT);
+    void setroom_type(QString RT);
 
     void check_availability();
-    string book_room();
+    QString book_room();
     int remaining_rooms();
     int booked_rooms();
-
 };
 #endif
