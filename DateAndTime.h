@@ -22,10 +22,10 @@ class DateAndTime
     int getmonth();
     int getyear();
 
-    void sethour();
-    void setminute();
-    void setday();
-    void setmonth();
-    void setyear();
+    void sethour(int H);
+    void setminute(int Min);
+    void setday(int D);
+    void setmonth(int Mon);
+    void setyear(int Y);
 };
 #endif
