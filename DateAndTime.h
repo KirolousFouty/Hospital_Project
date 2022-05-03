@@ -1,20 +1,22 @@
-#include <iostream>
-using namespace std;
-
 #ifndef DATEANDTIME_H
 #define DATEANDTIME_H
 
+#include <iostream>
+
+using namespace std;
+
 class DateAndTime
 {
-    private:
+private:
     int hour;
     int minute;
     int day;
     int month;
     int year;
-    public:
+
+public:
     DateAndTime();
-    DateAndTime(int H,int Min, int D, int Mon, int Y);
+    DateAndTime(int H, int Min, int D, int Mon, int Y);
 
     int gethour();
     int getminute();

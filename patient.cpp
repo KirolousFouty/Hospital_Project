@@ -1,7 +1,6 @@
 #include "Patient.h"
-using namespace std; 
 
-Patient::Patient()//default constructor
+Patient::Patient() // default constructor
 {
 	medical_history = "unknown";
 	points = 0;
@@ -12,7 +11,7 @@ Patient::Patient()//default constructor
 	allergies = "none";
 	insured = false;
 }
-Patient::Patient(string MH, int P, int PID, int A, string G, string BT, string All, bool INS)//parameterized constructor
+Patient::Patient(string MH, int P, int PID, int A, string G, string BT, string All, bool INS) // parameterized constructor
 {
 	medical_history = MH;
 	points = P;
@@ -89,12 +88,9 @@ void Patient::setInsured(bool INS)
 }
 void Patient::update_history()
 {
-	
-	
 }
 void Patient::patient_request()
 {
-	
 }
 string Patient::searchForDoctor(string specialization)
 {
@@ -108,4 +104,4 @@ long Patient::cancelReservation(int reservationID)
 {
 	///////////////////////////////////////////
 }
-//MISSING: getshortestpath 
+// MISSING: getshortestpath

@@ -1,18 +1,20 @@
-#pragma once
-#include <iostream>
-#include <string>
-using namespace std;
 #ifndef EMERGENCYROOM_H
 #define EMERGENCYROOM_H
+
+#include <iostream>
+#include <string>
+
+using namespace std;
 class EmergencyRoom
 {
 protected:
 	int room_number;
 	int floor;
+
 private:
 	string room_type;
 	bool available;
-	//Position:pair<x : double, y : double> ///////////////////////////////
+	// Position:pair<x : double, y : double> ///////////////////////////////
 public:
 	EmergencyRoom();
 	EmergencyRoom(int RN, int F, string RT, bool A);
@@ -29,8 +31,6 @@ public:
 	string book_room();
 	int remaining_rooms();
 	int booked_rooms();
-
 };
 
 #endif // !emergencyroom_H
-

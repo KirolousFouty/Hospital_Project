@@ -1,16 +1,16 @@
 #include "Room.h"
-using namespace std;
+
 Room::Room()
 {
-    room_number=0;
-    floor=0;
-    room_type="VIP";
+    room_number = 0;
+    floor = 0;
+    room_type = "VIP";
 }
 Room::Room(int RN, int F, string RT)
 {
-    room_number=RN;
-    floor=F;
-    room_type=RT;
+    room_number = RN;
+    floor = F;
+    room_type = RT;
 }
 int Room::getroom_number()
 {
@@ -26,15 +26,15 @@ string Room::getroom_type()
 }
 void Room::setroom_number(int RN)
 {
-    room_number=RN;
+    room_number = RN;
 }
 void Room::setfloor(int F)
 {
-    floor=F;
+    floor = F;
 }
 void Room::setroom_type(string RT)
 {
-    room_type=RT;
+    room_type = RT;
 }
 void Room::check_availability()
 {
@@ -52,4 +52,3 @@ int Room::booked_rooms()
 {
     ////////////////////////////////
 }
-    

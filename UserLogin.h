@@ -1,17 +1,18 @@
-#pragma once
+#ifndef USERLOGIN_H
+#define USERLOGIN_H
+
 #include <iostream>
 #include <string>
 #include "Patient.h"
 
 using namespace std;
 
-#ifndef USERLOGIN_H
-#define USERLOGIN_H
-class UserLogin:public Patient
+class UserLogin : public Patient
 {
 protected:
-	string username;
-	string password;
+    string username;
+    string password;
+
 public:
     UserLogin();
     UserLogin(string User, string Pass);
@@ -22,26 +23,8 @@ public:
     void setusername(string U);
     void setpassword(string P);
 
-	void login();
-	void user_information_getter();
-
+    void login();
+    void user_information_getter();
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #endif // !userlogin_H
-

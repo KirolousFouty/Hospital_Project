@@ -1,15 +1,16 @@
 #include "Doctor.h"
+
 Doctor::Doctor()
 {
-    id=0;
-    rating=0.0;
-//    earliestdate=0;
+    id = 0;
+    rating = 0.0;
+    //    earliestdate=0;
 }
 Doctor::Doctor(int ID, double R, DateAndTime ED)
 {
-    id=ID;
-    rating=R;
-    earliestdate=ED;
+    id = ID;
+    rating = R;
+    earliestdate = ED;
 }
 int Doctor::getid()
 {
@@ -25,29 +26,29 @@ DateAndTime Doctor::getearliestdate()
 }
 void Doctor::setid(int ID)
 {
-    id=ID;
+    id = ID;
 }
 void Doctor::setrating(double R)
 {
-    rating=R;
+    rating = R;
 }
 void Doctor::setearliestdate(DateAndTime ED)
 {
-    earliestdate=ED;
+    earliestdate = ED;
 }
 double Doctor::showrating()
 {
     ///////////////////////////////////////
-return 0;
+    return 0;
 }
 void Doctor::set_appointment()
 {
     //////////////////////////////////////////
 }
-  //void Doctor::examine()
- // {
-      //////////////////////////
- // }  
+// void Doctor::examine()
+// {
+//////////////////////////
+// }
 
 void Doctor::requestBloodTest()
 {

@@ -1,5 +1,4 @@
 #include "EmergencyRoom.h"
-using namespace std;
 
 EmergencyRoom::EmergencyRoom()
 {
@@ -45,14 +44,14 @@ bool EmergencyRoom::check_availablilty()
 	if (available == true)
 		return true;
 	else
-		return false; 
+		return false;
 }
-string EmergencyRoom::book_room()//////////////////////// 7ad yerage3 el kalam da 
+string EmergencyRoom::book_room() //////////////////////// 7ad yerage3 el kalam da
 {
 	if (check_availablilty() == true)
 		return book_room();
 	else
-        return "False: Room is not Booked."; //room is not booked
+		return "False: Room is not Booked."; // room is not booked
 }
 int EmergencyRoom::remaining_rooms()
 {

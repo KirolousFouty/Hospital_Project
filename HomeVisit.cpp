@@ -1,6 +1,4 @@
-#include <iostream>
 #include "HomeVisit.h"
-using namespace std;
 
 HomeVisit::HomeVisit()
 {
@@ -31,4 +29,5 @@ void HomeVisit::setsymptoms(QString S)
 QString HomeVisit::request_doctor()
 {
 	//////////////////////////////////
+	return "";
 }

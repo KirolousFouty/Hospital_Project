@@ -1,5 +1,4 @@
 #include "OutpatientClinic.h"
-using namespace std;
 
 OutpatientClinic::OutpatientClinic()
 {

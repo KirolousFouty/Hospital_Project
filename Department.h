@@ -1,15 +1,19 @@
+#ifndef DEPARTMENT_H
+#define DEPARTMENT_H
+
 #include <iostream>
 #include <QString>
 #include "DateAndTime.h"
+#include "Room.h"
+
 using namespace std;
 
-#ifndef DEPARTMENT_H
-#define DEPARTMENT_H
-class Department:public DateAndTime
+class Department : public DateAndTime
 {
-    protected:
+protected:
     QString department_type;
-    public:
+
+public:
     Department();
     Department(QString DT);
 
@@ -18,7 +22,5 @@ class Department:public DateAndTime
 
     QString assign_doctor();
     QString assign_room();
-
-
 };
 #endif

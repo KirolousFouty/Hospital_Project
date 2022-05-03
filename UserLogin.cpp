@@ -1,5 +1,4 @@
 #include "UserLogin.h"
-using namespace std;
 
 UserLogin::UserLogin()
 {

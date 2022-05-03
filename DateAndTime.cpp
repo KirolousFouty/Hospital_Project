@@ -2,19 +2,19 @@
 using namespace std;
 DateAndTime::DateAndTime()
 {
-    hour=0;
-    minute=0;
-    day=0;
-    month=0;
-    year=0;
+    hour = 0;
+    minute = 0;
+    day = 0;
+    month = 0;
+    year = 0;
 }
-DateAndTime::DateAndTime(int H,int Min, int D, int Mon, int Y)
+DateAndTime::DateAndTime(int H, int Min, int D, int Mon, int Y)
 {
-    hour=H;
-    minute=Min;
-    day=D;
-    month=Mon;
-    year=Y;
+    hour = H;
+    minute = Min;
+    day = D;
+    month = Mon;
+    year = Y;
 }
 int DateAndTime::gethour()
 {
@@ -22,7 +22,7 @@ int DateAndTime::gethour()
 }
 int DateAndTime::getminute()
 {
-    return minute;   
+    return minute;
 }
 int DateAndTime::getday()
 {
@@ -38,21 +38,21 @@ int DateAndTime::getyear()
 }
 void DateAndTime::sethour(int H)
 {
-    hour=H;
+    hour = H;
 }
 void DateAndTime::setminute(int Min)
 {
-    minute=Min;
+    minute = Min;
 }
 void DateAndTime::setday(int D)
 {
-    day=D;
+    day = D;
 }
 void DateAndTime::setmonth(int Mon)
 {
-    month=Mon;
+    month = Mon;
 }
 void DateAndTime::setyear(int Y)
 {
-    year=Y;
+    year = Y;
 }

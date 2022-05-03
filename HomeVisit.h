@@ -1,17 +1,19 @@
-#pragma once
-#include <iostream>
-#include <QString>
-using namespace std;
-
 #ifndef HOMEVISIT_H
 #define HOMEVISIT_H
 
-class HomeVisit:public Patient
+#include <iostream>
+#include <QString>
+#include "Patient.h"
+
+using namespace std;
+
+class HomeVisit : public Patient
 {
-private: 
+private:
 	QString home_address;
-	//date_and_time dateandtime;
+	// date_and_time dateandtime;
 	QString symptoms;
+
 public:
 	HomeVisit();
 	HomeVisit(QString HA, QString S);
@@ -23,7 +25,6 @@ public:
 	void setsymptoms(QString S);
 
 	QString request_doctor();
-
 };
 
 #endif

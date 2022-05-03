@@ -1,19 +1,20 @@
+#ifndef DOCTOR_H
+#define DOCTOR_H
+
 #include <iostream>
 #include <QString>
 #include "DateAndTime.h"
-using namespace std; 
 
-#ifndef DOCTOR_H
-#define DOCTOR_H
+using namespace std;
 class Doctor
 {
 protected:
     int id;
-    
+
 private:
     double rating;
     DateAndTime earliestdate;
-    
+
 public:
     Doctor();
     Doctor(int ID, double R, DateAndTime ED);
@@ -28,10 +29,7 @@ public:
 
     double showrating();
     void set_appointment();
-  //void examine();  
+    // void examine();
     void requestBloodTest();
-    
-
-
 };
 #endif

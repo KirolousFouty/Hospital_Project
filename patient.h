@@ -1,23 +1,25 @@
-#pragma once
-#include <iostream>
-#include <string>
-using namespace std;
-
 #ifndef PATIENT_H
 #define PATIENT_H
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
 class Patient
 {
 private:
 	string medical_history;
+
 protected:
 	int points;
 	int patientID;
-	int age; 
+	int age;
 	string gender;
 	string bloodType;
 	string allergies;
 	bool insured;
-	//Position : pair<double, double> ma3rafsh meen kan 3amel keda fel class diagram 
+	// Position : pair<double, double> ma3rafsh meen kan 3amel keda fel class diagram
 
 public:
 	Patient();
@@ -44,11 +46,11 @@ public:
 	void update_history();
 	void patient_request();
 	string searchForDoctor(string specialization);
-			//dateTime : DateAndTime) ma3rash meen 3amel deeh
+	// dateTime : DateAndTime) ma3rash meen 3amel deeh
 	bool getInsuranceApproval();
 	long cancelReservation(int reservationID);
-	//getShortestPath(pos:pair<double, double>;
-	//vector<double, double>:: getShortestPath;
+	// getShortestPath(pos:pair<double, double>;
+	// vector<double, double>:: getShortestPath;
 };
 
 #endif // !patient_H
