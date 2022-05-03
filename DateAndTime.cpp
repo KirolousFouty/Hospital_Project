@@ -1,58 +1,69 @@
 #include "DateAndTime.h"
-using namespace std;
+
 DateAndTime::DateAndTime()
 {
-    hour = 0;
-    minute = 0;
-    day = 0;
-    month = 0;
-    year = 0;
+    this->hour = 0;
+    this->minute = 0;
+    this->day = 0;
+    this->month = 0;
+    this->year = 0;
 }
+
 DateAndTime::DateAndTime(int H, int Min, int D, int Mon, int Y)
 {
-    hour = H;
-    minute = Min;
-    day = D;
-    month = Mon;
-    year = Y;
+    this->hour = H;
+    this->minute = Min;
+    this->day = D;
+    this->month = Mon;
+    this->year = Y;
 }
-int DateAndTime::gethour()
+
+int DateAndTime::getHour()
 {
-    return hour;
+    return this->hour;
 }
-int DateAndTime::getminute()
+
+int DateAndTime::getMinute()
 {
-    return minute;
+    return this->minute;
 }
-int DateAndTime::getday()
+
+int DateAndTime::getDay()
 {
-    return day;
+    return this->day;
 }
-int DateAndTime::getmonth()
+
+int DateAndTime::getMonth()
 {
-    return month;
+    return this->month;
 }
-int DateAndTime::getyear()
+
+int DateAndTime::getYear()
 {
-    return year;
+    return this->year;
 }
-void DateAndTime::sethour(int H)
+
+void DateAndTime::setHour(int H)
 {
-    hour = H;
+    this->hour = H;
 }
-void DateAndTime::setminute(int Min)
+
+void DateAndTime::setMinute(int Min)
 {
-    minute = Min;
+    this->minute = Min;
 }
-void DateAndTime::setday(int D)
+
+void DateAndTime::setDay(int D)
 {
-    day = D;
+    this->day = D;
 }
-void DateAndTime::setmonth(int Mon)
+
+void DateAndTime::setMonth(int Mon)
 {
-    month = Mon;
+    this->month = Mon;
 }
-void DateAndTime::setyear(int Y)
+
+void DateAndTime::setYear(int Y)
 {
-    year = Y;
+    this->year = Y;
 }

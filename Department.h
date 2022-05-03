@@ -12,14 +12,14 @@ using namespace std;
 class Department : public DateAndTime :public Doctor
 {
 protected:
-    QString department_type;
+    QString departmentType;
 
 public:
     Department();
     Department(QString DT);
 
-    QString getdepartment_type();
-    void setdepartment_type(QString DT);
+    QString getDepartmentType();
+    void setDepartmentType(QString DT);
 
     QString assign_doctor();
     QString assign_room();

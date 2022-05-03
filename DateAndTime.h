@@ -18,16 +18,17 @@ public:
     DateAndTime();
     DateAndTime(int H, int Min, int D, int Mon, int Y);
 
-    int gethour();
-    int getminute();
-    int getday();
-    int getmonth();
-    int getyear();
+    int getHour();
+    int getMinute();
+    int getDay();
+    int getMonth();
+    int getYear();
 
-    void sethour(int H);
-    void setminute(int Min);
-    void setday(int D);
-    void setmonth(int Mon);
-    void setyear(int Y);
+    void setHour(int H);
+    void setMinute(int Min);
+    void setDay(int D);
+    void setMonth(int Mon);
+    void setYear(int Y);
 };
+
 #endif

@@ -2,35 +2,38 @@
 
 Department::Department()
 {
-    department_type = "cardio";
+    this->departmentType = "cardio";
 }
+
 Department::Department(QString DT)
 {
-    department_type = DT;
+    this->departmentType = DT;
 }
-QString Department::getdepartment_type()
+
+QString Department::getDepartmentType()
 {
-    return department_type;
+    return this->departmentType;
 }
-void Department::setdepartment_type(QString DT)
+
+void Department::setDepartmentType(QString DT)
 {
-    department_type = DT;
+    this->departmentType = DT;
 }
+
 QString Department::assign_doctor()
 {
-    //for(int i=0; i<3; i++)
+    // for(int i=0; i<3; i++)
     //{
-        if (department_type=="cardiology")
+    if (this->departmentType == "cardiology")
         return "Ahmad";
     //}
-        if(department_type=="dermaotology")
+    if (this->departmentType == "dermaotology")
         return "Ayman";
 
-        if(department_typr=="neurology")
+    if (this->department_typr == "neurology")
         return "Adam";
-
-    
 }
+
 QString Department::assign_room()
 {
     //////////////////////////////////////////
