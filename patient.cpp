@@ -2,7 +2,7 @@
 
 Patient::Patient() // default constructor
 {
-	this->medical_history = "unknown";
+	this->medicalHistory = "unknown";
 	this->points = 0;
 	this->patientID = 900211928;
 	this->age = 18;
@@ -30,7 +30,7 @@ QString Patient::getName()
 
 QString Patient::getMedicalHistory()
 {
-	return this->medical_history;
+	return this->medicalHistory;
 }
 int Patient::getPoints()
 {
@@ -62,7 +62,7 @@ bool Patient::getInsured()
 }
 void Patient::setMedicalHistory(QString p_medicalHistory)
 {
-	this->medical_history = p_medicalHistory;
+	this->medicalHistory = p_medicalHistory;
 }
 void Patient::setPoints(int p_points)
 {
@@ -114,6 +114,52 @@ long Patient::cancelReservation(int p_reservationID) // How does cancel reservat
 {
 	///////////////////////////////////////////
 	return 0;
+}
+
+int Patient::login(QString p_username, QString p_password)
+{
+	if (usersMap.find(p_username) != usersMap.end() && usersMap[p_username] == p_password)
+	{
+		this->loggedIn = true;
+		return 0; // if username and password are correct.
+	}
+	else
+	{
+		this->loggedIn = false;
+        if (usersMap.find(p_username) != usersMap.end() && usersMap[p_username] != p_password)
+		{
+			return 1; // if username is correct, and the password is incorrect.
+		}
+		else
+		{
+			return 2; // if username does not exist.
+		}
+    }
+}
+
+QString Patient::getUsername()
+{
+	return this->username;
+}
+
+QString Patient::getPassword()
+{
+	return this->password;
+}
+
+void Patient::setUsername(QString p_username)
+{
+	this->username = p_username;
+}
+
+void Patient::setPassword(QString p_password)
+{
+	this->password = p_password;
+}
+
+void Patient::userInformationGetter()
+{
+	/////////////////////////////////////
 }
 
 // MISSING: getshortestpath

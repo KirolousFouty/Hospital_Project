@@ -1,4 +1,5 @@
 #include "Payment.h"
+
 Payment::Payment()
 {
     this->paymentChoice = "cash";

@@ -4,15 +4,15 @@ EmergencyRoom::EmergencyRoom()
 {
 	this->roomNumber = 0;
 	this->floor = 0;
-	this->room_type = "standard";
+	this->roomType = "standard";
 	this->available = true;
 	//-  this->Position:pair<x:double, y:double>
 }
 EmergencyRoom::EmergencyRoom(int p_roomNumber, int p_floor, QString p_roomType, bool p_available)
 {
-	this->room_number = p_roomNumber;
+	this->roomNumber = p_roomNumber;
 	this->floor = p_floor;
-	this->room_type = p_roomType;
+	this->roomType = p_roomType;
 	this->available = p_available;
 }
 int EmergencyRoom::getRoomNumber()

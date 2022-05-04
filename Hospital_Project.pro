@@ -23,11 +23,9 @@ SOURCES += \
     Payment.cpp \
     Pharmacy.cpp \
     Room.cpp \
-    UserLogin.cpp \
     bookappointmentwindow.cpp \
     main.cpp \
     mainwindow.cpp \
-    patient.cpp \
     showpatientinformation.cpp \
     userloginwindow.cpp
 
@@ -46,10 +44,8 @@ HEADERS += \
     Payment.h \
     Pharmacy.h \
     Room.h \
-    UserLogin.h \
     bookappointmentwindow.h \
     mainwindow.h \
-    patient.h \
     showpatientinformation.h \
     userloginwindow.h
 

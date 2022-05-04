@@ -7,7 +7,6 @@
 #include "bookappointmentwindow.h"
 
 #include "DateAndTime.h"
-#include "UserLogin.h"
 #include "HomeVisit.h"
 #include "EmergencyRoom.h"
 #include "EmergencyVisit.h"
