@@ -2,21 +2,21 @@
 
 Drugs::Drugs()
 {
-    price=0.0;
+    this->price = 0.0;
 }
-Drugs::Drugs(double P)
+Drugs::Drugs(double p_price)
 {
-    price=P;
+    this->price = p_price;
 }
-void Drugs::setPrice(double P)
+void Drugs::setPrice(double p_price)
 {
-    price=P;
+    this->price = p_price;
 }
 double Drugs::getPrice()
 {
-    return price;
+    return this->price;
 }
-void Drugs::Purchase()
+void Drugs::purchase()
 {
-    ////////////////////////
+    //////////////
 }

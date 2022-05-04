@@ -3,11 +3,11 @@
 Doctor::Doctor()
 {
     //    id = 0;
-    rating = 0.0;
-    //    earliestdate=0;
+    this->rating = 0.0;
+    //    earliestDate=0;
 }
 
-Doctor::Doctor(QString p_name,  int p_id, double p_rating, QString p_department)
+Doctor::Doctor(QString p_name, int p_id, double p_rating, QString p_department)
 {
     this->name = p_name;
     this->id = p_id;
@@ -15,48 +15,49 @@ Doctor::Doctor(QString p_name,  int p_id, double p_rating, QString p_department)
     this->department = p_department;
 }
 
-Doctor::Doctor(QString p_name,  int p_id, double p_rating, DateAndTime p_earliestDate)
+Doctor::Doctor(QString p_name, int p_id, double p_rating, DateAndTime p_earliestDate)
 {
     this->name = p_name;
     this->id = p_id;
     this->rating = p_rating;
-    this->earliestdate = p_earliestDate;
+    this->earliestDate = p_earliestDate;
 }
 
-QString Doctor::getName(){
-    return name;
+QString Doctor::getName()
+{
+    return this->name;
 }
 
 int Doctor::getId()
 {
-     return id;
+    return this->id;
 }
-double Doctor::getrating()
+double Doctor::getRating()
 {
-    return rating;
+    return this->rating;
 }
-DateAndTime Doctor::getearliestdate()
+DateAndTime Doctor::getEarliestDate()
 {
-    return earliestdate;
+    return this->earliestDate;
 }
-void Doctor::setid(int ID)
+void Doctor::setId(int p_id)
 {
-    // id = ID;
+    // id = p_id;
 }
-void Doctor::setrating(double R)
+void Doctor::setRating(double p_rating)
 {
-    rating = R;
+    this->rating = p_rating;
 }
-void Doctor::setearliestdate(DateAndTime ED)
+void Doctor::setEarliestDate(DateAndTime p_earliestDate)
 {
-    earliestdate = ED;
+    this->earliestDate = p_earliestDate;
 }
-double Doctor::showrating()
+double Doctor::showRating()
 {
     // ui->display->SetText("Rating: " + rating);
     return 0;
 }
-void Doctor::set_appointment(Patient p)
+void Doctor::setAppointment(Patient p_patient)
 {
     // need to know the database we will use
     //  use Department::assign_doctor()?
@@ -72,6 +73,7 @@ void Doctor::requestBloodTest()
     BloodTest.test_results();
 }
 
-QString Doctor::getDepartment(){
+QString Doctor::getDepartment()
+{
     return this->department;
 }

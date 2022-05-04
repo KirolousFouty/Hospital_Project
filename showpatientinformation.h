@@ -3,8 +3,9 @@
 
 #include <QDialog>
 
-namespace Ui {
-class ShowPatientInformation;
+namespace Ui
+{
+    class ShowPatientInformation;
 }
 
 class ShowPatientInformation : public QDialog

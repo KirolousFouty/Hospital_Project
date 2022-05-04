@@ -15,16 +15,16 @@ protected:
 
 public:
     UserLogin();
-    UserLogin(QString User, QString Pass);
+    UserLogin(QString p_username, QString p_password);
 
-    QString getusername();
-    QString getpassword();
+    QString getUsername();
+    QString getPassword();
 
-    void setusername(QString U);
-    void setpassword(QString P);
+    void setUsername(QString p_username);
+    void setPassword(QString p_password);
 
     void login();
-    void user_information_getter();
+    void userInformationGetter();
 };
 
 #endif // !userlogin_H

@@ -2,35 +2,35 @@
 
 UserLogin::UserLogin()
 {
-	username = "nour";
-	password = "selim";
+	this->username = "nour";
+	this->password = "selim";
 }
-UserLogin::UserLogin(QString User, QString Pass)
+UserLogin::UserLogin(QString p_username, QString p_password)
 {
-	username = User;
-	password = Pass;
+	this->username = username;
+	this->password = p_password;
 }
-QString UserLogin::getusername()
+QString UserLogin::getUsername()
 {
-	return username;
+	return this->username;
 }
-QString UserLogin::getpassword()
+QString UserLogin::getPassword()
 {
-	return password;
+	return this->password;
 }
-void UserLogin::setusername(QString U)
+void UserLogin::setUsername(QString p_username)
 {
-	username = U;
+	this->username = p_username;
 }
-void UserLogin::setpassword(QString P)
+void UserLogin::setPassword(QString p_password)
 {
-	password = P;
+	this->password = p_password;
 }
 void UserLogin::login()
 {
 	/////////////////////////////////////////
 }
-void UserLogin::user_information_getter()
+void UserLogin::userInformationGetter()
 {
 	/////////////////////////////////////
 }

@@ -9,18 +9,14 @@
 using namespace std;
 class Doctor
 {
-public:
-//     int id[3] = {1, 2, 3};
-//     QByteArray name[3] = {"Ahmed", "Adam", "Ayman"};
-
 private:
     double rating;
-    DateAndTime earliestdate;
+    DateAndTime earliestDate;
 
 public:
     Doctor();
-    Doctor(QString p_name,  int p_id, double p_rating, QString p_department);
-    Doctor(QString p_name,  int p_id, double p_rating, DateAndTime p_earliestDate);
+    Doctor(QString p_name, int p_id, double p_rating, QString p_department);
+    Doctor(QString p_name, int p_id, double p_rating, DateAndTime p_earliestDate);
 
     QString name;
     int id;
@@ -28,17 +24,16 @@ public:
 
     QString getName();
     int getId();
-    double getrating();
-    DateAndTime getearliestdate();
+    double getRating();
+    DateAndTime getEarliestDate();
     QString getDepartment();
 
-    void setid(int ID);
-    void setrating(double R);
-    void setearliestdate(DateAndTime ED);
+    void setId(int p_id);
+    void setRating(double p_rating);
+    void setEarliestDate(DateAndTime p_earliestDate);
 
-    double showrating();
-    void set_appointment(Patient p);
-
+    double showRating();
+    void setAppointment(Patient p_patient);
 
     // void examine();
     void requestBloodTest();

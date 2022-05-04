@@ -17,7 +17,7 @@ public:
     // location
 
     Appointment();
-    Appointment(Patient *p, Doctor *d, DateAndTime dateTime);
+    Appointment(Patient *p_patientName, Doctor *p_doctorName, DateAndTime p_dt);
 
     QString showAppointment();
 };

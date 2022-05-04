@@ -2,19 +2,19 @@
 
 MedicalTools::MedicalTools()
 {
-    price=0.0;
+    this->price = 0.0;
 }
-MedicalTools::MedicalTools(double P)
+MedicalTools::MedicalTools(double p_price)
 {
-    price=P;
+    this->price = p_price;
 }
-void MedicalTools::setPrice(double P)
+void MedicalTools::setPrice(double p_price)
 {
-    price=P;
+    this->price = p_price;
 }
 double MedicalTools::getPrice()
 {
-    return price;
+    return this->price;
 }
 void MedicalTools::Purchase()
 {

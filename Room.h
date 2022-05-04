@@ -10,28 +10,28 @@ using namespace std;
 class Room : public Patient
 {
 protected:
-    int room_number;
+    int roomNumber;
     int floor;
 
 private:
     // Position:pair<x:double, y:double>
-    QString room_type;
+    QString roomType;
 
 public:
     Room();
     Room(int RN, int F, QString RT);
 
-    int getroom_number();
-    int getfloor();
-    QString getroom_type();
+    int getRoomNumber();
+    int getFloor();
+    QString getRoomType();
 
-    void setroom_number(int RN);
-    void setfloor(int F);
-    void setroom_type(QString RT);
+    void setRoomNumber(int RN);
+    void setFloor(int F);
+    void setRoomType(QString RT);
 
-    bool check_availability();
-    QString book_room();
-    //int remaining_rooms();
-    //int booked_rooms();
+    bool checkAvailability();
+    QString bookRoom();
+    // int remainingRooms();
+    // int bookedRooms();
 };
 #endif

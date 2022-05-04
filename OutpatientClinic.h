@@ -14,10 +14,10 @@ private:
 
 public:
 	OutpatientClinic();
-	OutpatientClinic(QString S);
+	OutpatientClinic(QString p_speciality);
 
-	QString getspecialty();
+	QString getSpecialty();
 
-	void setspeciality(QString S);
+	void setSpeciality(QString p_speciality);
 };
 #endif // !outpatientclinic_H

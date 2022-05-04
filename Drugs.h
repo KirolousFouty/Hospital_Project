@@ -2,21 +2,23 @@
 #define DRUGS_H
 
 #include <iostream>
+#include <QString>
+#include "Pharmacy.h"
 
 using namespace std;
 
-class Drugs
+class Drugs : public Pharmacy
 {
 private:
-double price;
+    double price;
 
 public:
-Drugs();
-Drugs(double P);
-void setPrice(double P);
+    Drugs();
+    Drugs(double p_price);
+    void setPrice(double p_price);
 
-double getPrice();
-void Purchase();
+    double getPrice();
+    void purchase();
 };
 
 #endif

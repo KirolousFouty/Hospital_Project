@@ -4,12 +4,12 @@ EmergencyVisit::EmergencyVisit()
 {
 	/////////////////////
 }
-bool EmergencyVisit::check_availability()
+bool EmergencyVisit::checkAvailability()
 {
 	/////////////////////
 	return true;
 }
-QString EmergencyVisit::book_date_and_time()
+QString EmergencyVisit::bookDateAndTime()
 {
 	//////////////////////////////
 	return "";

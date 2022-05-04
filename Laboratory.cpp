@@ -2,22 +2,22 @@
 
 Laboratory::Laboratory()
 {
-    type_of_test = " ";
+    this->typeOfTest = " ";
 }
 
-Laboratory::Laboratory(QString T)
+Laboratory::Laboratory(QString p_typeOfTest)
 {
-    type_of_test = T;
+    this->typeOfTest = p_typeOfTest;
 }
 
-void Laboratory::setTest(QString T)
+void Laboratory::setTest(QString p_typeOfTest)
 {
-    type_of_test = T;
+    this->typeOfTest = p_typeOfTest;
 }
 
 QString Laboratory::getTest()
 {
-    return type_of_test;
+    return this->typeOfTest;
 }
 
 QString Laboratory::test_results()

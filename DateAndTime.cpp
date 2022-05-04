@@ -9,13 +9,13 @@ DateAndTime::DateAndTime()
     this->year = 0;
 }
 
-DateAndTime::DateAndTime(int H, int Min, int D, int Mon, int Y)
+DateAndTime::DateAndTime(int p_hour, int p_minute, int p_day, int p_month, int p_year)
 {
-    this->hour = H;
-    this->minute = Min;
-    this->day = D;
-    this->month = Mon;
-    this->year = Y;
+    this->hour = p_hour;
+    this->minute = p_minute;
+    this->day = p_day;
+    this->month = p_month;
+    this->year = p_year;
 }
 
 int DateAndTime::getHour()
@@ -43,27 +43,27 @@ int DateAndTime::getYear()
     return this->year;
 }
 
-void DateAndTime::setHour(int H)
+void DateAndTime::setHour(int p_hour)
 {
-    this->hour = H;
+    this->hour = p_hour;
 }
 
-void DateAndTime::setMinute(int Min)
+void DateAndTime::setMinute(int p_minute)
 {
-    this->minute = Min;
+    this->minute = p_minute;
 }
 
-void DateAndTime::setDay(int D)
+void DateAndTime::setDay(int p_day)
 {
-    this->day = D;
+    this->day = p_day;
 }
 
-void DateAndTime::setMonth(int Mon)
+void DateAndTime::setMonth(int p_month)
 {
-    this->month = Mon;
+    this->month = p_month;
 }
 
-void DateAndTime::setYear(int Y)
+void DateAndTime::setYear(int p_year)
 {
-    this->year = Y;
+    this->year = p_year;
 }

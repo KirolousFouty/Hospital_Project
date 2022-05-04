@@ -17,12 +17,12 @@ protected:
 
 public:
     Department();
-    Department(QString DT);
+    Department(QString p_departmentType);
 
     QString getDepartmentType();
-    void setDepartmentType(QString DT);
+    void setDepartmentType(QString p_departmentType);
 
-    QString assign_doctor();
-    QString assign_room();
+    QString assignDoctor();
+    QString assignRoom();
 };
 #endif

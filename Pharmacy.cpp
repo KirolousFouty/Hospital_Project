@@ -2,21 +2,21 @@
 
 Pharmacy ::Pharmacy()
 {
-    assigned_medicine_from_doctor = " ";
+    this->assignedMedicineFromDoctor = " ";
 }
-Pharmacy ::Pharmacy(QString M)
+Pharmacy ::Pharmacy(QString p_assignedMedicineFromDoctor)
 {
-    assigned_medicine_from_doctor = M;
+    this->assignedMedicineFromDoctor = p_assignedMedicineFromDoctor;
 }
-void Pharmacy::setMed(QString M)
+void Pharmacy::setMed(QString p_assignedMedicineFromDoctor)
 {
-    assigned_medicine_from_doctor = M;
+    this->assignedMedicineFromDoctor = p_assignedMedicineFromDoctor;
 }
 QString Pharmacy::getMed()
 {
-    return assigned_medicine_from_doctor;
+    return this->assignedMedicineFromDoctor;
 }
-QString Pharmacy::getMedicine_fromDoctor()
+QString Pharmacy::getMedicineFromDoctor()
 {
     ////////////////////////
 }

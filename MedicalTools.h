@@ -8,15 +8,15 @@ using namespace std;
 class MedicalTools
 {
 private:
-double price;
+    double price;
 
 public:
-MedicalTools();
-MedicalTools(double P);
-void setPrice(double P);
+    MedicalTools();
+    MedicalTools(double p_price);
+    void setPrice(double p_price);
 
-double getPrice();
-void Purchase();
+    double getPrice();
+    void Purchase();
 };
 
 #endif

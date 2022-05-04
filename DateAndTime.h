@@ -24,11 +24,11 @@ public:
     int getMonth();
     int getYear();
 
-    void setHour(int H);
-    void setMinute(int Min);
-    void setDay(int D);
-    void setMonth(int Mon);
-    void setYear(int Y);
+    void setHour(int p_hour);
+    void setMinute(int p_minute);
+    void setDay(int p_day);
+    void setMonth(int p_month);
+    void setYear(int p_year);
 };
 
 #endif

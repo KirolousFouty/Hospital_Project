@@ -2,63 +2,63 @@
 
 EmergencyRoom::EmergencyRoom()
 {
-	room_number = 0;
-	floor = 0;
-	room_type = "standard";
-	available = true;
-	//- Position:pair<x:double, y:double>
+	this->roomNumber = 0;
+	this->floor = 0;
+	this->room_type = "standard";
+	this->available = true;
+	//-  this->Position:pair<x:double, y:double>
 }
-EmergencyRoom::EmergencyRoom(int RN, int F, QString RT, bool A)
+EmergencyRoom::EmergencyRoom(int p_roomNumber, int p_floor, QString p_roomType, bool p_available)
 {
-	room_number = RN;
-	floor = F;
-	room_type = RT;
-	available = A;
+	this->room_number = p_roomNumber;
+	this->floor = p_floor;
+	this->room_type = p_roomType;
+	this->available = p_available;
 }
-int EmergencyRoom::getroom_number()
+int EmergencyRoom::getRoomNumber()
 {
-	return room_number;
+	return this->roomNumber;
 }
-int EmergencyRoom::get_floor()
+int EmergencyRoom::getFloor()
 {
-	return floor;
+	return this->floor;
 }
-QString EmergencyRoom::getroom_type()
+QString EmergencyRoom::getRoomType()
 {
-	return room_type;
+	return this->roomType;
 }
-void EmergencyRoom::setroom_number(int RN)
+void EmergencyRoom::setRoomNumber(int p_roomNumber)
 {
-	room_number = RN;
+	this->roomNumber = p_roomNumber;
 }
-void EmergencyRoom::set_floor(int F)
+void EmergencyRoom::setFloor(int p_floor)
 {
-	floor = F;
+	this->floor = p_floor;
 }
-void EmergencyRoom::setroom_type(QString RT)
+void EmergencyRoom::setRoomType(QString p_roomType)
 {
-	room_type = RT;
+	this->roomType = p_roomType;
 }
-bool EmergencyRoom::check_availablilty()
+bool EmergencyRoom::checkAvailability()
 {
 	if (available == true)
 		return true;
 	else
 		return false;
 }
-QString EmergencyRoom::book_room() //////////////////////// 7ad yerage3 el kalam da
+QString EmergencyRoom::bookRoom() //////////////////////// 7ad yerage3 el kalam da
 {
-	if (check_availablilty() == true)
-		return book_room();
+	if (checkAvailability() == true)
+		return this->bookRoom();
 	else
 		return "False: Room is not Booked."; // room is not booked
 }
-int EmergencyRoom::remaining_rooms()
+int EmergencyRoom::remainingRooms()
 {
 	/////////////////////////////////
 	return 0;
 }
-int EmergencyRoom::booked_rooms()
+int EmergencyRoom::bookedRooms()
 {
 	//////////////////////////////////
 	return 0;

@@ -8,29 +8,29 @@ using namespace std;
 class EmergencyRoom
 {
 protected:
-	int room_number;
+	int roomNumber;
 	int floor;
 
 private:
-	QString room_type;
+	QString roomType;
 	bool available;
 	// Position:pair<x : double, y : double> ///////////////////////////////
 public:
 	EmergencyRoom();
-	EmergencyRoom(int RN, int F, QString RT, bool A);
+	EmergencyRoom(int p_roomNumber, int p_floor, QString p_roomType, bool p_available);
 
-	int getroom_number();
-	int get_floor();
-	QString getroom_type();
+	int getRoomNumber();
+	int getFloor();
+	QString getRoomType();
 
-	void setroom_number(int RN);
-	void set_floor(int F);
-	void setroom_type(QString RT);
+	void setRoomNumber(int p_roomNumber);
+	void setFloor(int p_floor);
+	void setRoomType(QString p_roomType);
 
-	bool check_availablilty();
-	QString book_room();
-	int remaining_rooms();
-	int booked_rooms();
+	bool checkAvailability();
+	QString bookRoom();
+	int remainingRooms();
+	int bookedRooms();
 };
 
 #endif // !emergencyroom_H

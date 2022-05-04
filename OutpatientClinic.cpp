@@ -2,17 +2,17 @@
 
 OutpatientClinic::OutpatientClinic()
 {
-	speciality = "cardio";
+	this->speciality = "cardio";
 }
-OutpatientClinic::OutpatientClinic(QString S)
+OutpatientClinic::OutpatientClinic(QString p_speciality)
 {
-	speciality = S;
+	this->speciality = p_speciality;
 }
-QString OutpatientClinic::getspecialty()
+QString OutpatientClinic::getSpecialty()
 {
-	return speciality;
+	return this->speciality;
 }
-void OutpatientClinic::setspeciality(QString S)
+void OutpatientClinic::setSpeciality(QString p_speciality)
 {
-	speciality = S;
+	this->speciality = p_speciality;
 }

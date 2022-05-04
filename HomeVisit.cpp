@@ -2,31 +2,31 @@
 
 HomeVisit::HomeVisit()
 {
-	home_address = "auc";
-	symptoms = "unknown";
+	this->homeAddress = "auc";
+	this->symptoms = "unknown";
 }
-HomeVisit::HomeVisit(QString HA, QString S)
+HomeVisit::HomeVisit(QString p_homeAddress, QString p_symptoms)
 {
-	home_address = HA;
-	symptoms = S;
+	this->homeAddress = p_homeAddress;
+	this->symptoms = p_symptoms;
 }
-QString HomeVisit::gethome_address()
+QString HomeVisit::getHomeAddress()
 {
-	return home_address;
+	return this->homeAddress;
 }
-QString HomeVisit::getsymptoms()
+QString HomeVisit::getSymptoms()
 {
-	return symptoms;
+	return this->symptoms;
 }
-void HomeVisit::sethome_address(QString HA)
+void HomeVisit::setHomeAddress(QString p_homeAddress)
 {
-	home_address = HA;
+	this->homeAddress = p_homeAddress;
 }
-void HomeVisit::setsymptoms(QString S)
+void HomeVisit::setSymptoms(QString p_symptoms)
 {
-	symptoms = S;
+	this->symptoms = p_symptoms;
 }
-QString HomeVisit::request_doctor()
+QString HomeVisit::requestDoctor()
 {
 	//////////////////////////////////
 	return "";

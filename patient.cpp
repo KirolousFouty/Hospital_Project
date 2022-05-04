@@ -2,103 +2,105 @@
 
 Patient::Patient() // default constructor
 {
-	medical_history = "unknown";
-	points = 0;
-	patientID = 900211928;
-	age = 18;
-	gender = "female";
-	bloodType = "A+";
-	allergies = "none";
-	insured = false;
+	this->medical_history = "unknown";
+	this->points = 0;
+	this->patientID = 900211928;
+	this->age = 18;
+	this->gender = "female";
+	this->bloodType = "A+";
+	this->allergies = "none";
+	this->insured = false;
 }
-Patient::Patient(QString MH, int P, int PID, int A, QString G, QString BT, QString All, bool INS) // parameterized constructor
+Patient::Patient(QString p_medicalHistory, int p_points, int p_patientID, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured) // parameterized constructor
 {
-	medical_history = MH;
-	points = P;
-	patientID = PID;
-	age = A;
-	gender = G;
-	bloodType = BT;
-	allergies = All;
-	insured = INS;
+	this->medicalHistory = p_medicalHistory;
+	this->points = p_points;
+	this->patientID = p_patientID;
+	this->age = p_age;
+	this->gender = p_gender;
+	this->bloodType = p_bloodType;
+	this->allergies = p_allergies;
+	this->insured = p_insured;
 }
 
 QString Patient::getName()
 {
-	return name;
+	return this->name;
 }
 
 QString Patient::getMedicalHistory()
 {
-	return medical_history;
+	return this->medical_history;
 }
 int Patient::getPoints()
 {
-	return points;
+	return this->points;
 }
 int Patient::getpatientID()
 {
-	return patientID;
+	return this->patientID;
 }
 int Patient::getAge()
 {
-	return age;
+	return this->age;
 }
 QString Patient::getGender()
 {
-	return gender;
+	return this->gender;
 }
 QString Patient::getBloodType()
 {
-	return bloodType;
+	return this->bloodType;
 }
 QString Patient::getAllergies()
 {
-	return allergies;
+	return this->allergies;
 }
 bool Patient::getInsured()
 {
-	return insured;
+	return this->insured;
 }
-void Patient::setMedicalHistory(QString MH)
+void Patient::setMedicalHistory(QString p_medicalHistory)
 {
-	medical_history = MH;
+	this->medical_history = p_medicalHistory;
 }
-void Patient::setPoints(int P)
+void Patient::setPoints(int p_points)
 {
-	points = P;
+	this->points = p_points;
 }
-void Patient::setpatientID(int PID)
+void Patient::setpatientID(int p_patientID)
 {
-	patientID = PID;
+	this->patientID = p_patientID;
 }
-void Patient::setAge(int A)
+void Patient::setAge(int p_age)
 {
-	age = A;
+	this->age = p_age;
 }
-void Patient::setGender(QString G)
+void Patient::setGender(QString p_gender)
 {
-	gender = G;
+	this->gender = p_gender;
 }
-void Patient::setBloodType(QString BT)
+void Patient::setBloodType(QString p_bloodType)
 {
-	bloodType = BT;
+	this->bloodType = p_bloodType;
 }
-void Patient::setAllergies(QString All)
+void Patient::setAllergies(QString p_allergies)
 {
-	allergies = All;
+	this->allergies = p_allergies;
 }
-void Patient::setInsured(bool INS)
+void Patient::setInsured(bool p_insured)
 {
-	insured = INS;
+	this->insured = p_insured;
 }
 void Patient::update_history()
 {
+	/////////////////////////////////////////
 }
 void Patient::patient_request()
 {
+	/////////////////////////////////////////
 }
-QString Patient::searchForDoctor(QString specialization)
+QString Patient::searchForDoctor(QString p_specialization)
 {
 	/////////////////////////////////////////
 	return "";
@@ -108,9 +110,11 @@ bool Patient::getInsuranceApproval()
 	//////////////////////////////////////////
 	return true;
 }
-long Patient::cancelReservation(int reservationID) // How does cancel reservation return long?
+long Patient::cancelReservation(int p_reservationID) // How does cancel reservation return long?
 {
 	///////////////////////////////////////////
 	return 0;
 }
+
 // MISSING: getshortestpath
+////////////////////////////////////////////////

@@ -9,15 +9,15 @@ using namespace std;
 class Pharmacy
 {
 private:
-    QString assigned_medicine_from_doctor;
+    QString assignedMedicineFromDoctor;
 
 public:
     Pharmacy();
-    Pharmacy(QString M);
+    Pharmacy(QString p_assignedMedicineFromDoctor);
 
-    void setMed(QString M);
+    void setMed(QString p_assignedMedicineFromDoctor);
     QString getMed();
-    QString getMedicine_fromDoctor();
+    QString getMedicineFromDoctor();
 };
 
 #endif

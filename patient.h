@@ -24,7 +24,7 @@ protected:
 
 public:
 	Patient();
-	Patient(QString MH, int P, int PID, int A, QString G, QString BT, QString All, bool INS);
+	Patient(QString p_medicalHistory, int p_points, int p_patientID, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured);
 
 	QString getName();
 	QString getMedicalHistory();
@@ -36,23 +36,23 @@ public:
 	QString getAllergies();
 	bool getInsured();
 
-	void setMedicalHistory(QString MH);
-	void setPoints(int P);
-	void setpatientID(int PID);
-	void setAge(int A);
-	void setGender(QString G);
-	void setBloodType(QString BT);
-	void setAllergies(QString All);
-	void setInsured(bool INS);
+	void setMedicalHistory(QString p_medicalHistory);
+	void setPoints(int p_points);
+	void setpatientID(int p_patientID);
+	void setAge(int p_age);
+	void setGender(QString p_gender);
+	void setBloodType(QString p_bloodType);
+	void setAllergies(QString p_allergies);
+	void setInsured(bool p_insured);
 
 	void update_history();
 	void patient_request();
-	QString searchForDoctor(QString specialization);
+	QString searchForDoctor(QString p_specialization);
 	// dateTime : DateAndTime) ma3rash meen 3amel deeh
 	bool getInsuranceApproval();
-	long cancelReservation(int reservationID); // How does cancel reservation return long?
-											   // getShortestPath(pos:pair<double, double>;
-											   // vector<double, double>:: getShortestPath;
+	long cancelReservation(int p_reservationID); // How does cancel reservation return long?
+												 // getShortestPath(pos:pair<double, double>;
+												 // vector<double, double>:: getShortestPath;
 };
 
 #endif // !patient_H

@@ -2,78 +2,78 @@
 
 Room::Room()
 {
-    room_number = 0;
-    floor = 0;
-    room_type = "VIP";
+    this->roomNumber = 0;
+    this->floor = 0;
+    this->roomType = "VIP";
 }
 
-Room::Room(int RN, int F, QString RT)
+Room::Room(int p_roomNumber, int p_floor, QString p_roomType)
 {
-    room_number = RN;
-    floor = F;
-    room_type = RT;
+    this->roomNumber = p_roomNumber;
+    this->floor = p_floor;
+    this->roomType = p_roomType;
 }
 
-int Room::getroom_number()
+int Room::getRoomNumber()
 {
-    return room_number;
+    return this->roomNumber;
 }
 
-int Room::getfloor()
+int Room::getFloor()
 {
-    return floor;
+    return this->floor;
 }
 
-QString Room::getroom_type()
+QString Room::getRoomType()
 {
-    return room_type;
+    return this->roomType;
 }
 
-void Room::setroom_number(int RN)
+void Room::setRoomNumber(int p_roomNumber)
 {
-    room_number = RN;
+    this->roomNumber = p_roomNumber;
 }
 
-void Room::setfloor(int F)
+void Room::setFloor(int p_floor)
 {
-    floor = F;
+    this->floor = p_floor;
 }
 
-void Room::setroom_type(QString RT)
+void Room::setRoomType(QString p_roomType)
 {
-    room_type = RT;
+    this->roomType = p_roomType;
 }
 
-bool Room::check_availability()
+bool Room::checkAvailability()
 {
-//    if (getroom_number() == room_number[i])
+    //    if (getroom_number() == room_number[i])
     {
-//        ui->label->setText("this room is available");
+        //        ui->label->setText("this room is available");
         return true;
     }
-//    else
+    //    else
     {
-//        ui->label->setText("this room is not available");
+        //        ui->label->setText("this room is not available");
         return false;
     }
 }
 
-QString Room::book_room()
+QString Room::bookRoom()
 {
-    if (check_availability() == true)
+    if (checkAvailability() == true)
         return "booked";
     else
         return "booking unsuccessful";
 }
 
-/*int Room::remaining_rooms()
+/*int Room::remainingRooms()
 {
     ////////////////////////////////
     return 0;
 }
 
 */
-/*int Room::booked_rooms()
+/*int Room::bookedRooms()
 {
     ////////////////////////////////
     return 0;

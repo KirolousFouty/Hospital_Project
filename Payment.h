@@ -8,21 +8,21 @@ using namespace std;
 class Payment
 {
 protected:
-    QString payment_choice;
-    float invoice_for_insured;
+    QString paymentChoice;
+    float invoiceForInsured;
+
 public:
     Payment();
-    Payment(QString PC, float IFI);
+    Payment(QString p_paymentChoice, float p_invoiceForInsured);
 
-    QString getpayment_choice();
-    float getinvoice_for_insured();
+    QString getPaymentChoice();
+    float getInvoiceForInsured();
 
-    void setpayment_choice(QString PC);
-    void setinvoice_for_insured(float IFI);
+    void setPaymentChoice(QString p_paymentChoice);
+    void setInvoiceForInsured(float p_invoiceForInsured);
 
-    float send_invoice();
-    double calculate_amount();
-    int calculate_new_points();
-    
+    float sendInvoice();
+    double calculateAmount();
+    int calculateNewPoints();
 };
 #endif

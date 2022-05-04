@@ -1,41 +1,41 @@
 #include "Payment.h"
 Payment::Payment()
 {
-    payment_choice = "cash";
-    invoice_for_insured = 0.0;
+    this->paymentChoice = "cash";
+    this->invoiceForInsured = 0.0;
 }
-Payment::Payment(QString PC, float IFI)
+Payment::Payment(QString p_paymentChoice, float p_invoiceForInsured)
 {
-    payment_choice = PC;
-    invoice_for_insured = IFI;
+    this->paymentChoice = p_paymentChoice;
+    this->invoiceForInsured = p_invoiceForInsured;
 }
-QString Payment::getpayment_choice()
+QString Payment::getPaymentChoice()
 {
-    return payment_choice;
+    return this->paymentChoice;
 }
-float Payment::getinvoice_for_insured()
+float Payment::getInvoiceForInsured()
 {
-    return invoice_for_insured;
+    return this->invoiceForInsured;
 }
-void Payment ::setpayment_choice(QString PC)
+void Payment ::setPaymentChoice(QString p_paymentChoice)
 {
-    payment_choice = PC;
+    this->paymentChoice = p_paymentChoice;
 }
-void Payment::setinvoice_for_insured(float IFI)
+void Payment::setInvoiceForInsured(float p_invoiceForInsured)
 {
-    invoice_for_insured = IFI;
+    this->invoiceForInsured = p_invoiceForInsured;
 }
-float Payment::send_invoice()
-{
-    ///////////////////////////////
-    return 0.0;
-}
-double Payment::calculate_amount()
+float Payment::sendInvoice()
 {
     ///////////////////////////////
     return 0.0;
 }
-int Payment::calculate_new_points()
+double Payment::calculateAmount()
+{
+    ///////////////////////////////
+    return 0.0;
+}
+int Payment::calculateNewPoints()
 {
     ////////////////////////////////////
     return 0;

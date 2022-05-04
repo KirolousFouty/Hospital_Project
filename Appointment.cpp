@@ -8,17 +8,16 @@ Appointment::Appointment()
     // this->dt = dateTime;
 }
 
-Appointment::Appointment(Patient *p, Doctor *d, DateAndTime dateTime)
+Appointment::Appointment(Patient *p_patientName, Doctor *p_doctorName, DateAndTime p_dt)
 {
-    this->patientName = p->getName();
-//    this->doctorName = d.getName();
-//    this->fees = d->getFees();
-    // this->dt = dateTime;
+    this->patientName = p_patientName->getName();
+    //    this->doctorName = p_doctorName->getName();
+    //    this->fees = d->getFees();
+    //    this->dt = p_dt;
 }
 
-
-QString Appointment::showAppointment(){
-
+QString Appointment::showAppointment()
+{
+    ///////////////////////////////////////////////
     return "Appointment #1";
-
 }

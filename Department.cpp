@@ -5,9 +5,9 @@ Department::Department()
     this->departmentType = "cardio";
 }
 
-Department::Department(QString DT)
+Department::Department(QString p_departmentType)
 {
-    this->departmentType = DT;
+    this->departmentType = p_departmentType;
 }
 
 QString Department::getDepartmentType()
@@ -15,18 +15,17 @@ QString Department::getDepartmentType()
     return this->departmentType;
 }
 
-void Department::setDepartmentType(QString DT)
+void Department::setDepartmentType(QString p_departmentType)
 {
-    this->departmentType = DT;
+    this->departmentType = p_departmentType;
 }
 
-QString Department::assign_doctor()
+QString Department::assignDoctor()
 {
-    // for(int i=0; i<3; i++)
-    //{
+
     if (this->departmentType == "cardiology")
         return "Ahmad";
-    //}
+
     if (this->departmentType == "dermaotology")
         return "Ayman";
 
@@ -34,7 +33,7 @@ QString Department::assign_doctor()
         return "Adam";
 }
 
-QString Department::assign_room()
+QString Department::assignRoom()
 {
     //////////////////////////////////////////
     return "";

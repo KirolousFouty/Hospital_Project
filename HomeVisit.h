@@ -10,21 +10,21 @@ using namespace std;
 class HomeVisit : public Patient
 {
 private:
-	QString home_address;
+	QString homeAddress;
 	// date_and_time dateandtime;
 	QString symptoms;
 
 public:
 	HomeVisit();
-	HomeVisit(QString HA, QString S);
+	HomeVisit(QString p_homeAddress, QString p_symptoms);
 
-	QString gethome_address();
-	QString getsymptoms();
+	QString getHomeAddress();
+	QString getSymptoms();
 
-	void sethome_address(QString HA);
-	void setsymptoms(QString S);
+	void setHomeAddress(QString p_homeAddress);
+	void setSymptoms(QString p_symptoms);
 
-	QString request_doctor();
+	QString requestDoctor();
 };
 
 #endif

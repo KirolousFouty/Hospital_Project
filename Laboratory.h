@@ -9,12 +9,12 @@ using namespace std;
 class Laboratory
 {
 private:
-    QString type_of_test;
+    QString typeOfTest;
 
 public:
     Laboratory();
-    Laboratory(QString T);
-    void setTest(QString T);
+    Laboratory(QString p_typeOfTest);
+    void setTest(QString p_typeOfTest);
     QString getTest();
 
     QString test_results();
