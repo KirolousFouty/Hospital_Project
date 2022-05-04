@@ -53,11 +53,7 @@ void Doctor::setearliestdate(DateAndTime ED)
 }
 double Doctor::showrating()
 {
-<<<<<<< HEAD
     // ui->display->SetText("Rating: " + rating);
-=======
-    //ui->label->SetText("Rating: " + rating);
->>>>>>> 31f0f0881cd7ee37f5c6ae6dc590de6ccc56bfd3
     return 0;
 }
 void Doctor::set_appointment(Patient p)
