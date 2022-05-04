@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BookAppointmentWindow</class>
+ <widget class="QDialog" name="BookAppointmentWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1005</width>
+    <height>601</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLineEdit" name="appointmentTitle">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>40</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Appointment</string>
+   </property>
+   <property name="frame">
+    <bool>false</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="doctorsComboBox">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>250</y>
+     <width>171</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="selectDoctorButton">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>250</y>
+     <width>83</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirmAppointmentButton">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>410</y>
+     <width>251</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Confirm Appointment</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="departmentsComboBox">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>190</y>
+     <width>171</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="selectDepartmentTitle">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>190</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select Department:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="selectDoctorTitle">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>250</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select Doctor:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="selectDepartmentButton">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>190</y>
+     <width>83</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

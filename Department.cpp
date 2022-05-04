@@ -30,7 +30,7 @@ QString Department::assign_doctor()
     if (this->departmentType == "dermaotology")
         return "Ayman";
 
-    if (this->department_typr == "neurology")
+    if (this->departmentType == "neurology")
         return "Adam";
 }
 

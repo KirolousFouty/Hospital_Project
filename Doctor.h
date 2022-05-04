@@ -4,13 +4,14 @@
 #include <iostream>
 #include <QString>
 #include "DateAndTime.h"
+#include "Patient.h"
 
 using namespace std;
 class Doctor
 {
-protected:
-    int id[3] = {1, 2, 3};
-    QByteArray name[3] = {"Ahmed", "Adam", "Ayman"};
+public:
+//     int id[3] = {1, 2, 3};
+//     QByteArray name[3] = {"Ahmed", "Adam", "Ayman"};
 
 private:
     double rating;
@@ -18,18 +19,27 @@ private:
 
 public:
     Doctor();
-    Doctor(int ID, double R, DateAndTime ED);
+    Doctor(QString p_name,  int p_id, double p_rating, QString p_department);
+    Doctor(QString p_name,  int p_id, double p_rating, DateAndTime p_earliestDate);
 
-    int getid();
+    QString name;
+    int id;
+    QString department;
+
+    QString getName();
+    int getId();
     double getrating();
     DateAndTime getearliestdate();
+    QString getDepartment();
 
     void setid(int ID);
     void setrating(double R);
     void setearliestdate(DateAndTime ED);
 
     double showrating();
-    void set_appointment();
+    void set_appointment(Patient p);
+
+
     // void examine();
     void requestBloodTest();
 };

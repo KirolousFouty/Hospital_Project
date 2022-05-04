@@ -9,15 +9,22 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Appointment.cpp \
     DateAndTime.cpp \
     Department.cpp \
     Doctor.cpp \
+    Drugs.cpp \
     EmergencyRoom.cpp \
     EmergencyVisit.cpp \
     HomeVisit.cpp \
+    Laboratory.cpp \
+    MedicalTools.cpp \
     OutpatientClinic.cpp \
+    Payment.cpp \
+    Pharmacy.cpp \
     Room.cpp \
     UserLogin.cpp \
+    bookappointmentwindow.cpp \
     main.cpp \
     mainwindow.cpp \
     patient.cpp \
@@ -25,21 +32,29 @@ SOURCES += \
     userloginwindow.cpp
 
 HEADERS += \
+    Appointment.h \
     DateAndTime.h \
     Department.h \
     Doctor.h \
+    Drugs.h \
     EmergencyRoom.h \
     EmergencyVisit.h \
     HomeVisit.h \
+    Laboratory.h \
+    MedicalTools.h \
     OutpatientClinic.h \
+    Payment.h \
+    Pharmacy.h \
     Room.h \
     UserLogin.h \
+    bookappointmentwindow.h \
     mainwindow.h \
     patient.h \
     showpatientinformation.h \
     userloginwindow.h
 
 FORMS += \
+    bookappointmentwindow.ui \
     mainwindow.ui \
     showpatientinformation.ui \
     userloginwindow.ui

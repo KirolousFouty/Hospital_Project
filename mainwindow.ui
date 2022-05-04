@@ -128,6 +128,45 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="bookAppointmentButton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>240</y>
+      <width>291</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Book Appointment</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="showAppointmentsButton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>290</y>
+      <width>291</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Show Appointments</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="appointmentsTitle">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>290</y>
+      <width>161</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>No Appointments</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

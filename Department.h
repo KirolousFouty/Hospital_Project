@@ -9,7 +9,8 @@
 
 using namespace std;
 
-class Department : public DateAndTime :public Doctor
+// class Department : public DateAndTime : public Doctor
+class Department
 {
 protected:
     QString departmentType;

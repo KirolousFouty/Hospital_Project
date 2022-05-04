@@ -293,7 +293,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLineEdit" name="userLoginTitle">
+  <widget class="QLineEdit" name="patientInformationTitle">
    <property name="geometry">
     <rect>
      <x>100</x>

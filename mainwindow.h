@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "userloginwindow.h"
 #include "showpatientinformation.h"
+#include "bookappointmentwindow.h"
 
 #include "DateAndTime.h"
 #include "UserLogin.h"
@@ -15,6 +16,14 @@
 #include "Doctor.h"
 #include "Patient.h"
 #include "OutpatientClinic.h"
+#include "Appointment.h"
+
+#include <iostream>
+#include <QVector>
+#include <map>
+#include <algorithm>
+
+using namespace std;
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -30,6 +39,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    BookAppointmentWindow bookappointmentwin;
 
 private slots:
     void on_startButton_clicked();
@@ -38,7 +48,12 @@ private slots:
 
     void on_showPatientInformationButton_clicked();
 
+    void on_bookAppointmentButton_clicked();
+
+    void on_showAppointmentsButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+
 };
 #endif // MAINWINDOW_H
