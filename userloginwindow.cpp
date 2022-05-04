@@ -11,3 +11,11 @@ UserLoginWindow::~UserLoginWindow()
 {
     delete ui;
 }
+
+void UserLoginWindow::on_registerButton_clicked()
+{
+    UserRegisterWindow userRegWin;
+    userRegWin.setModal(true);
+    userRegWin.exec();
+}
+

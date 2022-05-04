@@ -109,6 +109,19 @@
     <string>Login</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="registerButton">
+   <property name="geometry">
+    <rect>
+     <x>142</x>
+     <y>260</y>
+     <width>91</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Register</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

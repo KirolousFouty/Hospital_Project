@@ -116,9 +116,37 @@ long Patient::cancelReservation(int p_reservationID) // How does cancel reservat
 	return 0;
 }
 
+bool Patient::reg()
+{
+	if (usersMap.count(this->getName()) == 0)
+	{
+		Patient temp;
+
+        // temp.name = ;							// QT
+		// temp.username;
+		// temp.password;
+		// temp.loggedIn;
+		// temp.points;
+		// temp.patientID;
+		// temp.age;
+		// temp.gender;
+		// temp.bloodType;
+		// temp.allergies;
+		// temp.insured;
+		// temp.medicalHistory;
+
+		usersMap.insert(pair<QString, Patient>(temp.getUsername(), temp));
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
 int Patient::login(QString p_username, QString p_password)
 {
-	if (usersMap.find(p_username) != usersMap.end() && usersMap[p_username] == p_password)
+	if (usersMap.find(p_username) != usersMap.end() && usersMap[p_username].getPassword() == p_password)
 	{
 		this->loggedIn = true;
 		return 0; // if username and password are correct.
@@ -126,7 +154,7 @@ int Patient::login(QString p_username, QString p_password)
 	else
 	{
 		this->loggedIn = false;
-        if (usersMap.find(p_username) != usersMap.end() && usersMap[p_username] != p_password)
+		if (usersMap.find(p_username) != usersMap.end() && usersMap[p_username].getPassword() != p_password)
 		{
 			return 1; // if username is correct, and the password is incorrect.
 		}
@@ -134,7 +162,7 @@ int Patient::login(QString p_username, QString p_password)
 		{
 			return 2; // if username does not exist.
 		}
-    }
+	}
 }
 
 QString Patient::getUsername()

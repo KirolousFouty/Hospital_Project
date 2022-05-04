@@ -28,7 +28,7 @@ private:
 
 public:
 
-    map<QString, QString> usersMap;
+    map<QString, Patient> usersMap;
 
 	Patient();
 	Patient(QString p_medicalHistory, int p_points, int p_patientID, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured);
@@ -52,7 +52,9 @@ public:
 	void setAllergies(QString p_allergies);
 	void setInsured(bool p_insured);
 
+	bool reg();
 	int login(QString p_username, QString p_password);
+
 	QString getUsername();
 	QString getPassword();
 	void setUsername(QString p_username);

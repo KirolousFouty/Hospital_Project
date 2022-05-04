@@ -20,6 +20,7 @@ SOURCES += \
     Laboratory.cpp \
     MedicalTools.cpp \
     OutpatientClinic.cpp \
+    Patient.cpp \
     Payment.cpp \
     Pharmacy.cpp \
     Room.cpp \
@@ -27,7 +28,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     showpatientinformation.cpp \
-    userloginwindow.cpp
+    userloginwindow.cpp \
+    userregisterwindow.cpp
 
 HEADERS += \
     Appointment.h \
@@ -41,19 +43,22 @@ HEADERS += \
     Laboratory.h \
     MedicalTools.h \
     OutpatientClinic.h \
+    Patient.h \
     Payment.h \
     Pharmacy.h \
     Room.h \
     bookappointmentwindow.h \
     mainwindow.h \
     showpatientinformation.h \
-    userloginwindow.h
+    userloginwindow.h \
+    userregisterwindow.h
 
 FORMS += \
     bookappointmentwindow.ui \
     mainwindow.ui \
     showpatientinformation.ui \
-    userloginwindow.ui
+    userloginwindow.ui \
+    userregisterwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
