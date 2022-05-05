@@ -7,7 +7,6 @@ UserRegisterWindow::UserRegisterWindow(QWidget *parent) : QDialog(parent),
                                                           ui(new Ui::UserRegisterWindow)
 {
     ui->setupUi(this);
-    p = new Patient;
 
 }
 
@@ -19,7 +18,7 @@ UserRegisterWindow::~UserRegisterWindow()
 void UserRegisterWindow::on_registerButton_clicked()
 {
 
-    if (p->reg(ui->nameDisplay->text(), ui->usernameDisplay->text(), ui->passwordDisplay->text(), ui->ageDisplay->text().toInt(), ui->genderComboBox->currentText(), ui->bloodTypeComboBox->currentText(), ui->allergiesDisplay->text(), ui->insuredYesRadioButton->isChecked(), ui->medicalHistoryDisplay->text()))
+    if (this->p->reg(ui->nameDisplay->text(), ui->usernameDisplay->text(), ui->passwordDisplay->text(), ui->ageDisplay->text().toInt(), ui->genderComboBox->currentText(), ui->bloodTypeComboBox->currentText(), ui->allergiesDisplay->text(), ui->insuredYesRadioButton->isChecked(), ui->medicalHistoryDisplay->text()))
     {
         ui->registrationStatusTitle->setText("Registration Status: Registered successfully!");
     }
@@ -27,7 +26,6 @@ void UserRegisterWindow::on_registerButton_clicked()
     {
         ui->registrationStatusTitle->setText("Registration Status: Registered failed!");
     }
-
 }
 
 void UserRegisterWindow::on_backButton_clicked()

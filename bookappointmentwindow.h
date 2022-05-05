@@ -2,7 +2,10 @@
 #define BOOKAPPOINTMENTWINDOW_H
 
 #include <QDialog>
+#include <QVector>
+#include <QVector>
 #include "Appointment.h"
+#include "Doctor.h"
 
 namespace Ui {
 class BookAppointmentWindow;
@@ -16,6 +19,8 @@ public:
     explicit BookAppointmentWindow(QWidget *parent = nullptr);
     ~BookAppointmentWindow();
     QVector<Appointment> appointmentsLog;
+    QVector<Doctor> *arrDoc;
+
 
 private slots:
     void on_confirmAppointmentButton_clicked();

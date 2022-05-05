@@ -23,20 +23,20 @@ Doctor::Doctor(QString p_name, int p_id, double p_rating, DateAndTime p_earliest
     this->earliestDate = p_earliestDate;
 }
 
-QString Doctor::getName()
+QString Doctor::getName() const
 {
     return this->name;
 }
 
-int Doctor::getId()
+int Doctor::getId() const
 {
     return this->id;
 }
-double Doctor::getRating()
+double Doctor::getRating() const
 {
     return this->rating;
 }
-DateAndTime Doctor::getEarliestDate()
+DateAndTime Doctor::getEarliestDate() const
 {
     return this->earliestDate;
 }
@@ -73,7 +73,7 @@ void Doctor::requestBloodTest()
     BloodTest.test_results();
 }
 
-QString Doctor::getDepartment()
+QString Doctor::getDepartment() const
 {
     return this->department;
 }

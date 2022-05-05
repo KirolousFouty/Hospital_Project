@@ -25,6 +25,8 @@ SOURCES += \
     Pharmacy.cpp \
     Room.cpp \
     bookappointmentwindow.cpp \
+    bookemergencyvisitwindow.cpp \
+    bookroomwindow.cpp \
     main.cpp \
     mainwindow.cpp \
     showpatientinformation.cpp \
@@ -48,6 +50,8 @@ HEADERS += \
     Pharmacy.h \
     Room.h \
     bookappointmentwindow.h \
+    bookemergencyvisitwindow.h \
+    bookroomwindow.h \
     mainwindow.h \
     showpatientinformation.h \
     userloginwindow.h \
@@ -55,6 +59,8 @@ HEADERS += \
 
 FORMS += \
     bookappointmentwindow.ui \
+    bookemergencyvisitwindow.ui \
+    bookroomwindow.ui \
     mainwindow.ui \
     showpatientinformation.ui \
     userloginwindow.ui \

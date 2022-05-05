@@ -5,6 +5,7 @@
 #include "userregisterwindow.h"
 #include <QDialog>
 #include <map>
+#include <QVector>
 
 namespace Ui
 {
@@ -18,7 +19,8 @@ class UserLoginWindow : public QDialog
 public:
     explicit UserLoginWindow(QWidget *parent = nullptr);
     ~UserLoginWindow();
-    Patient *p;
+    Patient *p = new Patient;
+    QVector<Doctor> *arrDoc;
 
 private slots:
     void on_registerButton_clicked();

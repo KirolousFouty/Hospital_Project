@@ -2,16 +2,16 @@
 #define USERREGISTERWINDOW_H
 
 #include "Patient.h"
+#include "Doctor.h"
 #include <QDialog>
 #include <QCloseEvent>
 #include <map>
-
+#include <QVector>
 
 namespace Ui
 {
     class UserRegisterWindow;
 }
-
 
 class UserRegisterWindow : public QDialog
 {
@@ -20,7 +20,8 @@ class UserRegisterWindow : public QDialog
 public:
     explicit UserRegisterWindow(QWidget *parent = nullptr);
     ~UserRegisterWindow();
-    Patient *p;
+    Patient *p = new Patient;
+    QVector<Doctor> *arrDoc;
 
 private slots:
     void on_registerButton_clicked();

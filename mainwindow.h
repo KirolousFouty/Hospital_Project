@@ -6,6 +6,7 @@
 #include "userloginwindow.h"
 #include "showpatientinformation.h"
 #include "bookappointmentwindow.h"
+#include "bookroomwindow.h"
 
 #include "DateAndTime.h"
 #include "HomeVisit.h"
@@ -15,7 +16,6 @@
 #include "Department.h"
 #include "Doctor.h"
 #include "Patient.h"
-//#include "userMapInclude.h"
 #include "OutpatientClinic.h"
 #include "Appointment.h"
 
@@ -43,7 +43,7 @@ public:
     ~MainWindow();
     BookAppointmentWindow bookappointmentwin;
     Patient *p;
-
+    QVector<Doctor> *arrDoc;
 
 private slots:
     void on_startButton_clicked();
@@ -55,6 +55,8 @@ private slots:
     void on_bookAppointmentButton_clicked();
 
     void on_showAppointmentsButton_clicked();
+
+    void on_bookRoomButton_clicked();
 
 private:
     Ui::MainWindow *ui;

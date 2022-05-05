@@ -1,7 +1,6 @@
 #include "userloginwindow.h"
 #include "ui_userloginwindow.h"
 
-
 UserLoginWindow::UserLoginWindow(QWidget *parent) : QDialog(parent),
                                                     ui(new Ui::UserLoginWindow)
 {
@@ -17,10 +16,9 @@ void UserLoginWindow::on_registerButton_clicked()
 {
     UserRegisterWindow userRegWin;
     userRegWin.setModal(true);
+    userRegWin.arrDoc = this->arrDoc;
+    userRegWin.p = this->p;
     userRegWin.exec();
-
-    this->p = userRegWin.p;
-
 }
 
 void UserLoginWindow::on_loginButton_clicked()
@@ -31,8 +29,6 @@ void UserLoginWindow::on_loginButton_clicked()
         ui->loginStatusTitle->setText("Login Status: Please fill in all fields.");
         return;
     }
-
-
 
     switch (p->login(ui->usernameDisplay->text(), ui->passwordDisplay->text()))
     {

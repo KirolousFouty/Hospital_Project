@@ -71,7 +71,7 @@ public:
 	bool getInsuranceApproval();
 	long cancelReservation(int p_reservationID); // How does cancel reservation return long?
 												 // getShortestPath(pos:pair<double, double>;
-												 // vector<double, double>:: getShortestPath;
+												 // QVector<double, double>:: getShortestPath;
 
 	void operator=(const Patient &c);
 };

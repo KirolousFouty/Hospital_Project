@@ -22,11 +22,11 @@ public:
     int id;
     QString department;
 
-    QString getName();
-    int getId();
-    double getRating();
-    DateAndTime getEarliestDate();
-    QString getDepartment();
+    QString getName() const;
+    int getId() const;
+    double getRating() const;
+    DateAndTime getEarliestDate() const;
+    QString getDepartment() const;
 
     void setId(int p_id);
     void setRating(double p_rating);
