@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
@@ -22,6 +25,8 @@ void MainWindow::on_loginButton_clicked()
     UserLoginWindow userloginwin;
     userloginwin.setModal(true);
     userloginwin.exec();
+
+    this->p = userloginwin.p;
 }
 
 void MainWindow::on_showPatientInformationButton_clicked()
@@ -33,7 +38,7 @@ void MainWindow::on_showPatientInformationButton_clicked()
 
 void MainWindow::on_bookAppointmentButton_clicked()
 {
-    //    BookAppointmentWindow bookappointmentwin;
+    BookAppointmentWindow bookappointmentwin;
     bookappointmentwin.setModal(true);
     bookappointmentwin.exec();
 }

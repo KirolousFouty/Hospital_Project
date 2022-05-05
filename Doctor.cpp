@@ -42,7 +42,7 @@ DateAndTime Doctor::getEarliestDate()
 }
 void Doctor::setId(int p_id)
 {
-    // id = p_id;
+    id = p_id;
 }
 void Doctor::setRating(double p_rating)
 {

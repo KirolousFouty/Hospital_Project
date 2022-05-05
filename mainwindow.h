@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+//#include "userregisterwindow.h"
 #include "userloginwindow.h"
 #include "showpatientinformation.h"
 #include "bookappointmentwindow.h"
@@ -14,6 +15,7 @@
 #include "Department.h"
 #include "Doctor.h"
 #include "Patient.h"
+//#include "userMapInclude.h"
 #include "OutpatientClinic.h"
 #include "Appointment.h"
 
@@ -23,6 +25,7 @@
 #include <algorithm>
 
 using namespace std;
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -39,6 +42,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     BookAppointmentWindow bookappointmentwin;
+    Patient *p;
+
 
 private slots:
     void on_startButton_clicked();
@@ -53,6 +58,5 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-
 };
 #endif // MAINWINDOW_H

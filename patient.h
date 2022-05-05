@@ -1,13 +1,13 @@
 #ifndef PATIENT_H
 #define PATIENT_H
 
+
 #include <iostream>
 #include <QString>
 #include <map>
 
+
 using namespace std;
-
-
 
 class Patient
 {
@@ -28,12 +28,13 @@ private:
 
 public:
 
-    map<QString, Patient> usersMap;
 
 	Patient();
 	Patient(QString p_medicalHistory, int p_points, int p_patientID, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured);
 
-	QString getName();
+    map<QString, Patient> userMap;
+
+    QString getName();
 	QString getMedicalHistory();
 	int getPoints();
 	int getpatientID();
@@ -42,6 +43,7 @@ public:
 	QString getBloodType();
 	QString getAllergies();
 	bool getInsured();
+	bool getLoggedIn();
 
 	void setMedicalHistory(QString p_medicalHistory);
 	void setPoints(int p_points);
@@ -51,9 +53,10 @@ public:
 	void setBloodType(QString p_bloodType);
 	void setAllergies(QString p_allergies);
 	void setInsured(bool p_insured);
+	void setLoggedIn(bool p_loggedIn);
 
-	bool reg();
-	int login(QString p_username, QString p_password);
+	bool reg(QString p_name, QString p_username, QString p_password, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured, QString p_medicalHistory);
+    int login(QString p_username, QString p_password);
 
 	QString getUsername();
 	QString getPassword();
@@ -69,6 +72,8 @@ public:
 	long cancelReservation(int p_reservationID); // How does cancel reservation return long?
 												 // getShortestPath(pos:pair<double, double>;
 												 // vector<double, double>:: getShortestPath;
+
+	void operator=(const Patient &c);
 };
 
 #endif // !patient_H

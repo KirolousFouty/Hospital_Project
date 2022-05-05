@@ -116,26 +116,31 @@ long Patient::cancelReservation(int p_reservationID) // How does cancel reservat
 	return 0;
 }
 
-bool Patient::reg()
+bool Patient::reg(QString p_name, QString p_username, QString p_password, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured, QString p_medicalHistory)
 {
-	if (usersMap.count(this->getName()) == 0)
+	if (userMap.count(this->getName()) == 0)
 	{
 		Patient temp;
 
-        // temp.name = ;							// QT
-		// temp.username;
-		// temp.password;
-		// temp.loggedIn;
-		// temp.points;
-		// temp.patientID;
-		// temp.age;
-		// temp.gender;
-		// temp.bloodType;
-		// temp.allergies;
-		// temp.insured;
-		// temp.medicalHistory;
+		//                              Validation ///////////////////
+		//                               // Patient ID creation
 
-		usersMap.insert(pair<QString, Patient>(temp.getUsername(), temp));
+		temp.name = p_name;
+		temp.username = p_username;
+		temp.password = p_password;
+		temp.age = p_age;
+		temp.gender = p_gender;
+		temp.bloodType = p_bloodType;
+		temp.allergies = p_allergies;
+		temp.insured = p_insured;
+		temp.medicalHistory = p_medicalHistory;
+		temp.loggedIn = false;
+		temp.points = 0;
+
+		*this = temp;
+
+		this->userMap.insert(pair<QString, Patient>(temp.getUsername(), temp));
+
 		return true;
 	}
 	else
@@ -146,7 +151,8 @@ bool Patient::reg()
 
 int Patient::login(QString p_username, QString p_password)
 {
-	if (usersMap.find(p_username) != usersMap.end() && usersMap[p_username].getPassword() == p_password)
+
+	if (this->userMap.find(p_username) != this->userMap.end() && this->userMap[p_username].getPassword() == p_password)
 	{
 		this->loggedIn = true;
 		return 0; // if username and password are correct.
@@ -154,7 +160,8 @@ int Patient::login(QString p_username, QString p_password)
 	else
 	{
 		this->loggedIn = false;
-		if (usersMap.find(p_username) != usersMap.end() && usersMap[p_username].getPassword() != p_password)
+
+		if (this->userMap.find(p_username) != this->userMap.end() && this->userMap[p_username].getPassword() != p_password)
 		{
 			return 1; // if username is correct, and the password is incorrect.
 		}
@@ -175,6 +182,11 @@ QString Patient::getPassword()
 	return this->password;
 }
 
+bool Patient::getLoggedIn()
+{
+	return this->loggedIn;
+}
+
 void Patient::setUsername(QString p_username)
 {
 	this->username = p_username;
@@ -185,9 +197,29 @@ void Patient::setPassword(QString p_password)
 	this->password = p_password;
 }
 
+void Patient::setLoggedIn(bool p_loggedIn)
+{
+	this->loggedIn = p_loggedIn;
+}
+
 void Patient::userInformationGetter()
 {
 	/////////////////////////////////////
+}
+
+void Patient::operator=(const Patient &c)
+{
+	this->name = c.name;
+	this->username = c.username;
+    this->password = c.password;
+	this->age = c.age;
+	this->gender = c.gender;
+	this->bloodType = c.bloodType;
+	this->allergies = c.allergies;
+	this->insured = c.insured;
+	this->medicalHistory = c.medicalHistory;
+	this->loggedIn = c.loggedIn;
+	this->points = c.points;
 }
 
 // MISSING: getshortestpath

@@ -1,9 +1,10 @@
 #ifndef USERLOGINWINDOW_H
 #define USERLOGINWINDOW_H
 
-#include "patient.h"
+#include "Patient.h"
 #include "userregisterwindow.h"
 #include <QDialog>
+#include <map>
 
 namespace Ui
 {
@@ -17,9 +18,12 @@ class UserLoginWindow : public QDialog
 public:
     explicit UserLoginWindow(QWidget *parent = nullptr);
     ~UserLoginWindow();
+    Patient *p;
 
 private slots:
     void on_registerButton_clicked();
+
+    void on_loginButton_clicked();
 
 private:
     Ui::UserLoginWindow *ui;

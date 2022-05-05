@@ -1,13 +1,17 @@
 #ifndef USERREGISTERWINDOW_H
 #define USERREGISTERWINDOW_H
 
-#include "patient.h"
+#include "Patient.h"
 #include <QDialog>
 #include <QCloseEvent>
+#include <map>
 
-namespace Ui {
-class UserRegisterWindow;
+
+namespace Ui
+{
+    class UserRegisterWindow;
 }
+
 
 class UserRegisterWindow : public QDialog
 {
@@ -16,11 +20,14 @@ class UserRegisterWindow : public QDialog
 public:
     explicit UserRegisterWindow(QWidget *parent = nullptr);
     ~UserRegisterWindow();
+    Patient *p;
 
 private slots:
     void on_registerButton_clicked();
 
     void on_backButton_clicked();
+
+    void on_clearFieldsButton_clicked();
 
 private:
     Ui::UserRegisterWindow *ui;
