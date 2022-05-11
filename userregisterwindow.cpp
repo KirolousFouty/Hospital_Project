@@ -8,6 +8,10 @@ UserRegisterWindow::UserRegisterWindow(QWidget *parent) : QDialog(parent),
 {
     ui->setupUi(this);
 
+    this->p = new Patient;
+    this->appointmentsLog = new QVector<Appointment>;
+    this->arrDoc = new QVector<Doctor>;
+
 }
 
 UserRegisterWindow::~UserRegisterWindow()
@@ -35,6 +39,8 @@ void UserRegisterWindow::on_backButton_clicked()
 
 void UserRegisterWindow::on_clearFieldsButton_clicked()
 {
+
+
 
     ui->nameDisplay->setText("");
     ui->usernameDisplay->setText("");

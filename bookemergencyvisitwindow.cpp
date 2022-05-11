@@ -6,6 +6,10 @@ bookEmergencyVisitWindow::bookEmergencyVisitWindow(QWidget *parent) :
     ui(new Ui::bookEmergencyVisitWindow)
 {
     ui->setupUi(this);
+
+    this->p = new Patient;
+    this->appointmentsLog = new QVector<Appointment>;
+    this->arrDoc = new QVector<Doctor>;
 }
 
 bookEmergencyVisitWindow::~bookEmergencyVisitWindow()

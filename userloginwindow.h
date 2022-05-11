@@ -6,6 +6,7 @@
 #include <QDialog>
 #include <map>
 #include <QVector>
+#include <QLabel>
 
 namespace Ui
 {
@@ -19,13 +20,18 @@ class UserLoginWindow : public QDialog
 public:
     explicit UserLoginWindow(QWidget *parent = nullptr);
     ~UserLoginWindow();
-    Patient *p = new Patient;
+
+    Patient *p;
+    QVector<Appointment> *appointmentsLog;
     QVector<Doctor> *arrDoc;
+    QLabel* p_userLoginTitle;
 
 private slots:
     void on_registerButton_clicked();
 
     void on_loginButton_clicked();
+
+    void on_backButton_clicked();
 
 private:
     Ui::UserLoginWindow *ui;

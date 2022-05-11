@@ -18,7 +18,9 @@ class BookAppointmentWindow : public QDialog
 public:
     explicit BookAppointmentWindow(QWidget *parent = nullptr);
     ~BookAppointmentWindow();
-    QVector<Appointment> appointmentsLog;
+
+    Patient *p;
+    QVector<Appointment> *appointmentsLog;
     QVector<Doctor> *arrDoc;
 
 
@@ -26,6 +28,8 @@ private slots:
     void on_confirmAppointmentButton_clicked();
 
     void on_selectDepartmentButton_clicked();
+
+    void on_selectDoctorButton_clicked();
 
 private:
     Ui::BookAppointmentWindow *ui;

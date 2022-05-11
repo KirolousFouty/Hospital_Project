@@ -19,7 +19,7 @@ public:
     Appointment();
     Appointment(Patient *p_patientName, Doctor *p_doctorName, DateAndTime p_dt);
 
-    QString showAppointment();
+    QString showAppointment() const;
 };
 
 #endif

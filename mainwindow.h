@@ -23,6 +23,7 @@
 #include <QVector>
 #include <map>
 #include <algorithm>
+#include <QLabel>
 
 using namespace std;
 
@@ -41,13 +42,14 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    BookAppointmentWindow bookappointmentwin;
+
     Patient *p;
+    QVector<Appointment> *appointmentsLog;
     QVector<Doctor> *arrDoc;
+    QLabel* p_userLoginTitle;
+
 
 private slots:
-    void on_startButton_clicked();
-
     void on_loginButton_clicked();
 
     void on_showPatientInformationButton_clicked();

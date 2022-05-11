@@ -3,6 +3,8 @@
 
 #include "Patient.h"
 #include "Doctor.h"
+#include "Appointment.h"
+
 #include <QDialog>
 #include <QCloseEvent>
 #include <map>
@@ -20,7 +22,9 @@ class UserRegisterWindow : public QDialog
 public:
     explicit UserRegisterWindow(QWidget *parent = nullptr);
     ~UserRegisterWindow();
-    Patient *p = new Patient;
+
+    Patient *p;
+    QVector<Appointment> *appointmentsLog;
     QVector<Doctor> *arrDoc;
 
 private slots:

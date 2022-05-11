@@ -3,6 +3,9 @@
 
 #include "userregisterwindow.h"
 #include "Patient.h"
+#include "Doctor.h"
+#include "Appointment.h"
+
 #include <QDialog>
 #include <QVector>
 
@@ -17,7 +20,9 @@ class BookRoomWindow : public QDialog
 public:
     explicit BookRoomWindow(QWidget *parent = nullptr);
     ~BookRoomWindow();
-    Patient *p = new Patient;
+
+    Patient *p;
+    QVector<Appointment> *appointmentsLog;
     QVector<Doctor> *arrDoc;
 
 private slots:

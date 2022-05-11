@@ -16,7 +16,7 @@ Appointment::Appointment(Patient *p_patientName, Doctor *p_doctorName, DateAndTi
     //    this->dt = p_dt;
 }
 
-QString Appointment::showAppointment()
+QString Appointment::showAppointment() const
 {
     ///////////////////////////////////////////////
     return "Appointment #1";

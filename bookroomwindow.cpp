@@ -13,6 +13,10 @@ BookRoomWindow::BookRoomWindow(QWidget *parent) :
     ui->departmentsComboBox->addItem("Nutrition");
     ui->departmentsComboBox->addItem("Neurology");
 
+    this->p = new Patient;
+    this->appointmentsLog = new QVector<Appointment>;
+    this->arrDoc = new QVector<Doctor>;
+
 }
 
 BookRoomWindow::~BookRoomWindow()

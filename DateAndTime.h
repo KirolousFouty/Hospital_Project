@@ -18,17 +18,18 @@ public:
     DateAndTime();
     DateAndTime(int H, int Min, int D, int Mon, int Y);
 
-    int getHour();
-    int getMinute();
-    int getDay();
-    int getMonth();
-    int getYear();
+    int getHour() const;
+    int getMinute() const;
+    int getDay() const;
+    int getMonth() const;
+    int getYear() const;
 
     void setHour(int p_hour);
     void setMinute(int p_minute);
     void setDay(int p_day);
     void setMonth(int p_month);
     void setYear(int p_year);
+    bool operator==(const DateAndTime &dt) const;
 };
 
 #endif

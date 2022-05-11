@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <QString>
+#include <QVector>
 #include "DateAndTime.h"
 #include "Patient.h"
 
@@ -37,5 +38,11 @@ public:
 
     // void examine();
     void requestBloodTest();
+    QVector<DateAndTime> timeList;
+    void setAddTimeList(DateAndTime dt);
+    void setRemoveTimeList(DateAndTime dt);
+    QVector<DateAndTime> getTimeList() const;
+    bool operator==(const Doctor &d);
+
 };
 #endif

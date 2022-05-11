@@ -5,6 +5,11 @@ UserLoginWindow::UserLoginWindow(QWidget *parent) : QDialog(parent),
                                                     ui(new Ui::UserLoginWindow)
 {
     ui->setupUi(this);
+
+    this->p = new Patient;
+    this->appointmentsLog = new QVector<Appointment>;
+    this->arrDoc = new QVector<Doctor>;
+    QLabel* p_userLoginTitle = new QLabel;
 }
 
 UserLoginWindow::~UserLoginWindow()
@@ -16,8 +21,11 @@ void UserLoginWindow::on_registerButton_clicked()
 {
     UserRegisterWindow userRegWin;
     userRegWin.setModal(true);
-    userRegWin.arrDoc = this->arrDoc;
+
     userRegWin.p = this->p;
+    userRegWin.appointmentsLog = this->appointmentsLog;
+    userRegWin.arrDoc = this->arrDoc;
+
     userRegWin.exec();
 }
 
@@ -37,6 +45,8 @@ void UserLoginWindow::on_loginButton_clicked()
 
         ui->usernameDisplay->setText("");
         ui->passwordDisplay->setText("");
+        this->p->setLoggedIn(true);
+        this->p_userLoginTitle->setText("User: " + this->p->getName());
         break;
 
     case 1:
@@ -50,8 +60,14 @@ void UserLoginWindow::on_loginButton_clicked()
         ui->passwordDisplay->setText("");
         break;
     default:
-        ui->loginStatusTitle->setText("Login Status: Default Case.");
+        ui->loginStatusTitle->setText("Login Status: Default Case."); //////////////////////
         ui->usernameDisplay->setText("");
         ui->passwordDisplay->setText("");
     }
 }
+
+void UserLoginWindow::on_backButton_clicked()
+{
+        this->close();
+}
+

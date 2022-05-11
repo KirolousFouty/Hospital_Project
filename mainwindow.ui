@@ -14,71 +14,11 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="startButton">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>150</y>
-      <width>83</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Start</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="displayResult">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>190</y>
-      <width>113</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Not Clicked</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-    <property name="dragEnabled">
-     <bool>false</bool>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="userLoginTitle">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>150</y>
-      <width>181</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>User: Not Logged In</string>
-    </property>
-    <property name="frame">
-     <bool>false</bool>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QPushButton" name="loginButton">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>150</y>
+      <x>448</x>
+      <y>140</y>
       <width>83</width>
       <height>29</height>
      </rect>
@@ -90,7 +30,7 @@
    <widget class="QPushButton" name="showPatientInformationButton">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>238</x>
       <y>190</y>
       <width>291</width>
       <height>29</height>
@@ -103,9 +43,9 @@
    <widget class="QLineEdit" name="salamtakHospitalTitle">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>20</y>
-      <width>331</width>
+      <x>-10</x>
+      <y>0</y>
+      <width>791</width>
       <height>61</height>
      </rect>
     </property>
@@ -131,8 +71,8 @@
    <widget class="QPushButton" name="bookAppointmentButton">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>320</y>
+      <x>238</x>
+      <y>340</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -144,8 +84,8 @@
    <widget class="QPushButton" name="showAppointmentsButton">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>370</y>
+      <x>238</x>
+      <y>390</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -157,10 +97,10 @@
    <widget class="QLabel" name="appointmentsTitle">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>370</y>
+      <x>540</x>
+      <y>390</y>
       <width>161</width>
-      <height>20</height>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
@@ -170,8 +110,8 @@
    <widget class="QPushButton" name="emergencyVisitButton">
     <property name="geometry">
      <rect>
-      <x>62</x>
-      <y>280</y>
+      <x>240</x>
+      <y>290</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -183,7 +123,7 @@
    <widget class="QPushButton" name="bookRoomButton">
     <property name="geometry">
      <rect>
-      <x>62</x>
+      <x>240</x>
       <y>240</y>
       <width>291</width>
       <height>29</height>
@@ -193,6 +133,25 @@
      <string>Book Room</string>
     </property>
    </widget>
+   <widget class="QLabel" name="userLoginTitle">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>134</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>User: Not Logged in</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -200,7 +159,7 @@
      <x>0</x>
      <y>0</y>
      <width>782</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

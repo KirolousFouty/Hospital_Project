@@ -4,7 +4,7 @@ Patient::Patient() // default constructor
 {
 	this->medicalHistory = "unknown";
 	this->points = 0;
-	this->patientID = 900211928;
+    this->patientID = -1;
 	this->age = 18;
 	this->gender = "female";
 	this->bloodType = "A+";
@@ -36,7 +36,7 @@ int Patient::getPoints()
 {
 	return this->points;
 }
-int Patient::getpatientID()
+int Patient::getPatientID()
 {
 	return this->patientID;
 }
@@ -182,7 +182,7 @@ QString Patient::getPassword()
 	return this->password;
 }
 
-bool Patient::getLoggedIn()
+bool Patient::getLoggedIn() const
 {
 	return this->loggedIn;
 }

@@ -18,27 +18,27 @@ DateAndTime::DateAndTime(int p_hour, int p_minute, int p_day, int p_month, int p
     this->year = p_year;
 }
 
-int DateAndTime::getHour()
+int DateAndTime::getHour() const
 {
     return this->hour;
 }
 
-int DateAndTime::getMinute()
+int DateAndTime::getMinute() const
 {
     return this->minute;
 }
 
-int DateAndTime::getDay()
+int DateAndTime::getDay() const
 {
     return this->day;
 }
 
-int DateAndTime::getMonth()
+int DateAndTime::getMonth() const
 {
     return this->month;
 }
 
-int DateAndTime::getYear()
+int DateAndTime::getYear() const
 {
     return this->year;
 }
@@ -66,4 +66,10 @@ void DateAndTime::setMonth(int p_month)
 void DateAndTime::setYear(int p_year)
 {
     this->year = p_year;
+}
+
+bool DateAndTime::operator==(const DateAndTime &dt) const
+{
+//    return (this->minute == dt.minute  && this->hour == dt.hour && this->day == dt.day && this->month == dt.month && this->year == dt.year);
+    return (this->minute == dt.minute  && this->hour == dt.hour);
 }

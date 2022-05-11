@@ -37,13 +37,13 @@ public:
     QString getName();
 	QString getMedicalHistory();
 	int getPoints();
-	int getpatientID();
+    int getPatientID();
 	int getAge();
 	QString getGender();
 	QString getBloodType();
 	QString getAllergies();
 	bool getInsured();
-	bool getLoggedIn();
+    bool getLoggedIn() const;
 
 	void setMedicalHistory(QString p_medicalHistory);
 	void setPoints(int p_points);
