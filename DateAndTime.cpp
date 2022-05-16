@@ -9,6 +9,12 @@ DateAndTime::DateAndTime()
     this->year = 0;
 }
 
+DateAndTime::DateAndTime(int p_hour, int p_minute)
+{
+    this->hour = p_hour;
+    this->minute = p_minute;
+}
+
 DateAndTime::DateAndTime(int p_hour, int p_minute, int p_day, int p_month, int p_year)
 {
     this->hour = p_hour;

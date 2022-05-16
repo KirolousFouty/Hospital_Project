@@ -31,6 +31,8 @@ private slots:
 
     void on_selectDoctorButton_clicked();
 
+    void on_backButton_clicked();
+
 private:
     Ui::BookAppointmentWindow *ui;
 

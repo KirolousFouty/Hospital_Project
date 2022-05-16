@@ -10,6 +10,7 @@ Patient::Patient() // default constructor
 	this->bloodType = "A+";
 	this->allergies = "none";
 	this->insured = false;
+    this->loggedIn = false;
 }
 Patient::Patient(QString p_medicalHistory, int p_points, int p_patientID, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured) // parameterized constructor
 {
@@ -21,6 +22,7 @@ Patient::Patient(QString p_medicalHistory, int p_points, int p_patientID, int p_
 	this->bloodType = p_bloodType;
 	this->allergies = p_allergies;
 	this->insured = p_insured;
+    this->loggedIn = false;
 }
 
 QString Patient::getName()

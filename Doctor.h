@@ -13,15 +13,20 @@ class Doctor
 private:
     double rating;
     DateAndTime earliestDate;
+    QString name;
+    int id;
+    QString department;
+    double fees;
+
 
 public:
     Doctor();
     Doctor(QString p_name, int p_id, double p_rating, QString p_department);
+    Doctor(QString p_name, int p_id, double p_rating, double p_fees, QString p_department);
     Doctor(QString p_name, int p_id, double p_rating, DateAndTime p_earliestDate);
 
-    QString name;
-    int id;
-    QString department;
+
+
 
     QString getName() const;
     int getId() const;
@@ -43,6 +48,7 @@ public:
     void setRemoveTimeList(DateAndTime dt);
     QVector<DateAndTime> getTimeList() const;
     bool operator==(const Doctor &d);
+    double getFees() const;
 
 };
 #endif

@@ -194,7 +194,7 @@
     </font>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="idDisplay">
@@ -212,7 +212,7 @@
     </font>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="ageDisplay">
@@ -230,7 +230,7 @@
     </font>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="genderDisplay">
@@ -248,7 +248,7 @@
     </font>
    </property>
    <property name="text">
-    <string>genderDisplay</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="bloodTypesDisplay">
@@ -266,7 +266,7 @@
     </font>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="allergiesDisplay">
@@ -284,10 +284,10 @@
     </font>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="isuranceDisplay">
+  <widget class="QLabel" name="insuranceDisplay">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -302,7 +302,7 @@
     </font>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="pointsDisplay">
@@ -320,7 +320,33 @@
     </font>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="showButton">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>360</y>
+     <width>93</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Show</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>360</y>
+     <width>91</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
    </property>
   </widget>
  </widget>

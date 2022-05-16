@@ -12,14 +12,14 @@ MainWindow::MainWindow(QWidget *parent)
 
         this->p_userLoginTitle = ui->userLoginTitle;
 
-        Doctor d1("Ahmed", 121, 2.4, "Cardio");
-        Doctor d2("Tarek", 122, 2.3, "Emergency");
-        Doctor d3("Youssef", 123, 4.4, "Cardio");
-        Doctor d4("Ziad", 124, 3.4, "Blood");
-        Doctor d5("Ali", 125, 4.6, "Neurology");
-        Doctor d6("Farah", 126, 4.5, "Neurology");
-        Doctor d7("Kiro", 127, 4.4, "Blood");
-        Doctor d8("Nour", 128, 3.7, "Emergency");
+        Doctor d1("Ahmed", 121, 2.4, 1000, "Cardio");
+        Doctor d2("Tarek", 122, 2.3, 1500, "Emergency");
+        Doctor d3("Youssef", 123, 4.4, 950, "Cardio");
+        Doctor d4("Ziad", 124, 3.4, 1100, "Blood");
+        Doctor d5("Ali", 125, 4.6, 900, "Neurology");
+        Doctor d6("Farah", 126, 4.5, 1900, "Neurology");
+        Doctor d7("Kiro", 127, 4.4, 1600, "Blood");
+        Doctor d8("Nour", 128, 3.7, 1700, "Emergency");
 
         arrDoc->push_back(d1);
         arrDoc->push_back(d2);
@@ -52,6 +52,11 @@ void MainWindow::on_loginButton_clicked()
 
 void MainWindow::on_showPatientInformationButton_clicked()
 {
+
+    if (this->p->getLoggedIn() == false){
+        return;
+    }
+
     ShowPatientInformation showpatientinfo;
     showpatientinfo.setModal(true);
 
@@ -77,9 +82,9 @@ void MainWindow::on_bookAppointmentButton_clicked()
 
 void MainWindow::on_showAppointmentsButton_clicked()
 {
+    ui->appointmentsTitle->setText("");
     for (int i = 0; i < this->appointmentsLog->size(); i++){
-        //       ui->appointmentsTitle->setText("TEST");
-        ui->appointmentsTitle->setText(this->appointmentsLog->at(i).showAppointment()); ////// Test&fix
+        ui->appointmentsTitle->setText(ui->appointmentsTitle->text() + "\nAppointment #" + QString::number((i+1)) + " " + this->appointmentsLog->at(i).showAppointment());
     }
 
 }

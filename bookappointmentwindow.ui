@@ -149,6 +149,32 @@
     </rect>
    </property>
   </widget>
+  <widget class="QLabel" name="appointmentStatusTitle">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>470</y>
+     <width>451</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Appointment Status:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>410</y>
+     <width>101</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

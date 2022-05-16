@@ -25,9 +25,60 @@ BookAppointmentWindow::~BookAppointmentWindow()
 
 void BookAppointmentWindow::on_confirmAppointmentButton_clicked()
 {
-    Appointment a1;
 
-    appointmentsLog->push_back(a1);
+   DateAndTime dtTemp;
+
+   if (ui->timeComboBox->currentText() == "09:00 AM"){
+       dtTemp.setHour(9);
+       dtTemp.setMinute(0);
+   }
+   else if (ui->timeComboBox->currentText() == "10:00 AM"){
+       dtTemp.setHour(10);
+       dtTemp.setMinute(0);
+   }
+   else if (ui->timeComboBox->currentText() == "11:00 AM"){
+       dtTemp.setHour(11);
+       dtTemp.setMinute(0);
+   }
+   else if (ui->timeComboBox->currentText() == "12:00 PM"){
+       dtTemp.setHour(12);
+       dtTemp.setMinute(0);
+   }
+   else if (ui->timeComboBox->currentText() == "01:00 PM"){
+       dtTemp.setHour(1);
+       dtTemp.setMinute(0);
+   }
+   else if (ui->timeComboBox->currentText() == "02:00 PM"){
+       dtTemp.setHour(2);
+       dtTemp.setMinute(0);
+   }
+   else if (ui->timeComboBox->currentText() == "03:00 PM"){
+       dtTemp.setHour(3);
+       dtTemp.setMinute(0);
+   }
+
+
+
+    for (int i = 0; i < this->arrDoc->size(); i++)
+    {
+        if (this->arrDoc->at(i).getName() + "      " + QString::number(this->arrDoc->at(i).getRating()) == ui->doctorsComboBox->currentText()){
+
+            for (int j = 0; j < this->appointmentsLog->size(); j++){
+                if (this->appointmentsLog->at(j).doctorName == this->arrDoc->at(i).getName() && this->appointmentsLog->at(j).dt == dtTemp){
+                     ui->appointmentStatusTitle->setText("Appointment Status: Appointment already booked. Please try another.");
+                     return;
+                }
+            }
+
+           Appointment a1(this->p, &(this->arrDoc->at(i)), dtTemp);
+           appointmentsLog->push_back(a1);
+           break;
+            }
+
+        }
+
+    ui->appointmentStatusTitle->setText("Appointment Status: Booked Successfully!");
+
 }
 
 void BookAppointmentWindow::on_selectDepartmentButton_clicked()
@@ -37,7 +88,7 @@ void BookAppointmentWindow::on_selectDepartmentButton_clicked()
 
     for (int i = 0; i < this->arrDoc->size(); i++)
     {
-        if (this->arrDoc->at(i).department == ui->departmentsComboBox->currentText())
+        if (this->arrDoc->at(i).getDepartment() == ui->departmentsComboBox->currentText())
         {
 
             ui->doctorsComboBox->addItem(this->arrDoc->at(i).getName() + "      " + QString::number(this->arrDoc->at(i).getRating()));
@@ -79,5 +130,11 @@ void BookAppointmentWindow::on_selectDoctorButton_clicked()
     }
 
 
+}
+
+
+void BookAppointmentWindow::on_backButton_clicked()
+{
+    this->close();
 }
 

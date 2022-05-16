@@ -16,6 +16,7 @@ private:
 
 public:
     DateAndTime();
+    DateAndTime(int p_hour, int p_minute);
     DateAndTime(int H, int Min, int D, int Mon, int Y);
 
     int getHour() const;

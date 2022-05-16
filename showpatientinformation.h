@@ -24,6 +24,11 @@ public:
     QVector<Appointment> *appointmentsLog;
     QVector<Doctor> *arrDoc;
 
+private slots:
+    void on_showButton_clicked();
+
+    void on_backButton_clicked();
+
 private:
     Ui::ShowPatientInformation *ui;
 };
