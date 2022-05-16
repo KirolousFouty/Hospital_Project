@@ -54,17 +54,22 @@ void MainWindow::on_showPatientInformationButton_clicked()
 {
 
     if (this->p->getLoggedIn() == false){
-        return;
+        QMessageBox::about(this, "Error", "Please log in first");
+    }
+    else{
+
+        ShowPatientInformation showpatientinfo;
+        showpatientinfo.setModal(true);
+
+        showpatientinfo.p = this->p;
+        showpatientinfo.appointmentsLog = this->appointmentsLog;
+        showpatientinfo.arrDoc = this->arrDoc;
+
+        showpatientinfo.exec();
+
     }
 
-    ShowPatientInformation showpatientinfo;
-    showpatientinfo.setModal(true);
 
-    showpatientinfo.p = this->p;
-    showpatientinfo.appointmentsLog = this->appointmentsLog;
-    showpatientinfo.arrDoc = this->arrDoc;
-
-    showpatientinfo.exec();
 }
 
 void MainWindow::on_bookAppointmentButton_clicked()
@@ -100,4 +105,3 @@ void MainWindow::on_bookRoomButton_clicked()
 
     bookroomwin.exec();
 }
-

@@ -19,6 +19,22 @@ ShowPatientInformation::~ShowPatientInformation()
 
 void ShowPatientInformation::on_showButton_clicked()
 {
+
+ //    if (this->p->getLoggedIn() == false){
+
+//        ui->nameDisplay->setText("Not logged in");
+//        ui->idDisplay->setText("Not logged in");
+//        ui->ageDisplay->setText("Not logged in");
+//        ui->genderDisplay->setText("Not logged in");
+//        ui->bloodTypesDisplay->setText("Not logged in");
+//        ui->allergiesDisplay->setText("Not logged in");
+//        ui->insuranceDisplay->setText("Not logged in");
+//        ui->pointsDisplay->setText("Not logged in");
+
+//        return;
+
+//    }
+
     ui->nameDisplay->setText(this->p->getName());
     ui->idDisplay->setText("ID#900212931");
     ui->ageDisplay->setText(QString::number(this->p->getAge()));

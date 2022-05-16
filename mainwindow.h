@@ -24,6 +24,7 @@
 #include <map>
 #include <algorithm>
 #include <QLabel>
+#include <QMessageBox>
 
 using namespace std;
 
