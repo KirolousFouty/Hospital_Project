@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->p = new Patient;
     this->appointmentsLog = new QVector<Appointment>;
     this->arrDoc = new QVector<Doctor>;
+    this->emergencyVisitLog = new QVector<EmergencyVisit>;
 
         this->p_userLoginTitle = ui->userLoginTitle;
 
@@ -105,3 +106,17 @@ void MainWindow::on_bookRoomButton_clicked()
 
     bookroomwin.exec();
 }
+
+void MainWindow::on_emergencyVisitButton_clicked()
+{
+    bookEmergencyVisitWindow bookemervisit;
+    bookemervisit.setModal(true);
+
+    bookemervisit.p = this->p;
+    bookemervisit.appointmentsLog = this->appointmentsLog;
+    bookemervisit.arrDoc = this->arrDoc;
+    bookemervisit.emergencyVisitLog = this->emergencyVisitLog;
+
+    bookemervisit.exec();
+}
+

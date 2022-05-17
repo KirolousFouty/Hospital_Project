@@ -26,7 +26,7 @@
     <string>Select Time:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="emergencyStatusTitle">
+  <widget class="QLabel" name="visitStatusTitle">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -76,8 +76,43 @@
      <height>26</height>
     </rect>
    </property>
+   <item>
+    <property name="text">
+     <string>09:00 AM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10:00 AM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>11:00 AM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>12:00 PM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>01:00 PM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>02:00 PM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>03:00 PM</string>
+    </property>
+   </item>
   </widget>
-  <widget class="QPushButton" name="confirmRoomButton">
+  <widget class="QPushButton" name="confirmVisitButton">
    <property name="geometry">
     <rect>
      <x>240</x>

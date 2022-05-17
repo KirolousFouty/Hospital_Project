@@ -2,10 +2,11 @@
 #define BOOKEMERGENCYVISITWINDOW_H
 
 #include <QDialog>
+#include <QVector>
 #include "Patient.h"
 #include "Doctor.h"
 #include "Appointment.h"
-
+#include "EmergencyVisit.h"
 
 namespace Ui {
 class bookEmergencyVisitWindow;
@@ -22,6 +23,12 @@ public:
     Patient *p;
     QVector<Appointment> *appointmentsLog;
     QVector<Doctor> *arrDoc;
+    QVector<EmergencyVisit> *emergencyVisitLog;
+
+private slots:
+    void on_confirmVisitButton_clicked();
+
+    void on_backButton_clicked();
 
 private:
     Ui::bookEmergencyVisitWindow *ui;

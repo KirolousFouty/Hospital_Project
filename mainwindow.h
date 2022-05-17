@@ -7,6 +7,7 @@
 #include "showpatientinformation.h"
 #include "bookappointmentwindow.h"
 #include "bookroomwindow.h"
+#include "bookemergencyvisitwindow.h"
 
 #include "DateAndTime.h"
 #include "HomeVisit.h"
@@ -47,7 +48,9 @@ public:
     Patient *p;
     QVector<Appointment> *appointmentsLog;
     QVector<Doctor> *arrDoc;
+    QVector<EmergencyVisit> *emergencyVisitLog;
     QLabel* p_userLoginTitle;
+
 
 
 private slots:
@@ -60,6 +63,8 @@ private slots:
     void on_showAppointmentsButton_clicked();
 
     void on_bookRoomButton_clicked();
+
+    void on_emergencyVisitButton_clicked();
 
 private:
     Ui::MainWindow *ui;

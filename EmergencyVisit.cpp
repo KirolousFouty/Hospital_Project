@@ -2,15 +2,30 @@
 
 EmergencyVisit::EmergencyVisit()
 {
-	/////////////////////
+    this->patientName = "Name";
 }
-bool EmergencyVisit::checkAvailability()
+
+EmergencyVisit::EmergencyVisit(QString p_patientName, DateAndTime p_dt)
 {
-	/////////////////////
-	return true;
+    this->patientName = p_patientName;
+    this->dt = p_dt;
 }
-QString EmergencyVisit::bookDateAndTime()
-{
-	//////////////////////////////
-	return "";
+
+DateAndTime EmergencyVisit::getDt() const{
+    return this->dt;
 }
+
+QString EmergencyVisit::getPatientName(){
+    return this->patientName;
+}
+
+//bool EmergencyVisit::checkAvailability()
+//{
+//	/////////////////////
+//	return true;
+//}
+//QString EmergencyVisit::bookDateAndTime()
+//{
+//	//////////////////////////////
+//	return "";
+//}
