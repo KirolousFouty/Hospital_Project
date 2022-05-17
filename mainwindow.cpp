@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->appointmentsLog = new QVector<Appointment>;
     this->arrDoc = new QVector<Doctor>;
     this->emergencyVisitLog = new QVector<EmergencyVisit>;
+    this->roomLog = new QVector<Room>;
 
         this->p_userLoginTitle = ui->userLoginTitle;
 
@@ -89,8 +90,20 @@ void MainWindow::on_bookAppointmentButton_clicked()
 void MainWindow::on_showAppointmentsButton_clicked()
 {
     ui->appointmentsTitle->setText("");
+
+    if (this->appointmentsLog->size() == 0 && this->emergencyVisitLog->size() == 0 && this->roomLog->size() == 0){
+        ui->appointmentsTitle->setText("No bookings.");
+        return;
+    }
+
     for (int i = 0; i < this->appointmentsLog->size(); i++){
         ui->appointmentsTitle->setText(ui->appointmentsTitle->text() + "\nAppointment #" + QString::number((i+1)) + " " + this->appointmentsLog->at(i).showAppointment());
+    }
+    for (int i = 0; i < this->emergencyVisitLog->size(); i++){
+        ui->appointmentsTitle->setText(ui->appointmentsTitle->text() + "\nEmergency Visit #" + QString::number((i+1)) + " " + this->emergencyVisitLog->at(i).showVisit());
+    }
+    for (int i = 0; i < this->roomLog->size(); i++){
+        ui->appointmentsTitle->setText(ui->appointmentsTitle->text() + "\nRoom #" + QString::number((i+1)) + " " + this->roomLog->at(i).showRoom());
     }
 
 }
@@ -103,6 +116,7 @@ void MainWindow::on_bookRoomButton_clicked()
     bookroomwin.p = this->p;
     bookroomwin.appointmentsLog = this->appointmentsLog;
     bookroomwin.arrDoc = this->arrDoc;
+    bookroomwin.roomLog = this->roomLog;
 
     bookroomwin.exec();
 }

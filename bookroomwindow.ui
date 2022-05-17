@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLineEdit" name="appointmentTitle">
+  <widget class="QLineEdit" name="roomTitle">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -55,7 +55,7 @@
    <property name="geometry">
     <rect>
      <x>490</x>
-     <y>150</y>
+     <y>156</y>
      <width>83</width>
      <height>29</height>
     </rect>
@@ -68,7 +68,7 @@
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>150</y>
+     <y>156</y>
      <width>171</width>
      <height>28</height>
     </rect>
@@ -87,7 +87,7 @@
     <string>Select Doctor:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="confirmAppointmentButton">
+  <widget class="QPushButton" name="confirmRoomButton">
    <property name="geometry">
     <rect>
      <x>300</x>
@@ -104,7 +104,7 @@
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>150</y>
+     <y>156</y>
      <width>141</width>
      <height>20</height>
     </rect>
@@ -148,6 +148,41 @@
      <height>28</height>
     </rect>
    </property>
+   <item>
+    <property name="text">
+     <string>09:00 AM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10:00 AM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>11:00 AM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>12:00 PM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>01:00 PM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>02:00 PM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>03:00 PM</string>
+    </property>
+   </item>
   </widget>
   <widget class="QComboBox" name="roomTypesComboBox">
    <property name="geometry">

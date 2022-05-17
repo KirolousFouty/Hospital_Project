@@ -26,6 +26,17 @@ BookAppointmentWindow::~BookAppointmentWindow()
 void BookAppointmentWindow::on_confirmAppointmentButton_clicked()
 {
 
+    if(ui->doctorsComboBox->currentText() == ""){
+         ui->appointmentStatusTitle->setText("Appointment Status: Please choose a department.");
+         return;
+    }
+
+    if(ui->timeComboBox->currentText() == ""){
+         ui->appointmentStatusTitle->setText("Appointment Status: Please choose a doctor.");
+         return;
+    }
+
+
    DateAndTime dtTemp;
 
    if (ui->timeComboBox->currentText() == "09:00 AM"){

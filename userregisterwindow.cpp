@@ -1,8 +1,6 @@
 #include "userregisterwindow.h"
 #include "ui_userregisterwindow.h"
 
-
-
 UserRegisterWindow::UserRegisterWindow(QWidget *parent) : QDialog(parent),
                                                           ui(new Ui::UserRegisterWindow)
 {
@@ -11,7 +9,6 @@ UserRegisterWindow::UserRegisterWindow(QWidget *parent) : QDialog(parent),
     this->p = new Patient;
     this->appointmentsLog = new QVector<Appointment>;
     this->arrDoc = new QVector<Doctor>;
-
 }
 
 UserRegisterWindow::~UserRegisterWindow()
@@ -22,21 +19,31 @@ UserRegisterWindow::~UserRegisterWindow()
 void UserRegisterWindow::on_registerButton_clicked()
 {
 
-    if(ui->passwordDisplay->text().size()<5)
+    if (ui->nameDisplay->text() == "" || ui->usernameDisplay->text() == "" || ui->passwordDisplay->text() == "" || ui->ageDisplay->text() == "" || ui->allergiesDisplay->text() == "" || ui->medicalHistoryDisplay->text() == "" || ((!ui->insuredYesRadioButton->isChecked()) && (!ui->insuredNoRadioButton->isChecked())))
     {
-        ui->registrationStatusTitle->setText("Password must be at least 5 characters");
+        ui->registrationStatusTitle->setText("Registration Status: Please fill in all the fields.");
+        return;
     }
-    else if(ui->ageDisplay->text().toInt()<18)
+
+    if (ui->passwordDisplay->text().size() < 5)
     {
-        ui->registrationStatusTitle->setText("User must be at least 18 years old to register");
+        ui->registrationStatusTitle->setText("Registration Status: Password must be at least 5 characters.");
+        return;
+    }
+    else if (ui->ageDisplay->text().toInt() < 18)
+    {
+        ui->registrationStatusTitle->setText("Registration Status: User must be at least 18 years old to register.");
+        return;
     }
     else if (this->p->reg(ui->nameDisplay->text(), ui->usernameDisplay->text(), ui->passwordDisplay->text(), ui->ageDisplay->text().toInt(), ui->genderComboBox->currentText(), ui->bloodTypeComboBox->currentText(), ui->allergiesDisplay->text(), ui->insuredYesRadioButton->isChecked(), ui->medicalHistoryDisplay->text()))
     {
         ui->registrationStatusTitle->setText("Registration Status: Registered successfully!");
+        return;
     }
     else
     {
-        ui->registrationStatusTitle->setText("Registration Status: Registered failed!");
+        ui->registrationStatusTitle->setText("Registration Status: User already exists!");
+        return;
     }
 }
 

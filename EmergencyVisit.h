@@ -17,6 +17,9 @@ public:
     EmergencyVisit(QString p_patientName, DateAndTime p_dt);
     DateAndTime getDt() const;
     QString getPatientName();
+
+    QString showVisit() const;
+
 //	bool checkAvailability();
 //	QString bookDateAndTime();
 

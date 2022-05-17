@@ -22,7 +22,7 @@ QString Appointment::showAppointment() const
     txt = txt + "   Doctor Name: " + this->doctorName;
     txt = txt + "   Patient Name: " + this->patientName;
     txt = txt + "   Fees: " + QString::number(this->fees);
-    txt = txt + "   Date: " + QString::number(this->dt.getHour()) + ":" + QString::number(this->dt.getMinute()) + "0";
+    txt = txt + "   Time: " + QString::number(this->dt.getHour()) + ":" + QString::number(this->dt.getMinute()) + "0";
 
     return txt;
 }

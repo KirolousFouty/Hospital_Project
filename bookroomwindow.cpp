@@ -1,9 +1,9 @@
 #include "bookroomwindow.h"
 #include "ui_bookroomwindow.h"
 
-BookRoomWindow::BookRoomWindow(QWidget *parent) : //done slect dpt
-    QDialog(parent),
-    ui(new Ui::BookRoomWindow)
+BookRoomWindow::BookRoomWindow(QWidget *parent) : // done slect dpt
+                                                  QDialog(parent),
+                                                  ui(new Ui::BookRoomWindow)
 {
     ui->setupUi(this);
 
@@ -16,129 +16,87 @@ BookRoomWindow::BookRoomWindow(QWidget *parent) : //done slect dpt
     this->p = new Patient;
     this->appointmentsLog = new QVector<Appointment>;
     this->arrDoc = new QVector<Doctor>;
-
+    this->roomLog = new QVector<Room>;
 }
 
-BookRoomWindow::~BookRoomWindow() //done
+BookRoomWindow::~BookRoomWindow() // done
 {
     delete ui;
 }
 
-void BookRoomWindow::on_selectDepartmentButton_clicked()//done slct dr
+void BookRoomWindow::on_selectDepartmentButton_clicked()
 {
-
-    if (this->p == NULL){
-        ui->statusTitle->setText("Status: Registration Required!");
-        return;
-    }
-
     ui->doctorsComboBox->clear();
 
     for (int i = 0; i < this->arrDoc->size(); i++)
     {
         if (this->arrDoc->at(i).getDepartment() == ui->departmentsComboBox->currentText())
         {
-
             ui->doctorsComboBox->addItem(this->arrDoc->at(i).getName() + "      " + QString::number(this->arrDoc->at(i).getRating()));
         }
     }
 }
 
-void BookRoomWindow::on_confirmAppointmentButton_clicked()  //half done
+void BookRoomWindow::on_confirmRoomButton_clicked()
 {
-   DateAndTime dtTemp;
 
-   if (ui->timesComboBox->currentText() == "09:00 AM"){
-       dtTemp.setHour(9);
-       dtTemp.setMinute(0);
-   }
-   else if (ui->timesComboBox->currentText() == "10:00 AM"){
-       dtTemp.setHour(10);
-       dtTemp.setMinute(0);
-   }
-   else if (ui->timesComboBox->currentText() == "11:00 AM"){
-       dtTemp.setHour(11);
-       dtTemp.setMinute(0);
-   }
-   else if (ui->timesComboBox->currentText() == "12:00 PM"){
-       dtTemp.setHour(12);
-       dtTemp.setMinute(0);
-   }
-   else if (ui->timesComboBox->currentText() == "01:00 PM"){
-       dtTemp.setHour(1);
-       dtTemp.setMinute(0);
-   }
-   else if (ui->timesComboBox->currentText() == "02:00 PM"){
-       dtTemp.setHour(2);
-       dtTemp.setMinute(0);
-   }
-   else if (ui->timesComboBox->currentText() == "03:00 PM"){
-       dtTemp.setHour(3);
-       dtTemp.setMinute(0);
-   }
+    if(ui->doctorsComboBox->currentText() == ""){
+         ui->statusTitle->setText("Room Status: Please choose a department.");
+         return;
+    }
+
+    QString s = ui->doctorsComboBox->currentText();
+    s.erase(s.end()-9, s.end());
 
 
+ui->statusTitle->setText("Room Status: " + s + "!");
 
-    for (int i = 0; i < this->arrDoc->size(); i++)  //Incomplete
-    {
-        if (this->arrDoc->at(i).getName() + "      " + QString::number(this->arrDoc->at(i).getRating()) == ui->doctorsComboBox->currentText()){
+    DateAndTime dtTemp;
 
-            for (int j = 0; j < this->appointmentsLog->size(); j++){
-                if (this->appointmentsLog->at(j).doctorName == this->arrDoc->at(i).getName() && this->appointmentsLog->at(j).dt == dtTemp)
-                {
-                     ui->statusTitle->setText("Room Status: Room already booked. Please choose another.");
-                     return;
-                }
+            if (ui->timesComboBox->currentText() == "09:00 AM"){
+                dtTemp.setHour(9);
+                dtTemp.setMinute(0);
+            }
+            else if (ui->timesComboBox->currentText() == "10:00 AM"){
+                dtTemp.setHour(10);
+                dtTemp.setMinute(0);
+            }
+            else if (ui->timesComboBox->currentText() == "11:00 AM"){
+                dtTemp.setHour(11);
+                dtTemp.setMinute(0);
+            }
+            else if (ui->timesComboBox->currentText() == "12:00 PM"){
+                dtTemp.setHour(12);
+                dtTemp.setMinute(0);
+            }
+            else if (ui->timesComboBox->currentText() == "01:00 PM"){
+                dtTemp.setHour(1);
+                dtTemp.setMinute(0);
+            }
+            else if (ui->timesComboBox->currentText() == "02:00 PM"){
+                dtTemp.setHour(2);
+                dtTemp.setMinute(0);
+            }
+            else if (ui->timesComboBox->currentText() == "03:00 PM"){
+                dtTemp.setHour(3);
+                dtTemp.setMinute(0);
             }
 
-           Appointment a1(this->p, &(this->arrDoc->at(i)), dtTemp);
-           appointmentsLog->push_back(a1);
-           break;
-            }
-
-        }
-
-    ui->statusTitle->setText("Room Status: Room Booked Successfully!");
-
-}
-
-void BookRoomWindow::on_doctorsComboBox_activated(int i) //done
-{
-    ui->timesComboBox->clear();
-
-    QString temp;
 
 
-    for (int i = 0; i < this->arrDoc->size(); i++)
-    {
-        if (this->arrDoc->at(i).getName() + "      " + QString::number(this->arrDoc->at(i).getRating())== ui->doctorsComboBox->currentText()){
-
-            for (int i = 0; i < this->arrDoc->at(i).timeList.size(); i++){
-
-                if (this->arrDoc->at(i).timeList.at(i).getHour() == 9){
-                    temp = "0" + QString::number(this->arrDoc->at(i).timeList.at(i).getHour()) + ":00 AM";
-                }
-                else if (this->arrDoc->at(i).timeList.at(i).getHour() > 9){
-                    temp = QString::number(this->arrDoc->at(i).timeList.at(i).getHour()) + ":00 AM";
-                }
-                else {
-                    temp = "0" + QString::number(this->arrDoc->at(i).timeList.at(i).getHour()) + ":00 PM";
-                }
-
-                ui->timesComboBox->addItem(temp);
-
-
-            }
-
-            break;
+    for (int i = 0; i < this->roomLog->size(); i++){
+        if (this->roomLog->at(i).getDt().getHour() == dtTemp.getHour() && this->roomLog->at(i).getDt().getMinute() == dtTemp.getMinute()){
+             ui->statusTitle->setText("Room Status: Room is unavailable! Try another!");
+             return;
         }
     }
 
+    Room tempRoom(ui->departmentsComboBox->currentText(), s, dtTemp, ui->roomTypesComboBox->currentText());
+    this->roomLog->push_back(tempRoom);
+    ui->statusTitle->setText("Room Status: Room booked successfully!");
 }
 
-void BookRoomWindow::on_backButton_clicked() //done
+void BookRoomWindow::on_backButton_clicked() // done
 {
     this->close();
 }
-
-

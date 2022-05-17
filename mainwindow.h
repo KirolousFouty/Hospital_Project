@@ -49,6 +49,7 @@ public:
     QVector<Appointment> *appointmentsLog;
     QVector<Doctor> *arrDoc;
     QVector<EmergencyVisit> *emergencyVisitLog;
+    QVector<Room> *roomLog;
     QLabel* p_userLoginTitle;
 
 

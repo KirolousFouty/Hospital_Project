@@ -19,13 +19,10 @@ QString EmergencyVisit::getPatientName(){
     return this->patientName;
 }
 
-//bool EmergencyVisit::checkAvailability()
-//{
-//	/////////////////////
-//	return true;
-//}
-//QString EmergencyVisit::bookDateAndTime()
-//{
-//	//////////////////////////////
-//	return "";
-//}
+QString EmergencyVisit::showVisit() const{
+    QString txt = "";
+    txt = txt + "   Patient Name: " + this->patientName;
+    txt = txt + "   Time: " + QString::number(this->dt.getHour()) + ":" + QString::number(this->dt.getMinute()) + "0";
+
+    return txt;
+}

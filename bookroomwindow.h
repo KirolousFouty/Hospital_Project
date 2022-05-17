@@ -5,6 +5,7 @@
 #include "Patient.h"
 #include "Doctor.h"
 #include "Appointment.h"
+#include "Room.h"
 
 #include <QDialog>
 #include <QVector>
@@ -24,19 +25,16 @@ public:
     Patient *p;
     QVector<Appointment> *appointmentsLog;
     QVector<Doctor> *arrDoc;
+    QVector<Room> *roomLog;
 
 private slots:
     void on_selectDepartmentButton_clicked();
 
-    void on_departmentsComboBox_activated(int index);
-
-    void on_confirmAppointmentButton_clicked();
-
     void on_backButton_clicked();
 
-    void on_doctorsComboBox_activated(int index);
 
-    void on_roomTypesComboBox_activated(int index);
+
+    void on_confirmRoomButton_clicked();
 
 private:
     Ui::BookRoomWindow *ui;
