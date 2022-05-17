@@ -14,7 +14,7 @@ class Patient
 private:
 	QString name;
 	QString username;
-	QString password;
+    QString password;
 	bool loggedIn;
 	int points;
 	int patientID;
