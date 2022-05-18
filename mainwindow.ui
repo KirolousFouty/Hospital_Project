@@ -158,6 +158,22 @@
      <string>User: Not Logged in</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_logo">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>231</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../newnewlogo.png</pixmap>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -165,7 +181,7 @@
      <x>0</x>
      <y>0</y>
      <width>782</width>
-     <height>26</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>
