@@ -152,3 +152,15 @@ void MainWindow::on_rechargeButton_clicked()
 }
 }
 
+
+
+void MainWindow::on_doBloodTestButton_clicked()
+{
+    doBloodTestWindow doBTestwin;
+    doBTestwin.setModal(true);
+
+    doBTestwin.p = this->p;
+
+    doBTestwin.exec();
+}
+
