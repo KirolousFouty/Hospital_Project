@@ -4,8 +4,9 @@
 #include <QDialog>
 #include "Patient.h"
 
-namespace Ui {
-class rechargeBalanceWindow;
+namespace Ui
+{
+    class rechargeBalanceWindow;
 }
 
 class rechargeBalanceWindow : public QDialog

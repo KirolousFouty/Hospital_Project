@@ -6,8 +6,9 @@
 #include <QMessageBox>
 #include "Patient.h"
 
-namespace Ui {
-class doBloodTestWindow;
+namespace Ui
+{
+    class doBloodTestWindow;
 }
 
 class doBloodTestWindow : public QDialog
@@ -21,6 +22,8 @@ public:
 
 private slots:
     void on_submitSampleButton_clicked();
+
+    void on_checkDiscountButton_clicked();
 
 private:
     Ui::doBloodTestWindow *ui;

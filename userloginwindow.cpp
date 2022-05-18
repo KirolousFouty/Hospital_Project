@@ -9,7 +9,7 @@ UserLoginWindow::UserLoginWindow(QWidget *parent) : QDialog(parent),
     this->p = new Patient;
     this->appointmentsLog = new QVector<Appointment>;
     this->arrDoc = new QVector<Doctor>;
-    QLabel* p_userLoginTitle = new QLabel;
+    QLabel *p_userLoginTitle = new QLabel;
 }
 
 UserLoginWindow::~UserLoginWindow()
@@ -68,6 +68,5 @@ void UserLoginWindow::on_loginButton_clicked()
 
 void UserLoginWindow::on_backButton_clicked()
 {
-        this->close();
+    this->close();
 }
-

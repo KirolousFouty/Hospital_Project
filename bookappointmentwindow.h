@@ -8,8 +8,9 @@
 #include "Appointment.h"
 #include "Doctor.h"
 
-namespace Ui {
-class BookAppointmentWindow;
+namespace Ui
+{
+    class BookAppointmentWindow;
 }
 
 class BookAppointmentWindow : public QDialog
@@ -24,7 +25,6 @@ public:
     QVector<Appointment> *appointmentsLog;
     QVector<Doctor> *arrDoc;
 
-
 private slots:
     void on_confirmAppointmentButton_clicked();
 
@@ -36,7 +36,6 @@ private slots:
 
 private:
     Ui::BookAppointmentWindow *ui;
-
 };
 
 #endif // BOOKAPPOINTMENTWINDOW_H

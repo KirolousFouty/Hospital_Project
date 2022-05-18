@@ -26,6 +26,7 @@ SOURCES += \
     Room.cpp \
     bookappointmentwindow.cpp \
     bookemergencyvisitwindow.cpp \
+    bookhomevisitwindow.cpp \
     bookroomwindow.cpp \
     dobloodtestwindow.cpp \
     main.cpp \
@@ -53,6 +54,7 @@ HEADERS += \
     Room.h \
     bookappointmentwindow.h \
     bookemergencyvisitwindow.h \
+    bookhomevisitwindow.h \
     bookroomwindow.h \
     dobloodtestwindow.h \
     mainwindow.h \
@@ -64,6 +66,7 @@ HEADERS += \
 FORMS += \
     bookappointmentwindow.ui \
     bookemergencyvisitwindow.ui \
+    bookhomevisitwindow.ui \
     bookroomwindow.ui \
     dobloodtestwindow.ui \
     mainwindow.ui \

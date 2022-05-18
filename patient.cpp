@@ -3,28 +3,28 @@
 Patient::Patient() // default constructor
 {
 	this->medicalHistory = "unknown";
-    this->balance = 0;
+	this->balance = 0;
 	this->points = 0;
-    this->patientID = -1;
+	this->patientID = -1;
 	this->age = 18;
 	this->gender = "female";
 	this->bloodType = "A+";
 	this->allergies = "none";
 	this->insured = false;
-    this->loggedIn = false;
+	this->loggedIn = false;
 }
 Patient::Patient(QString p_medicalHistory, double p_balance, int p_points, int p_patientID, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured) // parameterized constructor
 {
 	this->medicalHistory = p_medicalHistory;
-    this->balance = p_balance;
+	this->balance = p_balance;
 	this->points = p_points;
 	this->patientID = p_patientID;
-    this->age = p_age;
+	this->age = p_age;
 	this->gender = p_gender;
 	this->bloodType = p_bloodType;
 	this->allergies = p_allergies;
 	this->insured = p_insured;
-    this->loggedIn = false;
+	this->loggedIn = false;
 }
 
 QString Patient::getName()
@@ -37,8 +37,9 @@ QString Patient::getMedicalHistory()
 	return this->medicalHistory;
 }
 
-double Patient::getBalance() const{
-    return this->balance;
+double Patient::getBalance() const
+{
+	return this->balance;
 }
 
 int Patient::getPoints()
@@ -74,8 +75,9 @@ void Patient::setMedicalHistory(QString p_medicalHistory)
 	this->medicalHistory = p_medicalHistory;
 }
 
-void Patient::setBalance(double p_balance){
-    this->balance = p_balance;
+void Patient::setBalance(double p_balance)
+{
+	this->balance = p_balance;
 }
 
 void Patient::setPoints(int p_points)
@@ -107,10 +109,9 @@ void Patient::setInsured(bool p_insured)
 	this->insured = p_insured;
 }
 
-
 bool Patient::reg(QString p_name, QString p_username, QString p_password, int p_age, double p_balance, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured, QString p_medicalHistory)
 {
-    if (userMap.count(p_name) == 0)
+	if (userMap.count(p_name) == 0)
 	{
 		Patient temp;
 
@@ -121,7 +122,7 @@ bool Patient::reg(QString p_name, QString p_username, QString p_password, int p_
 		temp.username = p_username;
 		temp.password = p_password;
 		temp.age = p_age;
-        temp.balance = p_balance;
+		temp.balance = p_balance;
 		temp.gender = p_gender;
 		temp.bloodType = p_bloodType;
 		temp.allergies = p_allergies;
@@ -129,7 +130,7 @@ bool Patient::reg(QString p_name, QString p_username, QString p_password, int p_
 		temp.medicalHistory = p_medicalHistory;
 		temp.loggedIn = false;
 		temp.points = 0;
-        temp.patientID = 900200101 + this->userMap.size();
+		temp.patientID = 900200101 + this->userMap.size();
 
 		*this = temp;
 
@@ -196,14 +197,13 @@ void Patient::setLoggedIn(bool p_loggedIn)
 	this->loggedIn = p_loggedIn;
 }
 
-
 void Patient::operator=(const Patient &c)
 {
 	this->name = c.name;
 	this->username = c.username;
-    this->password = c.password;
+	this->password = c.password;
 	this->age = c.age;
-    this->balance = c.balance;
+	this->balance = c.balance;
 	this->gender = c.gender;
 	this->bloodType = c.bloodType;
 	this->allergies = c.allergies;
@@ -211,5 +211,5 @@ void Patient::operator=(const Patient &c)
 	this->medicalHistory = c.medicalHistory;
 	this->loggedIn = c.loggedIn;
 	this->points = c.points;
-    this->patientID = c.patientID;
+	this->patientID = c.patientID;
 }

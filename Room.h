@@ -49,6 +49,5 @@ public:
 
     QString showRoom() const;
     double getFees() const;
-
 };
 #endif

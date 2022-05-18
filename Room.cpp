@@ -14,7 +14,8 @@ Room::Room(int p_roomNumber, int p_floor, QString p_roomType)
     this->roomType = p_roomType;
 }
 
-Room::Room(QString p_department, QString p_doc, DateAndTime p_dt, QString p_roomType){
+Room::Room(QString p_department, QString p_doc, DateAndTime p_dt, QString p_roomType)
+{
     this->department = p_department;
     this->doc = p_doc;
     this->dt = p_dt;
@@ -78,46 +79,55 @@ QString Room::getDepartment() const
     return this->department;
 }
 
-QString Room::getDoc() const{
+QString Room::getDoc() const
+{
     return this->doc;
 }
 
-DateAndTime Room::getDt() const{
+DateAndTime Room::getDt() const
+{
     return this->dt;
 }
 
-
-void Room::setDepartment(QString p_department){
+void Room::setDepartment(QString p_department)
+{
     this->department = p_department;
 }
 
-void Room::setDoc(QString p_doc){
+void Room::setDoc(QString p_doc)
+{
     this->doc = p_doc;
 }
 
-void Room::setDt(DateAndTime p_dt){
+void Room::setDt(DateAndTime p_dt)
+{
     this->dt = p_dt;
 }
 
-QString Room::showRoom() const{
+QString Room::showRoom() const
+{
     QString txt = "";
     txt = txt + "   Department: " + this->department;
     txt = txt + "   Doctor Name: " + this->doc;
-    txt = txt + "   Time: " + QString::number(this->dt.getHour()) + ":" + QString::number(this->dt.getMinute()) + "0";
     txt = txt + "   Room Type: " + this->roomType;
+    txt = txt + "   Time: " + QString::number(this->dt.getHour()) + ":" + QString::number(this->dt.getMinute()) + "0";
+    txt = txt + "   Fees: $" + QString::number(this->getFees());
 
     return txt;
 }
 
-
-double Room::getFees() const{
-    if (this->roomType == "Standard"){
+double Room::getFees() const
+{
+    if (this->roomType == "Standard")
+    {
         return 1000;
     }
-    else if (this->roomType == "Suit"){
+    else if (this->roomType == "Suit")
+    {
         return 1800;
     }
-    else {
+    else
+    {
         return 3000;
     }
 }

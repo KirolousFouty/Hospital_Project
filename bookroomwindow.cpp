@@ -1,8 +1,7 @@
 #include "bookroomwindow.h"
 #include "ui_bookroomwindow.h"
 
-BookRoomWindow::BookRoomWindow(QWidget *parent) :
-                                                  QDialog(parent),
+BookRoomWindow::BookRoomWindow(QWidget *parent) : QDialog(parent),
                                                   ui(new Ui::BookRoomWindow)
 {
     ui->setupUi(this);
@@ -39,80 +38,89 @@ void BookRoomWindow::on_selectDepartmentButton_clicked()
 
 void BookRoomWindow::on_confirmRoomButton_clicked()
 {
-    if (this->p->getLoggedIn() == false){
+    if (this->p->getLoggedIn() == false)
+    {
         QMessageBox::about(this, "Error", "Please log in first");
     }
-    else{
-    if(ui->doctorsComboBox->currentText() == ""){
-         ui->statusTitle->setText("Room Status: Please choose a department.");
-         return;
-    }
-
-    if (ui->feesDisplay->text() == ""){
-        ui->statusTitle->setText("Room Status: Please choose room type.");
-        return;
-    }
-
-    QString s = ui->doctorsComboBox->currentText();
-    s.erase(s.end()-9, s.end());
-
-    DateAndTime dtTemp;
-
-            if (ui->timesComboBox->currentText() == "09:00 AM"){
-                dtTemp.setHour(9);
-                dtTemp.setMinute(0);
-            }
-            else if (ui->timesComboBox->currentText() == "10:00 AM"){
-                dtTemp.setHour(10);
-                dtTemp.setMinute(0);
-            }
-            else if (ui->timesComboBox->currentText() == "11:00 AM"){
-                dtTemp.setHour(11);
-                dtTemp.setMinute(0);
-            }
-            else if (ui->timesComboBox->currentText() == "12:00 PM"){
-                dtTemp.setHour(12);
-                dtTemp.setMinute(0);
-            }
-            else if (ui->timesComboBox->currentText() == "01:00 PM"){
-                dtTemp.setHour(1);
-                dtTemp.setMinute(0);
-            }
-            else if (ui->timesComboBox->currentText() == "02:00 PM"){
-                dtTemp.setHour(2);
-                dtTemp.setMinute(0);
-            }
-            else if (ui->timesComboBox->currentText() == "03:00 PM"){
-                dtTemp.setHour(3);
-                dtTemp.setMinute(0);
-            }
-
-
-
-    for (int i = 0; i < this->roomLog->size(); i++){
-        if (this->roomLog->at(i).getDt().getHour() == dtTemp.getHour() && this->roomLog->at(i).getDt().getMinute() == dtTemp.getMinute() && this->roomLog->at(i).getRoomType() == ui->roomTypesComboBox->currentText()){
-             ui->statusTitle->setText("Room Status: Room is unavailable! Try another!");
-             return;
+    else
+    {
+        if (ui->doctorsComboBox->currentText() == "")
+        {
+            ui->statusTitle->setText("Room Status: Please choose a department.");
+            return;
         }
+
+        if (ui->feesDisplay->text() == "")
+        {
+            ui->statusTitle->setText("Room Status: Please choose room type.");
+            return;
+        }
+
+        QString s = ui->doctorsComboBox->currentText();
+        s.erase(s.end() - 9, s.end());
+
+        DateAndTime dtTemp;
+
+        if (ui->timesComboBox->currentText() == "09:00 AM")
+        {
+            dtTemp.setHour(9);
+            dtTemp.setMinute(0);
+        }
+        else if (ui->timesComboBox->currentText() == "10:00 AM")
+        {
+            dtTemp.setHour(10);
+            dtTemp.setMinute(0);
+        }
+        else if (ui->timesComboBox->currentText() == "11:00 AM")
+        {
+            dtTemp.setHour(11);
+            dtTemp.setMinute(0);
+        }
+        else if (ui->timesComboBox->currentText() == "12:00 PM")
+        {
+            dtTemp.setHour(12);
+            dtTemp.setMinute(0);
+        }
+        else if (ui->timesComboBox->currentText() == "01:00 PM")
+        {
+            dtTemp.setHour(1);
+            dtTemp.setMinute(0);
+        }
+        else if (ui->timesComboBox->currentText() == "02:00 PM")
+        {
+            dtTemp.setHour(2);
+            dtTemp.setMinute(0);
+        }
+        else if (ui->timesComboBox->currentText() == "03:00 PM")
+        {
+            dtTemp.setHour(3);
+            dtTemp.setMinute(0);
+        }
+
+        for (int i = 0; i < this->roomLog->size(); i++)
+        {
+            if (this->roomLog->at(i).getDt().getHour() == dtTemp.getHour() && this->roomLog->at(i).getDt().getMinute() == dtTemp.getMinute() && this->roomLog->at(i).getRoomType() == ui->roomTypesComboBox->currentText())
+            {
+                ui->statusTitle->setText("Room Status: Room is unavailable! Try another!");
+                return;
+            }
+        }
+
+        Room tempRoom(ui->departmentsComboBox->currentText(), s, dtTemp, ui->roomTypesComboBox->currentText());
+
+        if (this->p->getBalance() < tempRoom.getFees())
+        {
+            ui->statusTitle->setText("Room Status: Failed! Insufficient balance.");
+            return;
+        }
+
+        this->roomLog->push_back(tempRoom);
+
+        this->p->setBalance(this->p->getBalance() - tempRoom.getFees() + this->p->getPoints()); // Accumulative non-decreasing points system
+        this->p->setPoints(this->p->getPoints() + 30);
+
+        ui->statusTitle->setText("Room Status: Room booked successfully!");
     }
-
-
-
-
-    Room tempRoom(ui->departmentsComboBox->currentText(), s, dtTemp, ui->roomTypesComboBox->currentText());
-
-    if (this->p->getBalance() < tempRoom.getFees()){
-                   ui->statusTitle->setText("Room Status: Failed! Insufficient balance.");
-                   return;
-               }
-
-    this->roomLog->push_back(tempRoom);
-
-    this->p->setBalance(this->p->getBalance() - tempRoom.getFees() + this->p->getPoints()); // Accumulative non-decreasing points system
-    this->p->setPoints(this->p->getPoints() + 30);
-
-    ui->statusTitle->setText("Room Status: Room booked successfully!");
-}
 }
 
 void BookRoomWindow::on_backButton_clicked()
@@ -122,16 +130,18 @@ void BookRoomWindow::on_backButton_clicked()
 
 void BookRoomWindow::on_selectRoomTypeButton_clicked()
 {
-    if (ui->roomTypesComboBox->currentText() == "Standard"){
+    if (ui->roomTypesComboBox->currentText() == "Standard")
+    {
         ui->feesDisplay->setText("$" + QString::number(1000));
     }
-    else if (ui->roomTypesComboBox->currentText()== "Suit"){
+    else if (ui->roomTypesComboBox->currentText() == "Suit")
+    {
         ui->feesDisplay->setText("$" + QString::number(1800));
     }
-    else {
+    else
+    {
         ui->feesDisplay->setText("$" + QString::number(3000));
     }
 
     ui->discountDisplay->setText("$" + QString::number(this->p->getPoints()));
 }
-

@@ -4,27 +4,35 @@
 #include <iostream>
 #include <QString>
 #include "Patient.h"
+#include "DateAndTime.h"
 
 using namespace std;
 
 class HomeVisit : public Patient
 {
 private:
-	QString homeAddress;
-	// date_and_time dateandtime;
-	QString symptoms;
+    QString patientName;
+    DateAndTime dt;
+    QString homeAddress;
+    QString symptoms;
 
 public:
-	HomeVisit();
-	HomeVisit(QString p_homeAddress, QString p_symptoms);
+    HomeVisit();
+    HomeVisit(QString p_patientName, DateAndTime p_dt, QString p_homeAddress, QString p_symptoms);
 
-	QString getHomeAddress();
-	QString getSymptoms();
+    QString getPatientName() const;
+    DateAndTime getDt() const;
+    QString getHomeAddress() const;
+    QString getSymptoms() const;
 
-	void setHomeAddress(QString p_homeAddress);
-	void setSymptoms(QString p_symptoms);
+    void setPatientName(QString p_patientName);
+    void setDt(DateAndTime p_dt);
+    void setHomeAddress(QString p_homeAddress);
+    void setSymptoms(QString p_symptoms);
 
-	QString requestDoctor();
+    QString requestDoctor();
+
+    QString showHomeVisit() const;
 };
 
 #endif

@@ -1,22 +1,31 @@
 #include "Drugs.h"
 
-Drugs::Drugs()
+template <class T>
+Drugs<T>::Drugs()
 {
     this->price = 0.0;
 }
-Drugs::Drugs(double p_price)
+
+template <class T>
+Drugs<T>::Drugs(double p_price)
 {
     this->price = p_price;
 }
-void Drugs::setPrice(double p_price)
+
+template <class T>
+void Drugs<T>::setPrice(double p_price)
 {
     this->price = p_price;
 }
-double Drugs::getPrice()
+
+template <class T>
+double Drugs<T>::getPrice()
 {
     return this->price;
 }
-void Drugs::purchase()
+
+template <class T>
+void Drugs<T>::purchase()
 {
     //////////////
 }

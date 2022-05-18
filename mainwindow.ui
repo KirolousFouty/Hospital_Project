@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>782</width>
-    <height>617</height>
+    <height>710</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,39 +40,11 @@
      <string>Show Patient Information</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="salamtakHospitalTitle">
-    <property name="geometry">
-     <rect>
-      <x>-10</x>
-      <y>0</y>
-      <width>791</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Salamtak Hospital</string>
-    </property>
-    <property name="frame">
-     <bool>false</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QPushButton" name="bookAppointmentButton">
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>340</y>
+      <y>300</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -85,7 +57,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>440</y>
+      <y>480</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -98,9 +70,9 @@
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>480</y>
+      <y>530</y>
       <width>661</width>
-      <height>111</height>
+      <height>141</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -117,7 +89,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>300</y>
+      <y>260</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -130,7 +102,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>260</y>
+      <y>340</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -175,13 +147,48 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>380</y>
+      <y>420</y>
       <width>291</width>
       <height>29</height>
      </rect>
     </property>
     <property name="text">
      <string>Laboratory: Blood Test</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bookHomeVisitButton">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>380</y>
+      <width>291</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Book Home Visit</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="salamtakHospitalTitle">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>781</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>24</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Salamtak Hospital</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
@@ -191,7 +198,7 @@
      <x>0</x>
      <y>0</y>
      <width>782</width>
-     <height>17</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

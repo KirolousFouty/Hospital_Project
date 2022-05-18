@@ -9,8 +9,9 @@
 #include "Appointment.h"
 #include "EmergencyVisit.h"
 
-namespace Ui {
-class bookEmergencyVisitWindow;
+namespace Ui
+{
+    class bookEmergencyVisitWindow;
 }
 
 class bookEmergencyVisitWindow : public QDialog

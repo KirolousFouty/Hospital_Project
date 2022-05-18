@@ -27,19 +27,19 @@ void ShowPatientInformation::on_showButton_clicked()
     ui->bloodTypesDisplay->setText(this->p->getBloodType());
     ui->allergiesDisplay->setText(this->p->getAllergies());
 
-    if (this->p->getInsured()){
+    if (this->p->getInsured())
+    {
         ui->insuranceDisplay->setText("Yes");
     }
-    else{
+    else
+    {
         ui->insuranceDisplay->setText("No");
     }
 
     ui->pointsDisplay->setText(QString::number(this->p->getPoints()));
 }
 
-
 void ShowPatientInformation::on_backButton_clicked()
 {
     this->close();
 }
-

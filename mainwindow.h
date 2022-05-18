@@ -10,6 +10,7 @@
 #include "bookemergencyvisitwindow.h"
 #include "rechargebalancewindow.h"
 #include "dobloodtestwindow.h"
+#include "bookhomevisitwindow.h"
 
 #include "DateAndTime.h"
 #include "HomeVisit.h"
@@ -31,7 +32,6 @@
 
 using namespace std;
 
-
 QT_BEGIN_NAMESPACE
 namespace Ui
 {
@@ -52,9 +52,8 @@ public:
     QVector<Doctor> *arrDoc;
     QVector<EmergencyVisit> *emergencyVisitLog;
     QVector<Room> *roomLog;
-    QLabel* p_userLoginTitle;
-
-
+    QVector<HomeVisit> *homeVisitLog;
+    QLabel *p_userLoginTitle;
 
 private slots:
     void on_loginButton_clicked();
@@ -72,6 +71,8 @@ private slots:
     void on_rechargeButton_clicked();
 
     void on_doBloodTestButton_clicked();
+
+    void on_bookHomeVisitButton_clicked();
 
 private:
     Ui::MainWindow *ui;

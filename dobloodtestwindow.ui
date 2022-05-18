@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>654</width>
+    <height>366</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="submitSampleButton">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>120</y>
+     <x>230</x>
+     <y>200</y>
      <width>191</width>
      <height>41</height>
     </rect>
@@ -34,9 +34,9 @@
   <widget class="QLabel" name="bloodTestTitle">
    <property name="geometry">
     <rect>
-     <x>6</x>
+     <x>2</x>
      <y>4</y>
-     <width>391</width>
+     <width>651</width>
      <height>61</height>
     </rect>
    </property>
@@ -56,8 +56,8 @@
   <widget class="QLabel" name="resultDisplay">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>220</y>
+     <x>160</x>
+     <y>270</y>
      <width>321</width>
      <height>31</height>
     </rect>
@@ -74,9 +74,9 @@
   <widget class="QLabel" name="feesTitle">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>184</x>
      <y>90</y>
-     <width>191</width>
+     <width>101</width>
      <height>20</height>
     </rect>
    </property>
@@ -90,6 +90,53 @@
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="discountTitle">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>120</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Discount by Points:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="discountDisplay">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>120</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="checkDiscountButton">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>160</y>
+     <width>111</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Check Discount</string>
    </property>
   </widget>
  </widget>

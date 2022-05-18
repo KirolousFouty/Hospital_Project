@@ -7,14 +7,15 @@
 
 using namespace std;
 
+template <class T>
 class Drugs : public Pharmacy
 {
 private:
     double price;
 
 public:
-    Drugs();
-    Drugs(double p_price);
+    Drugs<T>();
+    Drugs<T>(double p_price);
     void setPrice(double p_price);
 
     double getPrice();

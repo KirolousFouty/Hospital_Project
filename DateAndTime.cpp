@@ -76,6 +76,6 @@ void DateAndTime::setYear(int p_year)
 
 bool DateAndTime::operator==(const DateAndTime &dt) const
 {
-//    return (this->minute == dt.minute  && this->hour == dt.hour && this->day == dt.day && this->month == dt.month && this->year == dt.year);
-    return (this->minute == dt.minute  && this->hour == dt.hour);
+    //    return (this->minute == dt.minute  && this->hour == dt.hour && this->day == dt.day && this->month == dt.month && this->year == dt.year);
+    return (this->minute == dt.minute && this->hour == dt.hour);
 }

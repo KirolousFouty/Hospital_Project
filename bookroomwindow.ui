@@ -16,15 +16,15 @@
   <widget class="QLineEdit" name="roomTitle">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>40</y>
-     <width>241</width>
-     <height>41</height>
+     <x>0</x>
+     <y>0</y>
+     <width>731</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>15</pointsize>
+     <pointsize>20</pointsize>
      <bold>true</bold>
     </font>
    </property>

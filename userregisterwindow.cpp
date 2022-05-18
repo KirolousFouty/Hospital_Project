@@ -37,42 +37,44 @@ void UserRegisterWindow::on_registerButton_clicked()
         return;
     }
 
-    if (ui->balanceDisplay->text().toDouble() <= 0){
+    if (ui->balanceDisplay->text().toDouble() <= 0)
+    {
         ui->registrationStatusTitle->setText("Registration Status: Balance has to be greater than zero.");
         return;
     }
 
     QString abc = "abcdefghijklmnopqrstuvwxyz~!@#$%^&*()-_=+";
-        QString qs = ui->ageDisplay->text();
+    QString qs = ui->ageDisplay->text();
 
-        for (int i = 0; i < qs.length(); i++){
-            for (int j = 0; j < abc.length(); j++){
-                if (abc[j] == qs[i]){
+    for (int i = 0; i < qs.length(); i++)
+    {
+        for (int j = 0; j < abc.length(); j++)
+        {
+            if (abc[j] == qs[i])
+            {
 
-                    ui->registrationStatusTitle->setText("Registration Status: Failed! Please enter age as only numbers.");
-                    ui->ageDisplay->setText("");
-                    return;
-                }
+                ui->registrationStatusTitle->setText("Registration Status: Failed! Please enter age as only numbers.");
+                ui->ageDisplay->setText("");
+                return;
             }
         }
+    }
 
+    qs = ui->balanceDisplay->text();
 
-   qs = ui->balanceDisplay->text();
+    for (int i = 0; i < qs.length(); i++)
+    {
+        for (int j = 0; j < abc.length(); j++)
+        {
+            if (abc[j] == qs[i])
+            {
 
-            for (int i = 0; i < qs.length(); i++){
-                for (int j = 0; j < abc.length(); j++){
-                    if (abc[j] == qs[i]){
-
-                        ui->registrationStatusTitle->setText("Registration Status: Failed! Please enter balance as only numbers.");
-                        ui->balanceDisplay->setText("");
-                        return;
-                    }
-                }
+                ui->registrationStatusTitle->setText("Registration Status: Failed! Please enter balance as only numbers.");
+                ui->balanceDisplay->setText("");
+                return;
             }
-
-
-
-
+        }
+    }
 
     if (this->p->reg(ui->nameDisplay->text(), ui->usernameDisplay->text(), ui->passwordDisplay->text(), ui->ageDisplay->text().toInt(), ui->balanceDisplay->text().toDouble(), ui->genderComboBox->currentText(), ui->bloodTypeComboBox->currentText(), ui->allergiesDisplay->text(), ui->insuredYesRadioButton->isChecked(), ui->medicalHistoryDisplay->text()))
     {

@@ -11,8 +11,9 @@
 #include <QVector>
 #include <QMessageBox>
 
-namespace Ui {
-class BookRoomWindow;
+namespace Ui
+{
+    class BookRoomWindow;
 }
 
 class BookRoomWindow : public QDialog
@@ -32,8 +33,6 @@ private slots:
     void on_selectDepartmentButton_clicked();
 
     void on_backButton_clicked();
-
-
 
     void on_confirmRoomButton_clicked();
 

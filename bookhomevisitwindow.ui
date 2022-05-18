@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>bookHomeVisitWindow</class>
+ <widget class="QDialog" name="bookHomeVisitWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>797</width>
+    <height>494</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="homeVisitTitle">
+   <property name="geometry">
+    <rect>
+     <x>-2</x>
+     <y>4</y>
+     <width>801</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Home Visit</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="symptomsTitle">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>106</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Symptoms:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="homeAddressTitle">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>153</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Home Address:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="timeTitle">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>200</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Time:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="symptomsDisplay">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>106</y>
+     <width>271</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="homeAddressDisplay">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>150</y>
+     <width>271</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="timesComboBox">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>200</y>
+     <width>111</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>09:00 AM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10:00 AM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>11:00 AM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>12:00 PM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>01:00 PM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>02:00 PM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>03:00 PM</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>310</y>
+     <width>101</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="feesTitle">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>241</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fees:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="feesDisplay">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>241</y>
+     <width>281</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>$900</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="discountDisplay">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>270</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirmHomeVisitButton">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>310</y>
+     <width>261</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Confirm Home Visit</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="discountTitle">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>271</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Discount by Points:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="statusTitle">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>390</y>
+     <width>421</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Status:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="checkDiscountButton">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>267</y>
+     <width>111</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Check Discount</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -24,7 +24,7 @@ public:
     Patient *p;
     QVector<Appointment> *appointmentsLog;
     QVector<Doctor> *arrDoc;
-    QLabel* p_userLoginTitle;
+    QLabel *p_userLoginTitle;
 
 private slots:
     void on_registerButton_clicked();
