@@ -18,5 +18,5 @@ QString Pharmacy::getMed()
 }
 QString Pharmacy::getMedicineFromDoctor()
 {
-    ////////////////////////
+    return "";
 }

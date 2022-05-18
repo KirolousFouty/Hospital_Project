@@ -22,5 +22,5 @@ QString Laboratory::getTest()
 
 QString Laboratory::test_results()
 {
-    ////////////////////////
+    return "";
 }

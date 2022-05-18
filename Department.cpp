@@ -31,6 +31,7 @@ QString Department::assignDoctor()
 
     if (this->departmentType == "neurology")
         return "Adam";
+    return "";
 }
 
 QString Department::assignRoom()
