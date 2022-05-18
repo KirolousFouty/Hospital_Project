@@ -37,6 +37,13 @@ void UserRegisterWindow::on_registerButton_clicked()
         return;
     }
 
+    if (ui->ageDisplay->text().toInt() > 100)
+    {
+        ui->registrationStatusTitle->setText("Registration Status: User must be younger than 100 years old to register.");
+        return;
+    }
+
+
     if (ui->balanceDisplay->text().toDouble() <= 0)
     {
         ui->registrationStatusTitle->setText("Registration Status: Balance has to be greater than zero.");

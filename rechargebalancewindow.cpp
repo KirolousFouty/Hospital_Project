@@ -46,8 +46,8 @@ void rechargeBalanceWindow::on_depositButton_clicked()
 
     this->p->setBalance(this->p->getBalance() + ui->amountDisplay->text().toDouble());
     ui->currentBalanceDisplay->setText("$" + QString::number(this->p->getBalance()));
-    ui->amountDisplay->setText("");
     ui->balanceStatusDisplay->setText("Balance Status: $" + ui->amountDisplay->text() + " deposited successfully!");
+    ui->amountDisplay->setText("");
 }
 
 void rechargeBalanceWindow::on_withdrawButton_clicked()
@@ -77,8 +77,8 @@ void rechargeBalanceWindow::on_withdrawButton_clicked()
 
     this->p->setBalance(this->p->getBalance() - ui->amountDisplay->text().toDouble());
     ui->currentBalanceDisplay->setText("$" + QString::number(this->p->getBalance()));
-    ui->amountDisplay->setText("");
     ui->balanceStatusDisplay->setText("Balance Status: $" + ui->amountDisplay->text() + " withdrawn successfully!");
+    ui->amountDisplay->setText("");
 }
 
 void rechargeBalanceWindow::on_showCurrentButton_clicked()

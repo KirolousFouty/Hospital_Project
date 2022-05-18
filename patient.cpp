@@ -2,16 +2,20 @@
 
 Patient::Patient() // default constructor
 {
-	this->medicalHistory = "unknown";
-	this->balance = 0;
-	this->points = 0;
-	this->patientID = -1;
-	this->age = 18;
-	this->gender = "female";
-	this->bloodType = "A+";
-	this->allergies = "none";
-	this->insured = false;
+
+    this->name = "Admin";
+    this->username = "Admin";
+    this->password = "Admin";
+    this->age = 19;
+    this->balance = 999999;
+    this->gender = "Male";
+    this->bloodType = "A+";
+    this->allergies = "None";
+    this->insured = true;
+    this->medicalHistory = "Excellent";
 	this->loggedIn = false;
+	this->points = 0;
+    this->patientID = 900200100 + this->userMap.size();
 }
 Patient::Patient(QString p_medicalHistory, double p_balance, int p_points, int p_patientID, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured) // parameterized constructor
 {
@@ -128,9 +132,9 @@ bool Patient::reg(QString p_name, QString p_username, QString p_password, int p_
 		temp.allergies = p_allergies;
 		temp.insured = p_insured;
 		temp.medicalHistory = p_medicalHistory;
-		temp.loggedIn = false;
+        temp.loggedIn = false;
 		temp.points = 0;
-		temp.patientID = 900200101 + this->userMap.size();
+        temp.patientID = 900200100 + this->userMap.size();
 
 		*this = temp;
 

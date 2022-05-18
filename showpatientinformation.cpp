@@ -19,6 +19,8 @@ ShowPatientInformation::~ShowPatientInformation()
 void ShowPatientInformation::on_showButton_clicked()
 {
 
+
+
     ui->nameDisplay->setText(this->p->getName());
     ui->idDisplay->setText(QString::number(this->p->getPatientID()));
     ui->ageDisplay->setText(QString::number(this->p->getAge()));

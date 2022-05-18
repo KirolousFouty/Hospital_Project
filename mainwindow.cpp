@@ -32,6 +32,10 @@ MainWindow::MainWindow(QWidget *parent)
     arrDoc->push_back(d6);
     arrDoc->push_back(d7);
     arrDoc->push_back(d8);
+
+    Patient Admin;
+    this->p->userMap.insert(pair<QString, Patient>(Admin.getUsername(), Admin));
+
 }
 
 MainWindow::~MainWindow()
