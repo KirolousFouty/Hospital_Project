@@ -78,8 +78,8 @@
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>210</y>
-     <width>111</width>
+     <y>211</y>
+     <width>141</width>
      <height>20</height>
     </rect>
    </property>
@@ -91,7 +91,7 @@
    <property name="geometry">
     <rect>
      <x>300</x>
-     <y>400</y>
+     <y>420</y>
      <width>251</width>
      <height>29</height>
     </rect>
@@ -103,8 +103,8 @@
   <widget class="QLabel" name="selectDepartmentTitle">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>156</y>
+     <x>130</x>
+     <y>157</y>
      <width>141</width>
      <height>20</height>
     </rect>
@@ -116,9 +116,9 @@
   <widget class="QLabel" name="selectRoomTypeTitle">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>310</y>
-     <width>131</width>
+     <x>130</x>
+     <y>311</y>
+     <width>141</width>
      <height>20</height>
     </rect>
    </property>
@@ -129,9 +129,9 @@
   <widget class="QLabel" name="selectTimeTitle">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>260</y>
-     <width>81</width>
+     <x>130</x>
+     <y>261</y>
+     <width>141</width>
      <height>20</height>
     </rect>
    </property>
@@ -213,7 +213,7 @@
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>480</y>
+     <y>500</y>
      <width>381</width>
      <height>20</height>
     </rect>
@@ -226,13 +226,84 @@
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>400</y>
+     <y>420</y>
      <width>101</width>
      <height>29</height>
     </rect>
    </property>
    <property name="text">
     <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="selectRoomTypeButton">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>310</y>
+     <width>81</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="feesTitle">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>351</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fees:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="feesDisplay">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>351</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="discountTitle">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>381</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Discount by Points:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="discountDisplay">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>380</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

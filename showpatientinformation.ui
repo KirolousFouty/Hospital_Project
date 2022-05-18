@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>380</width>
-    <height>421</height>
+    <height>481</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,7 +39,7 @@
    <property name="geometry">
     <rect>
      <x>89</x>
-     <y>114</y>
+     <y>88</y>
      <width>101</width>
      <height>20</height>
     </rect>
@@ -57,7 +57,7 @@
    <property name="geometry">
     <rect>
      <x>89</x>
-     <y>143</y>
+     <y>119</y>
      <width>101</width>
      <height>20</height>
     </rect>
@@ -75,7 +75,7 @@
    <property name="geometry">
     <rect>
      <x>89</x>
-     <y>170</y>
+     <y>144</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -93,7 +93,7 @@
    <property name="geometry">
     <rect>
      <x>89</x>
-     <y>205</y>
+     <y>212</y>
      <width>101</width>
      <height>20</height>
     </rect>
@@ -111,7 +111,7 @@
    <property name="geometry">
     <rect>
      <x>89</x>
-     <y>230</y>
+     <y>237</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -129,7 +129,7 @@
    <property name="geometry">
     <rect>
      <x>89</x>
-     <y>260</y>
+     <y>267</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -147,7 +147,7 @@
    <property name="geometry">
     <rect>
      <x>89</x>
-     <y>294</y>
+     <y>301</y>
      <width>101</width>
      <height>20</height>
     </rect>
@@ -165,7 +165,7 @@
    <property name="geometry">
     <rect>
      <x>89</x>
-     <y>322</y>
+     <y>329</y>
      <width>101</width>
      <height>20</height>
     </rect>
@@ -183,7 +183,7 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>111</y>
+     <y>88</y>
      <width>121</width>
      <height>23</height>
     </rect>
@@ -192,6 +192,9 @@
     <font>
      <pointsize>10</pointsize>
     </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
@@ -201,7 +204,7 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>141</y>
+     <y>118</y>
      <width>121</width>
      <height>23</height>
     </rect>
@@ -210,6 +213,9 @@
     <font>
      <pointsize>10</pointsize>
     </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
@@ -219,7 +225,7 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>171</y>
+     <y>148</y>
      <width>121</width>
      <height>23</height>
     </rect>
@@ -228,6 +234,9 @@
     <font>
      <pointsize>10</pointsize>
     </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
@@ -237,7 +246,7 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>201</y>
+     <y>208</y>
      <width>121</width>
      <height>23</height>
     </rect>
@@ -246,6 +255,9 @@
     <font>
      <pointsize>10</pointsize>
     </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
@@ -255,7 +267,7 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>231</y>
+     <y>238</y>
      <width>121</width>
      <height>23</height>
     </rect>
@@ -264,6 +276,9 @@
     <font>
      <pointsize>10</pointsize>
     </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
@@ -273,7 +288,7 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>261</y>
+     <y>268</y>
      <width>121</width>
      <height>23</height>
     </rect>
@@ -282,6 +297,9 @@
     <font>
      <pointsize>10</pointsize>
     </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
@@ -291,7 +309,7 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>291</y>
+     <y>298</y>
      <width>121</width>
      <height>23</height>
     </rect>
@@ -300,6 +318,9 @@
     <font>
      <pointsize>10</pointsize>
     </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="text">
     <string/>
@@ -309,7 +330,7 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>321</y>
+     <y>328</y>
      <width>121</width>
      <height>23</height>
     </rect>
@@ -319,6 +340,9 @@
      <pointsize>10</pointsize>
     </font>
    </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -326,11 +350,16 @@
   <widget class="QPushButton" name="showButton">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>360</y>
-     <width>93</width>
+     <x>92</x>
+     <y>390</y>
+     <width>221</width>
      <height>29</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Show</string>
@@ -339,14 +368,53 @@
   <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>360</y>
+     <x>156</x>
+     <y>430</y>
      <width>91</width>
      <height>29</height>
     </rect>
    </property>
    <property name="text">
     <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="balanceTitle">
+   <property name="geometry">
+    <rect>
+     <x>89</x>
+     <y>181</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Balance:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="balanceDisplay">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>180</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

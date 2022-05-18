@@ -112,15 +112,6 @@ double Doctor::showRating()
     // ui->display->SetText("Rating: " + rating);
     return 0;
 }
-void Doctor::setAppointment(Patient p_patient)
-{
-    // need to know the database we will use
-    //  use Department::assign_doctor()?
-}
-// void Doctor::examine()
-// {
-//////////////////////////
-// }
 
 void Doctor::requestBloodTest()
 {

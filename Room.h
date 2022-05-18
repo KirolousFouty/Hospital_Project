@@ -48,5 +48,7 @@ public:
     void setDt(DateAndTime p_dt);
 
     QString showRoom() const;
+    double getFees() const;
+
 };
 #endif

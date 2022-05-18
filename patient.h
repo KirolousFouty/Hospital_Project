@@ -16,6 +16,7 @@ private:
 	QString username;
     QString password;
 	bool loggedIn;
+    double balance;
 	int points;
 	int patientID;
 	int age;
@@ -30,12 +31,13 @@ public:
 
 
 	Patient();
-	Patient(QString p_medicalHistory, int p_points, int p_patientID, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured);
+    Patient(QString p_medicalHistory, double p_balance, int p_points, int p_patientID, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured);
 
     map<QString, Patient> userMap;
 
     QString getName();
 	QString getMedicalHistory();
+    double getBalance() const;
 	int getPoints();
     int getPatientID();
 	int getAge();
@@ -46,6 +48,7 @@ public:
     bool getLoggedIn() const;
 
 	void setMedicalHistory(QString p_medicalHistory);
+    void setBalance(double p_balance);
 	void setPoints(int p_points);
 	void setpatientID(int p_patientID);
 	void setAge(int p_age);
@@ -55,7 +58,7 @@ public:
 	void setInsured(bool p_insured);
 	void setLoggedIn(bool p_loggedIn);
 
-	bool reg(QString p_name, QString p_username, QString p_password, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured, QString p_medicalHistory);
+    bool reg(QString p_name, QString p_username, QString p_password, int p_age, double p_balance, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured, QString p_medicalHistory);
     int login(QString p_username, QString p_password);
 
 	QString getUsername();

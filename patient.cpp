@@ -3,6 +3,7 @@
 Patient::Patient() // default constructor
 {
 	this->medicalHistory = "unknown";
+    this->balance = 0;
 	this->points = 0;
     this->patientID = -1;
 	this->age = 18;
@@ -12,12 +13,13 @@ Patient::Patient() // default constructor
 	this->insured = false;
     this->loggedIn = false;
 }
-Patient::Patient(QString p_medicalHistory, int p_points, int p_patientID, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured) // parameterized constructor
+Patient::Patient(QString p_medicalHistory, double p_balance, int p_points, int p_patientID, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured) // parameterized constructor
 {
 	this->medicalHistory = p_medicalHistory;
+    this->balance = p_balance;
 	this->points = p_points;
 	this->patientID = p_patientID;
-	this->age = p_age;
+    this->age = p_age;
 	this->gender = p_gender;
 	this->bloodType = p_bloodType;
 	this->allergies = p_allergies;
@@ -34,6 +36,11 @@ QString Patient::getMedicalHistory()
 {
 	return this->medicalHistory;
 }
+
+double Patient::getBalance() const{
+    return this->balance;
+}
+
 int Patient::getPoints()
 {
 	return this->points;
@@ -66,6 +73,11 @@ void Patient::setMedicalHistory(QString p_medicalHistory)
 {
 	this->medicalHistory = p_medicalHistory;
 }
+
+void Patient::setBalance(double p_balance){
+    this->balance = p_balance;
+}
+
 void Patient::setPoints(int p_points)
 {
 	this->points = p_points;
@@ -94,33 +106,11 @@ void Patient::setInsured(bool p_insured)
 {
 	this->insured = p_insured;
 }
-void Patient::update_history()
-{
-	/////////////////////////////////////////
-}
-void Patient::patient_request()
-{
-	/////////////////////////////////////////
-}
-QString Patient::searchForDoctor(QString p_specialization)
-{
-	/////////////////////////////////////////
-	return "";
-}
-bool Patient::getInsuranceApproval()
-{
-	//////////////////////////////////////////
-	return true;
-}
-long Patient::cancelReservation(int p_reservationID) // How does cancel reservation return long?
-{
-	///////////////////////////////////////////
-	return 0;
-}
 
-bool Patient::reg(QString p_name, QString p_username, QString p_password, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured, QString p_medicalHistory)
+
+bool Patient::reg(QString p_name, QString p_username, QString p_password, int p_age, double p_balance, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured, QString p_medicalHistory)
 {
-	if (userMap.count(this->getName()) == 0)
+    if (userMap.count(p_name) == 0)
 	{
 		Patient temp;
 
@@ -131,6 +121,7 @@ bool Patient::reg(QString p_name, QString p_username, QString p_password, int p_
 		temp.username = p_username;
 		temp.password = p_password;
 		temp.age = p_age;
+        temp.balance = p_balance;
 		temp.gender = p_gender;
 		temp.bloodType = p_bloodType;
 		temp.allergies = p_allergies;
@@ -138,6 +129,7 @@ bool Patient::reg(QString p_name, QString p_username, QString p_password, int p_
 		temp.medicalHistory = p_medicalHistory;
 		temp.loggedIn = false;
 		temp.points = 0;
+        temp.patientID = 900200101 + this->userMap.size();
 
 		*this = temp;
 
@@ -204,10 +196,6 @@ void Patient::setLoggedIn(bool p_loggedIn)
 	this->loggedIn = p_loggedIn;
 }
 
-void Patient::userInformationGetter()
-{
-	/////////////////////////////////////
-}
 
 void Patient::operator=(const Patient &c)
 {
@@ -215,6 +203,7 @@ void Patient::operator=(const Patient &c)
 	this->username = c.username;
     this->password = c.password;
 	this->age = c.age;
+    this->balance = c.balance;
 	this->gender = c.gender;
 	this->bloodType = c.bloodType;
 	this->allergies = c.allergies;
@@ -222,7 +211,5 @@ void Patient::operator=(const Patient &c)
 	this->medicalHistory = c.medicalHistory;
 	this->loggedIn = c.loggedIn;
 	this->points = c.points;
+    this->patientID = c.patientID;
 }
-
-// MISSING: getshortestpath
-////////////////////////////////////////////////

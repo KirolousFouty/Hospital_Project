@@ -108,3 +108,16 @@ QString Room::showRoom() const{
 
     return txt;
 }
+
+
+double Room::getFees() const{
+    if (this->roomType == "Standard"){
+        return 1000;
+    }
+    else if (this->roomType == "Suit"){
+        return 1800;
+    }
+    else {
+        return 3000;
+    }
+}

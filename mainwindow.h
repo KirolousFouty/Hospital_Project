@@ -8,6 +8,7 @@
 #include "bookappointmentwindow.h"
 #include "bookroomwindow.h"
 #include "bookemergencyvisitwindow.h"
+#include "rechargebalancewindow.h"
 
 #include "DateAndTime.h"
 #include "HomeVisit.h"
@@ -66,6 +67,8 @@ private slots:
     void on_bookRoomButton_clicked();
 
     void on_emergencyVisitButton_clicked();
+
+    void on_rechargeButton_clicked();
 
 private:
     Ui::MainWindow *ui;

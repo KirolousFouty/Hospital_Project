@@ -9,6 +9,7 @@
 
 #include <QDialog>
 #include <QVector>
+#include <QMessageBox>
 
 namespace Ui {
 class BookRoomWindow;
@@ -35,6 +36,8 @@ private slots:
 
 
     void on_confirmRoomButton_clicked();
+
+    void on_selectRoomTypeButton_clicked();
 
 private:
     Ui::BookRoomWindow *ui;

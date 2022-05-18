@@ -76,6 +76,7 @@ void MainWindow::on_showPatientInformationButton_clicked()
 
 void MainWindow::on_bookAppointmentButton_clicked()
 {
+
     BookAppointmentWindow bookappointmentwin;
     bookappointmentwin.setModal(true);
 
@@ -92,7 +93,7 @@ void MainWindow::on_showAppointmentsButton_clicked()
     ui->appointmentsTitle->setText("");
 
     if (this->appointmentsLog->size() == 0 && this->emergencyVisitLog->size() == 0 && this->roomLog->size() == 0){
-        ui->appointmentsTitle->setText("No bookings.");
+        ui->appointmentsTitle->setText("No current bookings.");
         return;
     }
 
@@ -110,6 +111,7 @@ void MainWindow::on_showAppointmentsButton_clicked()
 
 void MainWindow::on_bookRoomButton_clicked()
 {
+
     BookRoomWindow bookroomwin;
     bookroomwin.setModal(true);
 
@@ -132,5 +134,21 @@ void MainWindow::on_emergencyVisitButton_clicked()
     bookemervisit.emergencyVisitLog = this->emergencyVisitLog;
 
     bookemervisit.exec();
+}
+
+
+void MainWindow::on_rechargeButton_clicked()
+{
+    if (this->p->getLoggedIn() == false){
+        QMessageBox::about(this, "Error", "Please log in first");
+    }
+    else{
+    rechargeBalanceWindow rechargewin;
+    rechargewin.setModal(true);
+
+    rechargewin.p = this->p;
+
+    rechargewin.exec();
+}
 }
 

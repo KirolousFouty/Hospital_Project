@@ -9,7 +9,6 @@ ShowPatientInformation::ShowPatientInformation(QWidget *parent) : QDialog(parent
     this->p = new Patient;
     this->appointmentsLog = new QVector<Appointment>;
     this->arrDoc = new QVector<Doctor>;
-
 }
 
 ShowPatientInformation::~ShowPatientInformation()
@@ -20,24 +19,10 @@ ShowPatientInformation::~ShowPatientInformation()
 void ShowPatientInformation::on_showButton_clicked()
 {
 
- //    if (this->p->getLoggedIn() == false){
-
-//        ui->nameDisplay->setText("Not logged in");
-//        ui->idDisplay->setText("Not logged in");
-//        ui->ageDisplay->setText("Not logged in");
-//        ui->genderDisplay->setText("Not logged in");
-//        ui->bloodTypesDisplay->setText("Not logged in");
-//        ui->allergiesDisplay->setText("Not logged in");
-//        ui->insuranceDisplay->setText("Not logged in");
-//        ui->pointsDisplay->setText("Not logged in");
-
-//        return;
-
-//    }
-
     ui->nameDisplay->setText(this->p->getName());
-    ui->idDisplay->setText("ID#900212931");
+    ui->idDisplay->setText(QString::number(this->p->getPatientID()));
     ui->ageDisplay->setText(QString::number(this->p->getAge()));
+    ui->balanceDisplay->setText("$" + QString::number(this->p->getBalance()));
     ui->genderDisplay->setText(this->p->getGender());
     ui->bloodTypesDisplay->setText(this->p->getBloodType());
     ui->allergiesDisplay->setText(this->p->getAllergies());

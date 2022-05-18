@@ -25,7 +25,10 @@ BookAppointmentWindow::~BookAppointmentWindow()
 
 void BookAppointmentWindow::on_confirmAppointmentButton_clicked()
 {
-
+    if (this->p->getLoggedIn() == false){
+        QMessageBox::about(this, "Error", "Please log in first");
+    }
+    else{
     if(ui->doctorsComboBox->currentText() == ""){
          ui->appointmentStatusTitle->setText("Appointment Status: Please choose a department.");
          return;
@@ -34,6 +37,11 @@ void BookAppointmentWindow::on_confirmAppointmentButton_clicked()
     if(ui->timeComboBox->currentText() == ""){
          ui->appointmentStatusTitle->setText("Appointment Status: Please choose a doctor.");
          return;
+    }
+
+    if(ui->feesDisplay->text().toDouble() > this->p->getBalance()){
+        ui->appointmentStatusTitle->setText("Appointment Status: Failed! Insufficient balance.");
+        return;
     }
 
 
@@ -81,17 +89,27 @@ void BookAppointmentWindow::on_confirmAppointmentButton_clicked()
                 }
             }
 
+            if (this->p->getBalance() < this->arrDoc->at(i).getFees()){
+                ui->appointmentStatusTitle->setText("Appointment Status: Failed! Insufficient balance.");
+                return;
+            }
+
            Appointment a1(this->p, &(this->arrDoc->at(i)), dtTemp);
            appointmentsLog->push_back(a1);
+
+           this->p->setBalance(this->p->getBalance() - this->arrDoc->at(i).getFees()+ this->p->getPoints()); // Accumulative non-decreasing points system
+           this->p->setPoints(this->p->getPoints() + 10);
+
            break;
             }
 
         }
 
+
     ui->appointmentStatusTitle->setText("Appointment Status: Booked Successfully!");
 
 }
-
+}
 void BookAppointmentWindow::on_selectDepartmentButton_clicked()
 {
 
@@ -136,6 +154,8 @@ void BookAppointmentWindow::on_selectDoctorButton_clicked()
 
             }
 
+            ui->feesDisplay->setText("$" + QString::number(this->arrDoc->at(i).getFees()));
+            ui->discountDisplay->setText("$" + QString::number(this->p->getPoints()));
             break;
         }
     }

@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QVector>
+#include <QMessageBox>
 #include "Patient.h"
 #include "Doctor.h"
 #include "Appointment.h"

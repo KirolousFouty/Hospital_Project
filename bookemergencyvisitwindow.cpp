@@ -11,6 +11,7 @@ bookEmergencyVisitWindow::bookEmergencyVisitWindow(QWidget *parent) :
     this->appointmentsLog = new QVector<Appointment>;
     this->arrDoc = new QVector<Doctor>;
     this->emergencyVisitLog = new QVector<EmergencyVisit>;
+    ui->discountDisplay->setText("$" + QString::number(this->p->getPoints()));
 }
 
 
@@ -19,8 +20,12 @@ bookEmergencyVisitWindow::~bookEmergencyVisitWindow()
     delete ui;
 }
 
-void bookEmergencyVisitWindow::on_confirmVisitButton_clicked()///////////////////////////////////////////////////////////////////
+void bookEmergencyVisitWindow::on_confirmVisitButton_clicked()
 {
+    if (this->p->getLoggedIn() == false){
+        QMessageBox::about(this, "Error", "Please log in first");
+    }
+    else{
    DateAndTime dtTemp;
 
    if (ui->timeComboBox->currentText() == "09:00 AM"){
@@ -60,12 +65,20 @@ void bookEmergencyVisitWindow::on_confirmVisitButton_clicked()//////////////////
        }
    }
 
+   if (this->p->getBalance() < 5000){
+       ui->visitStatusTitle->setText("Visit Status: Failed! Insufficient balance.");
+       return;
+   }
+
+
+   this->p->setBalance(this->p->getBalance() - 5000 + this->p->getPoints()); // Accumulative non-decreasing points system
+   this->p->setPoints(this->p->getPoints() + 50);
 
    this->emergencyVisitLog->push_back(EmergencyVisit(this->p->getName(), dtTemp));
    ui->visitStatusTitle->setText("Visit Status: Booked Successfully!");
 
 }
-
+}
 
 void bookEmergencyVisitWindow::on_backButton_clicked()
 {

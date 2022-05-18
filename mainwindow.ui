@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>446</x>
-      <y>120</y>
+      <y>110</y>
       <width>83</width>
       <height>29</height>
      </rect>
@@ -31,7 +31,7 @@
     <property name="geometry">
      <rect>
       <x>238</x>
-      <y>166</y>
+      <y>156</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -85,7 +85,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>420</y>
+      <y>430</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -98,7 +98,7 @@
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>460</y>
+      <y>470</y>
       <width>661</width>
       <height>111</height>
      </rect>
@@ -117,7 +117,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>290</y>
+      <y>300</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -130,7 +130,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>240</y>
+      <y>260</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -143,7 +143,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>110</y>
+      <y>100</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -156,6 +156,19 @@
     </property>
     <property name="text">
      <string>User: Not Logged in</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="rechargeButton">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>190</y>
+      <width>291</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Recharge Balance</string>
     </property>
    </widget>
   </widget>

@@ -29,6 +29,7 @@ SOURCES += \
     bookroomwindow.cpp \
     main.cpp \
     mainwindow.cpp \
+    rechargebalancewindow.cpp \
     showpatientinformation.cpp \
     userloginwindow.cpp \
     userregisterwindow.cpp
@@ -53,6 +54,7 @@ HEADERS += \
     bookemergencyvisitwindow.h \
     bookroomwindow.h \
     mainwindow.h \
+    rechargebalancewindow.h \
     showpatientinformation.h \
     userloginwindow.h \
     userregisterwindow.h
@@ -62,6 +64,7 @@ FORMS += \
     bookemergencyvisitwindow.ui \
     bookroomwindow.ui \
     mainwindow.ui \
+    rechargebalancewindow.ui \
     showpatientinformation.ui \
     userloginwindow.ui \
     userregisterwindow.ui
