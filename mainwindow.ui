@@ -85,7 +85,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>430</y>
+      <y>440</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -98,7 +98,7 @@
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>470</y>
+      <y>480</y>
       <width>661</width>
       <height>111</height>
      </rect>
@@ -186,6 +186,19 @@
     <property name="pixmap">
      <pixmap>../newnewlogo.png</pixmap>
 >>>>>>> 76dc06afa87dfa81e0359307d14ca9cdda02c434
+    </property>
+   </widget>
+   <widget class="QPushButton" name="doBloodTestButton">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>380</y>
+      <width>291</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Laboratory: Blood Test</string>
     </property>
    </widget>
   </widget>

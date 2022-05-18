@@ -436,6 +436,22 @@
    </property>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>nameDisplay</tabstop>
+  <tabstop>usernameDisplay</tabstop>
+  <tabstop>passwordDisplay</tabstop>
+  <tabstop>ageDisplay</tabstop>
+  <tabstop>balanceDisplay</tabstop>
+  <tabstop>allergiesDisplay</tabstop>
+  <tabstop>medicalHistoryDisplay</tabstop>
+  <tabstop>genderComboBox</tabstop>
+  <tabstop>bloodTypeComboBox</tabstop>
+  <tabstop>insuredYesRadioButton</tabstop>
+  <tabstop>insuredNoRadioButton</tabstop>
+  <tabstop>registerButton</tabstop>
+  <tabstop>clearFieldsButton</tabstop>
+  <tabstop>backButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

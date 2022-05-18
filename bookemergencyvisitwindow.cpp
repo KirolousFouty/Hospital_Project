@@ -26,6 +26,13 @@ void bookEmergencyVisitWindow::on_confirmVisitButton_clicked()
         QMessageBox::about(this, "Error", "Please log in first");
     }
     else{
+
+        if (this->p->getBalance() < 5000){
+            ui->visitStatusTitle->setText("Visit Status: Failed! Insufficient balance.");
+            return;
+        }
+
+
    DateAndTime dtTemp;
 
    if (ui->timeComboBox->currentText() == "09:00 AM"){
@@ -65,10 +72,7 @@ void bookEmergencyVisitWindow::on_confirmVisitButton_clicked()
        }
    }
 
-   if (this->p->getBalance() < 5000){
-       ui->visitStatusTitle->setText("Visit Status: Failed! Insufficient balance.");
-       return;
-   }
+
 
 
    this->p->setBalance(this->p->getBalance() - 5000 + this->p->getPoints()); // Accumulative non-decreasing points system
