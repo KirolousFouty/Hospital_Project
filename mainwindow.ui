@@ -158,7 +158,6 @@
      <string>User: Not Logged in</string>
     </property>
    </widget>
-<<<<<<< HEAD
    <widget class="QPushButton" name="rechargeButton">
     <property name="geometry">
      <rect>
@@ -170,22 +169,6 @@
     </property>
     <property name="text">
      <string>Recharge Balance</string>
-=======
-   <widget class="QLabel" name="label_logo">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>20</y>
-      <width>231</width>
-      <height>151</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../newnewlogo.png</pixmap>
->>>>>>> 76dc06afa87dfa81e0359307d14ca9cdda02c434
     </property>
    </widget>
    <widget class="QPushButton" name="doBloodTestButton">
