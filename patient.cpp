@@ -119,8 +119,6 @@ bool Patient::reg(QString p_name, QString p_username, QString p_password, int p_
 	{
 		Patient temp;
 
-		//                              Validation ///////////////////
-		//                               // Patient ID creation
 
 		temp.name = p_name;
 		temp.username = p_username;
@@ -216,4 +214,4 @@ void Patient::operator=(const Patient &c)
 	this->loggedIn = c.loggedIn;
 	this->points = c.points;
 	this->patientID = c.patientID;
-}
+    }
