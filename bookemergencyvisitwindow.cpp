@@ -93,3 +93,9 @@ void bookEmergencyVisitWindow::on_backButton_clicked()
 {
     this->close();
 }
+
+void bookEmergencyVisitWindow::on_checkDiscountButton_clicked()
+{
+    ui->discountDisplay->setText("$" + QString::number(this->p->getPoints()));
+}
+

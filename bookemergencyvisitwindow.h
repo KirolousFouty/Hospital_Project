@@ -32,6 +32,8 @@ private slots:
 
     void on_backButton_clicked();
 
+    void on_checkDiscountButton_clicked();
+
 private:
     Ui::bookEmergencyVisitWindow *ui;
 };

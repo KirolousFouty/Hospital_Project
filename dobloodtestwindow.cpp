@@ -34,10 +34,32 @@ void doBloodTestWindow::on_submitSampleButton_clicked()
         this->p->setPoints(this->p->getPoints() + 5);
 
         ui->resultDisplay->setText("Result:  %" + QString::number(x) + " Healthy.");
+        ui->discountDisplay->setText("$" + QString::number(this->p->getPoints()));
+        ui->currentBalanceDisplay->setText("$" + QString::number(this->p->getBalance()));
     }
 }
 
 void doBloodTestWindow::on_checkDiscountButton_clicked()
 {
+    if (this->p->getLoggedIn() == false)
+    {
+        QMessageBox::about(this, "Error", "Please log in first");
+    }
+    else
+    {
     ui->discountDisplay->setText("$" + QString::number(this->p->getPoints()));
+    }
 }
+
+void doBloodTestWindow::on_showCurrentButton_clicked()
+{
+    if (this->p->getLoggedIn() == false)
+    {
+        QMessageBox::about(this, "Error", "Please log in first");
+    }
+    else
+    {
+        ui->currentBalanceDisplay->setText("$" + QString::number(this->p->getBalance()));
+    }
+}
+

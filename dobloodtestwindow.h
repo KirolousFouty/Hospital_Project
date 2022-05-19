@@ -25,6 +25,8 @@ private slots:
 
     void on_checkDiscountButton_clicked();
 
+    void on_showCurrentButton_clicked();
+
 private:
     Ui::doBloodTestWindow *ui;
 };
