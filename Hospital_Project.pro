@@ -31,7 +31,9 @@ SOURCES += \
     dobloodtestwindow.cpp \
     main.cpp \
     mainwindow.cpp \
+    paymentwindow.cpp \
     rechargebalancewindow.cpp \
+    searchwindow.cpp \
     showpatientinformation.cpp \
     userloginwindow.cpp \
     userregisterwindow.cpp
@@ -58,7 +60,9 @@ HEADERS += \
     bookroomwindow.h \
     dobloodtestwindow.h \
     mainwindow.h \
+    paymentwindow.h \
     rechargebalancewindow.h \
+    searchwindow.h \
     showpatientinformation.h \
     userloginwindow.h \
     userregisterwindow.h
@@ -70,7 +74,9 @@ FORMS += \
     bookroomwindow.ui \
     dobloodtestwindow.ui \
     mainwindow.ui \
+    paymentwindow.ui \
     rechargebalancewindow.ui \
+    searchwindow.ui \
     showpatientinformation.ui \
     userloginwindow.ui \
     userregisterwindow.ui
