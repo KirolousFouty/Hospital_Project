@@ -18,12 +18,11 @@ private:
     // Position:pair<x:double, y:double>
     QString department;
     QString doc;
-    //DateAndTime dt;
+  //  DateAndTime dt;
     QString roomType;
 
 public:
     DateAndTime dt;
-
     Room();
     Room(int RN, int F, QString RT);
     Room(QString p_department, QString p_doc, DateAndTime p_dt, QString p_roomType);

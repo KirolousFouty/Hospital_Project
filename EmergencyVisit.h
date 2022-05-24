@@ -11,7 +11,7 @@ class EmergencyVisit
 {
 protected:
     QString patientName;
- //   DateAndTime dt;
+  //  DateAndTime dt;
 
 public:
     DateAndTime dt;

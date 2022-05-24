@@ -70,8 +70,44 @@ void ComplexSearchWindow::on_showAllButton_clicked()
         return;
 
     }
+    else if(ui->doctorRadioButton->isChecked()){
 
+        ui->searchResultDisplay->setText("");
 
+        for(int i=0; i< this->arrDoc->size(); i++){
+            ui->searchResultDisplay->setText(ui->searchResultDisplay->text()+ "Doctor's Name: " + this->arrDoc->at(i).getName() + "Doctor's Rating: " + QString::number(this->arrDoc->at(i).getRating()) + "Doctor's Fees: " + QString::number(this->arrDoc->at(i).getFees()) );
+    }
+
+    return;
+
+    }
+
+    else if(ui->emergencyVisitRadioButton->isChecked()){
+        ui->searchResultDisplay->setText("");
+
+        for(int i=0; i<this->emergencyVisitLog->size(); i++){
+            ui->searchResultDisplay->setText(ui->searchResultDisplay->text()+ this->emergencyVisitLog->at(i).showVisit() + '\n');
+    }
+
+    return;
+    }
+
+    else if(ui->roomVisitRadioButton->isChecked()){
+        ui->searchResultDisplay->setText("");
+    for(int i=0; i<this->roomLog->size(); i++){
+        ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + this->roomLog->at(i).showRoom()+'\n');
+    }
+    return;
+    }
+
+    else if(ui->homeVisitRadioButton->isChecked()){
+        ui->searchResultDisplay->setText("");
+        for(int i=0; i<this->homeVisitLog->size(); i++){
+            ui->searchResultDisplay->setText(ui->searchResultDisplay->text()+ this->roomLog->at(i).showRoom()+'\n');
+        }
+        return;
+
+    }
 
 
 }
@@ -133,6 +169,49 @@ void ComplexSearchWindow::on_pushButton_clicked()
         return;
 
     }
+    else if(ui->doctorRadioButton->isChecked()){
+
+        ui->searchResultDisplay->setText("");
+
+        for (int i=0; i< this->arrDoc->size(); i++){
+
+            if(ui->criteriaLineEdit->text()==this->arrDoc->at(i).getName()||ui->criteriaLineEdit->text() == QString::number(this->arrDoc->at(i).getFees()) || ui->criteriaLineEdit->text()==QString::number(this->arrDoc->at(i).getFees()))
+                ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + "Doctor's Name: " + this->arrDoc->at(i).getName() +" "+ "Doctor's Rating: " + QString::number(this->arrDoc->at(i).getRating()) +" "+ "Doctor's Fees: " + QString::number(this->arrDoc->at(i).getFees()));
+        }
+
+                return;
+    }
+    else if(ui->emergencyVisitRadioButton->isChecked()){
+        ui->searchResultDisplay->setText("");
+
+        for(int i=0; i<this->emergencyVisitLog->size(); i++)
+        {
+           if(ui->criteriaLineEdit->text()==this->emergencyVisitLog->at(i).showVisit()||ui->criteriaLineEdit->text()==this->emergencyVisitLog->at(i).dt.getDt())
+              ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + this->emergencyVisitLog->at(i).showVisit() + '\n');
+        }
+
+        return;
+    }
+    else if(ui->roomVisitRadioButton->isChecked()){
+
+        ui->searchResultDisplay->setText("");
+
+        for(int i=0; i<this->roomLog->size(); i++){
+            if(ui->criteriaLineEdit->text()==this->roomLog->at(i).getRoomType()||ui->criteriaLineEdit->text()==this->roomLog->at(i).dt.getDt())
+                ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + this->roomLog->at(i).showRoom() + '\n');
+        }
+        return;
+    }
+    else if(ui->homeVisitRadioButton->isChecked()){
+        ui->searchResultDisplay->setText("");
+        for (int i=0; i<this->homeVisitLog->size(); i++)
+        {
+            if(ui->criteriaLineEdit->text()==this->homeVisitLog->at(i).getPatientName()||ui->criteriaLineEdit->text()==this->homeVisitLog->at(i).getHomeAddress())
+                ui->searchResultDisplay->setText(ui->searchResultDisplay->text()+this->homeVisitLog->at(i).showHomeVisit() + '\n');
+        }
+        return;
+    }
+
 
 
 
@@ -147,7 +226,7 @@ void ComplexSearchWindow::on_selectTypeButton_clicked()
     if (ui->patientRadioButton->isChecked()){
 
         // Tell them that they can search by the Patient ID
-        ui->searchByTitle->setText("Search By Patient ID:");
+        ui->searchByTitle->setText("Search By Patient ID: ");
         return;
 
     }
@@ -157,7 +236,25 @@ void ComplexSearchWindow::on_selectTypeButton_clicked()
     else if (ui->appointmentRadioButton->isChecked()){
 
         // Tell them they can search by the Doctor Name, Patient Name, Fees, or Time
-        ui->searchByTitle->setText("Search By Appointment Doctor Name, Patient Name, Fees, or Time");
+        ui->searchByTitle->setText("Search By Appointment Doctor Name, Patient Name, Fees, or Time: ");
+        return;
+    }
+
+    else if(ui->doctorRadioButton->isChecked()){
+
+        ui->searchByTitle->setText("Search By Doctor Name, Doctor Fees or Doctor Rating: ");
+        return;
+    }
+    else if(ui->emergencyVisitRadioButton->isChecked()){
+        ui->searchByTitle->setText("Search by Time: ");
+        return;
+    }
+    else if(ui->roomVisitRadioButton->isChecked()){
+        ui->searchByTitle->setText("Search by Room Type, Doctor Name, Patient Name, Fees or Time: ");
+        return;
+    }
+    else if(ui->homeVisitRadioButton->isChecked()){
+        ui->searchByTitle->setText("Search by Patient Name or Home Address:");
         return;
     }
 }
