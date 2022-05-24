@@ -7,6 +7,7 @@
 
 #include "Appointment.h"
 #include "Doctor.h"
+#include "paymentwindow.h"
 
 namespace Ui
 {
@@ -24,6 +25,7 @@ public:
     Patient *p;
     QVector<Appointment> *appointmentsLog;
     QVector<Doctor> *arrDoc;
+    bool *isPaymentSuccessfull;
 
 private slots:
     void on_confirmAppointmentButton_clicked();

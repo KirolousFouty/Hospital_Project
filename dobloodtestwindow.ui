@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>664</width>
+    <width>491</width>
     <height>426</height>
    </rect>
   </property>
@@ -16,7 +16,7 @@
   <widget class="QPushButton" name="submitSampleButton">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>100</x>
      <y>260</y>
      <width>271</width>
      <height>41</height>
@@ -34,9 +34,9 @@
   <widget class="QLabel" name="bloodTestTitle">
    <property name="geometry">
     <rect>
-     <x>2</x>
-     <y>4</y>
-     <width>651</width>
+     <x>0</x>
+     <y>0</y>
+     <width>491</width>
      <height>61</height>
     </rect>
    </property>
@@ -56,7 +56,7 @@
   <widget class="QLabel" name="resultDisplay">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>100</x>
      <y>320</y>
      <width>271</width>
      <height>31</height>
@@ -71,13 +71,13 @@
     <string>Result: </string>
    </property>
    <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="feesTitle">
    <property name="geometry">
     <rect>
-     <x>189</x>
+     <x>99</x>
      <y>130</y>
      <width>261</width>
      <height>20</height>
@@ -98,7 +98,7 @@
   <widget class="QLabel" name="discountTitle">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>100</x>
      <y>160</y>
      <width>161</width>
      <height>20</height>
@@ -116,7 +116,7 @@
   <widget class="QLabel" name="discountDisplay">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>280</x>
      <y>160</y>
      <width>111</width>
      <height>20</height>
@@ -137,7 +137,7 @@
   <widget class="QPushButton" name="checkDiscountButton">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>100</x>
      <y>220</y>
      <width>121</width>
      <height>29</height>
@@ -150,7 +150,7 @@
   <widget class="QPushButton" name="showCurrentButton">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>240</x>
      <y>220</y>
      <width>131</width>
      <height>29</height>
@@ -163,7 +163,7 @@
   <widget class="QLabel" name="currentBalanceTitle">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>100</x>
      <y>100</y>
      <width>151</width>
      <height>20</height>
@@ -181,7 +181,7 @@
   <widget class="QLabel" name="currentBalanceDisplay">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>280</x>
      <y>100</y>
      <width>111</width>
      <height>20</height>
@@ -197,6 +197,19 @@
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>370</y>
+     <width>271</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
    </property>
   </widget>
  </widget>

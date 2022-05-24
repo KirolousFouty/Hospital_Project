@@ -29,6 +29,7 @@ SOURCES += \
     bookhomevisitwindow.cpp \
     bookroomwindow.cpp \
     dobloodtestwindow.cpp \
+    helpandpricingswindow.cpp \
     main.cpp \
     mainwindow.cpp \
     paymentwindow.cpp \
@@ -59,6 +60,7 @@ HEADERS += \
     bookhomevisitwindow.h \
     bookroomwindow.h \
     dobloodtestwindow.h \
+    helpandpricingswindow.h \
     mainwindow.h \
     paymentwindow.h \
     rechargebalancewindow.h \
@@ -73,6 +75,7 @@ FORMS += \
     bookhomevisitwindow.ui \
     bookroomwindow.ui \
     dobloodtestwindow.ui \
+    helpandpricingswindow.ui \
     mainwindow.ui \
     paymentwindow.ui \
     rechargebalancewindow.ui \

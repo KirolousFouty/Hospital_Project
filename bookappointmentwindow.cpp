@@ -15,6 +15,8 @@ BookAppointmentWindow::BookAppointmentWindow(QWidget *parent) : QDialog(parent),
     this->p = new Patient;
     this->appointmentsLog = new QVector<Appointment>;
     this->arrDoc = new QVector<Doctor>;
+    this->isPaymentSuccessfull = new bool;
+    *isPaymentSuccessfull = false;
 }
 
 BookAppointmentWindow::~BookAppointmentWindow()
@@ -100,23 +102,47 @@ void BookAppointmentWindow::on_confirmAppointmentButton_clicked()
                     }
                 }
 
-                if (this->p->getBalance() < this->arrDoc->at(i).getFees())
-                {
-                    ui->appointmentStatusTitle->setText("Appointment Status: Failed! Insufficient balance.");
+//                if (this->p->getBalance() < this->arrDoc->at(i).getFees())
+//                {
+//                    ui->appointmentStatusTitle->setText("Appointment Status: Failed! Insufficient balance.");
+//                    return;
+//                }
+
+                this->p->setAmountDue(this->arrDoc->at(i).getFees());
+
+                PaymentWindow paywin;
+                paywin.setModal(true);
+
+                paywin.p = this->p;
+                paywin.docName = this->arrDoc->at(i).getName();
+                paywin.appTime = ui->timeComboBox->currentText();
+
+                paywin.exec();
+
+                this->isPaymentSuccessfull = paywin.isPaymentSuccessfull;
+
+                if (*isPaymentSuccessfull == true){
+                    Appointment a1(this->p, &(this->arrDoc->at(i)), dtTemp);
+                    appointmentsLog->push_back(a1);
+
+                    ui->appointmentStatusTitle->setText("Appointment Status: Booked Successfully!");
+                    ui->discountDisplay->setText("$" + QString::number(this->p->getPoints()));
+                    return;
+
+                }else{
+
+                    ui->appointmentStatusTitle->setText("Appointment Status: Failed! Payment failed");
                     return;
                 }
 
-                Appointment a1(this->p, &(this->arrDoc->at(i)), dtTemp);
-                appointmentsLog->push_back(a1);
 
-                this->p->setBalance(this->p->getBalance() - this->arrDoc->at(i).getFees() + this->p->getPoints()); // Accumulative non-decreasing points system
-                this->p->setPoints(this->p->getPoints() + 10);
+
 
                 break;
             }
         }
 
-        ui->appointmentStatusTitle->setText("Appointment Status: Booked Successfully!");
+
     }
 }
 void BookAppointmentWindow::on_selectDepartmentButton_clicked()
@@ -150,7 +176,11 @@ void BookAppointmentWindow::on_selectDoctorButton_clicked()
 
                 if (this->arrDoc->at(i).timeList.at(i).getHour() == 9)
                 {
-                    temp = "0" + QString::number(this->arrDoc->at(i).timeList.at(i).getHour()) + ":00 AM";
+                    temp = "09:00 AM";
+                }
+                else if (this->arrDoc->at(i).timeList.at(i).getHour() == 12)
+                {
+                    temp = "12:00 PM";
                 }
                 else if (this->arrDoc->at(i).timeList.at(i).getHour() > 9)
                 {

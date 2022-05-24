@@ -11,6 +11,7 @@
 #include "rechargebalancewindow.h"
 #include "dobloodtestwindow.h"
 #include "bookhomevisitwindow.h"
+#include "helpandpricingswindow.h"
 
 #include "DateAndTime.h"
 #include "HomeVisit.h"
@@ -24,6 +25,7 @@
 #include "Appointment.h"
 
 #include <iostream>
+#include <fstream>
 #include <QVector>
 #include <map>
 #include <algorithm>
@@ -54,6 +56,7 @@ public:
     QVector<Room> *roomLog;
     QVector<HomeVisit> *homeVisitLog;
     QLabel *p_userLoginTitle;
+    fstream paymentsLogFile;
 
 private slots:
     void on_loginButton_clicked();
@@ -73,6 +76,8 @@ private slots:
     void on_doBloodTestButton_clicked();
 
     void on_bookHomeVisitButton_clicked();
+
+    void on_helpAndPricingsButton_clicked();
 
 private:
     Ui::MainWindow *ui;

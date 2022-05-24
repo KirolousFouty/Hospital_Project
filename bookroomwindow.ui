@@ -194,19 +194,6 @@
     <string>Status:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="backButton">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>420</y>
-     <width>101</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Back</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="selectRoomTypeButton">
    <property name="geometry">
     <rect>

@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center());
+
     this->p = new Patient;
     this->appointmentsLog = new QVector<Appointment>;
     this->arrDoc = new QVector<Doctor>;
@@ -35,6 +37,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     Patient Admin;
     this->p->userMap.insert(pair<QString, Patient>(Admin.getUsername(), Admin));
+
+
+    paymentsLogFile.open("paymentsLogFile.txt", ios::out);
+    paymentsLogFile.close();
+    remove("paymentsLogFile.txt");
 
 }
 
@@ -184,3 +191,11 @@ void MainWindow::on_bookHomeVisitButton_clicked()
 
     bookHVisitWin.exec();
 }
+
+void MainWindow::on_helpAndPricingsButton_clicked()
+{
+    HelpAndPricingsWindow helpwin;
+    helpwin.setModal(true);
+    helpwin.exec();
+}
+

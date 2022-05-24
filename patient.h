@@ -23,7 +23,9 @@ private:
 	QString allergies;
 	bool insured;
 	QString medicalHistory;
-	// Position : pair<double, double> ma3rafsh meen kan 3amel keda fel class diagram
+    double amountDue;
+    // Position : pair<double, double>
+
 
 public:
 	Patient();
@@ -42,6 +44,7 @@ public:
 	QString getAllergies();
 	bool getInsured();
 	bool getLoggedIn() const;
+    double getAmountDue() const;
 
 	void setMedicalHistory(QString p_medicalHistory);
 	void setBalance(double p_balance);
@@ -53,6 +56,7 @@ public:
 	void setAllergies(QString p_allergies);
 	void setInsured(bool p_insured);
 	void setLoggedIn(bool p_loggedIn);
+    void setAmountDue(double p_amountDue);
 
 	bool reg(QString p_name, QString p_username, QString p_password, int p_age, double p_balance, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured, QString p_medicalHistory);
 	int login(QString p_username, QString p_password);
