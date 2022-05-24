@@ -12,6 +12,8 @@
 #include "dobloodtestwindow.h"
 #include "bookhomevisitwindow.h"
 #include "helpandpricingswindow.h"
+#include "emailinboxwindow.h"
+#include "shortestpathwindow.h"
 
 #include "DateAndTime.h"
 #include "HomeVisit.h"
@@ -78,6 +80,11 @@ private slots:
     void on_bookHomeVisitButton_clicked();
 
     void on_helpAndPricingsButton_clicked();
+
+
+    void on_openEmailInboxButton_clicked();
+
+    void on_shortestPathButton_clicked();
 
 private:
     Ui::MainWindow *ui;

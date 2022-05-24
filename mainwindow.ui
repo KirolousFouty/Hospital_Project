@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>782</width>
-    <height>772</height>
+    <height>884</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -57,20 +57,20 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>518</y>
+      <y>608</y>
       <width>291</width>
       <height>29</height>
      </rect>
     </property>
     <property name="text">
-     <string>Show Bookings</string>
+     <string>Show Bookings - Invoices</string>
     </property>
    </widget>
    <widget class="QLabel" name="appointmentsTitle">
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>568</y>
+      <y>658</y>
       <width>661</width>
       <height>141</height>
      </rect>
@@ -195,13 +195,39 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>480</y>
+      <y>570</y>
       <width>291</width>
       <height>29</height>
      </rect>
     </property>
     <property name="text">
      <string>Help and Pricings</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openEmailInboxButton">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>530</y>
+      <width>291</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open Email Inbox</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shortestPathButton">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>490</y>
+      <width>291</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Shortest Path</string>
     </property>
    </widget>
   </widget>

@@ -196,6 +196,24 @@ void MainWindow::on_helpAndPricingsButton_clicked()
 {
     HelpAndPricingsWindow helpwin;
     helpwin.setModal(true);
+
     helpwin.exec();
+}
+
+void MainWindow::on_openEmailInboxButton_clicked()
+{
+    EmailInboxWindow emailwin;
+    emailwin.setModal(true);
+
+    emailwin.exec();
+}
+
+
+void MainWindow::on_shortestPathButton_clicked()
+{
+    ShortestPathWindow pathwin;
+    pathwin.setModal(true);
+
+    pathwin.exec();
 }
 

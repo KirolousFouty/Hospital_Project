@@ -29,12 +29,14 @@ SOURCES += \
     bookhomevisitwindow.cpp \
     bookroomwindow.cpp \
     dobloodtestwindow.cpp \
+    emailinboxwindow.cpp \
     helpandpricingswindow.cpp \
     main.cpp \
     mainwindow.cpp \
     paymentwindow.cpp \
     rechargebalancewindow.cpp \
     searchwindow.cpp \
+    shortestpathwindow.cpp \
     showpatientinformation.cpp \
     userloginwindow.cpp \
     userregisterwindow.cpp
@@ -60,11 +62,13 @@ HEADERS += \
     bookhomevisitwindow.h \
     bookroomwindow.h \
     dobloodtestwindow.h \
+    emailinboxwindow.h \
     helpandpricingswindow.h \
     mainwindow.h \
     paymentwindow.h \
     rechargebalancewindow.h \
     searchwindow.h \
+    shortestpathwindow.h \
     showpatientinformation.h \
     userloginwindow.h \
     userregisterwindow.h
@@ -75,11 +79,13 @@ FORMS += \
     bookhomevisitwindow.ui \
     bookroomwindow.ui \
     dobloodtestwindow.ui \
+    emailinboxwindow.ui \
     helpandpricingswindow.ui \
     mainwindow.ui \
     paymentwindow.ui \
     rechargebalancewindow.ui \
     searchwindow.ui \
+    shortestpathwindow.ui \
     showpatientinformation.ui \
     userloginwindow.ui \
     userregisterwindow.ui
