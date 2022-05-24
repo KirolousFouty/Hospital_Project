@@ -220,6 +220,13 @@ void MainWindow::on_openEmailInboxButton_clicked()
     EmailInboxWindow emailwin;
     emailwin.setModal(true);
 
+    emailwin.p = this->p;
+    emailwin.appointmentsLog = this->appointmentsLog;
+    emailwin.arrDoc = this->arrDoc;
+    emailwin.emergencyVisitLog = this->emergencyVisitLog;
+    emailwin.roomLog = this->roomLog;
+    emailwin.homeVisitLog = this->homeVisitLog;
+
     emailwin.exec();
 }
 
