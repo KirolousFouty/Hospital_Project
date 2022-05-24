@@ -11,9 +11,10 @@ class EmergencyVisit
 {
 protected:
     QString patientName;
-    DateAndTime dt;
+ //   DateAndTime dt;
 
 public:
+    DateAndTime dt;
     EmergencyVisit();
     EmergencyVisit(QString p_patientName, DateAndTime p_dt);
     DateAndTime getDt() const;
