@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center());
+    //move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center());
 
     this->p = new Patient;
     this->appointmentsLog = new QVector<Appointment>;

@@ -57,7 +57,7 @@ void BookRoomWindow::on_confirmRoomButton_clicked()
         }
 
         QString s = ui->doctorsComboBox->currentText();
-        s.erase(s.end() - 9, s.end());
+        //s.erase(s.end() - 9, s.end());
 
         DateAndTime dtTemp;
 

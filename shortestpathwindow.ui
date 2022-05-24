@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>ShortestPathWindow</class>
- <widget name="ShortestPathWindow" class="QDialog">
+ <widget class="QDialog" name="ShortestPathWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -12,6 +13,82 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>70</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>El Rehab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Madinaty</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Madinet Nasr</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Masr El Gedida</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Obour</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>West El Balad</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>October</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>El Dokki</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="Map">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>120</y>
+     <width>321</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>70</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string> Select Area</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
