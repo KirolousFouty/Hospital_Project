@@ -9,8 +9,9 @@
 #include "Room.h"
 #include "HomeVisit.h"
 
-namespace Ui {
-class EmailInboxWindow;
+namespace Ui
+{
+    class EmailInboxWindow;
 }
 
 class EmailInboxWindow : public QDialog

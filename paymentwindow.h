@@ -12,8 +12,9 @@
 #include "Patient.h"
 #include "Doctor.h"
 
-namespace Ui {
-class PaymentWindow;
+namespace Ui
+{
+    class PaymentWindow;
 }
 
 class PaymentWindow : public QDialog

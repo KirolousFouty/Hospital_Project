@@ -1,9 +1,8 @@
 #include "emailinboxwindow.h"
 #include "ui_emailinboxwindow.h"
 
-EmailInboxWindow::EmailInboxWindow(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::EmailInboxWindow)
+EmailInboxWindow::EmailInboxWindow(QWidget *parent) : QDialog(parent),
+                                                      ui(new Ui::EmailInboxWindow)
 {
     ui->setupUi(this);
 
@@ -14,13 +13,9 @@ EmailInboxWindow::EmailInboxWindow(QWidget *parent) :
     this->roomLog = new QVector<Room>;
     this->homeVisitLog = new QVector<HomeVisit>;
 
-
-
     ui->emailInbox->setText("");
 
     ui->emailInbox->setText("Refresh required.");
-
-
 }
 
 EmailInboxWindow::~EmailInboxWindow()
@@ -60,6 +55,4 @@ void EmailInboxWindow::on_refreshButton_clicked()
     {
         ui->emailInbox->setText(ui->emailInbox->text() + "\nEmail #" + QString::number(counter++) + "\tHome Visit #" + QString::number((i + 1)) + " " + this->homeVisitLog->at(i).showHomeVisit());
     }
-
 }
-

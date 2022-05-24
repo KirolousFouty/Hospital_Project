@@ -142,3 +142,9 @@ double Doctor::getFees() const
 {
     return this->fees;
 }
+
+bool Doctor::approve() const
+{
+    srand(time(NULL));
+    return rand() % 2;
+}

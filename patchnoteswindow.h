@@ -3,8 +3,9 @@
 
 #include <QDialog>
 
-namespace Ui {
-class PatchNotesWindow;
+namespace Ui
+{
+    class PatchNotesWindow;
 }
 
 class PatchNotesWindow : public QDialog

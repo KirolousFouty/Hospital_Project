@@ -24,7 +24,6 @@ BookRoomWindow::BookRoomWindow(QWidget *parent) : QDialog(parent),
     ui->timesComboBox->addItem("01:00 PM");
     ui->timesComboBox->addItem("02:00 PM");
     ui->timesComboBox->addItem("03:00 PM");
-
 }
 
 BookRoomWindow::~BookRoomWindow()
@@ -53,6 +52,9 @@ void BookRoomWindow::on_confirmRoomButton_clicked()
     }
     else
     {
+
+        bool approval = false;
+
         if (ui->doctorsComboBox->currentText() == "")
         {
             ui->statusTitle->setText("Room Status: Please choose a department.");
@@ -66,7 +68,7 @@ void BookRoomWindow::on_confirmRoomButton_clicked()
         }
 
         QString s = ui->doctorsComboBox->currentText();
-        //s.erase(s.end() - 9, s.end());
+        // s.erase(s.end() - 9, s.end());
 
         DateAndTime dtTemp;
 
@@ -106,17 +108,14 @@ void BookRoomWindow::on_confirmRoomButton_clicked()
             dtTemp.setMinute(0);
         }
 
-
-
-
-        for (int j = 0; j < this->appointmentsLog->size(); j++){
-            if (this->appointmentsLog->at(j).doctorName == s && this->appointmentsLog->at(j).dt.getDt() == ui->timesComboBox->currentText()){
+        for (int j = 0; j < this->appointmentsLog->size(); j++)
+        {
+            if (this->appointmentsLog->at(j).doctorName == s && this->appointmentsLog->at(j).dt.getDt() == ui->timesComboBox->currentText())
+            {
                 ui->statusTitle->setText("Room Status: Doctor is already booked for an Appointment. Please select another Time or Doctor.");
                 return;
             }
         }
-
-
 
         for (int i = 0; i < this->roomLog->size(); i++)
         {
@@ -137,10 +136,29 @@ void BookRoomWindow::on_confirmRoomButton_clicked()
 
         this->roomLog->push_back(tempRoom);
 
+        for (int i = 0; i < this->arrDoc->size(); i++)
+        {
+            if (this->arrDoc->at(i).getName() + "      " + QString::number(this->arrDoc->at(i).getRating()) == ui->doctorsComboBox->currentText())
+            {
+                approval = this->arrDoc->at(i).approve();
+            }
+        }
+
         this->p->setBalance(this->p->getBalance() - tempRoom.getFees() + this->p->getPoints()); // Accumulative non-decreasing points system
         this->p->setPoints(this->p->getPoints() + 30);
 
-        ui->statusTitle->setText("Room Status: Room booked successfully!");
+        ui->statusTitle->setText("Room Status:   Room booked successfully!");
+
+        if (approval)
+        {
+            srand(time(NULL));
+
+            ui->statusTitle->setText(ui->statusTitle->text() + "  Doctor's examination showed that a " + QString::number(rand() % 2) + " day(s) hospital stay is required");
+        }
+        else
+        {
+            ui->statusTitle->setText(ui->statusTitle->text() + "  Doctor's examination showed that no hospital stay is required");
+        }
     }
 }
 

@@ -4,6 +4,8 @@
 #include <iostream>
 #include <QString>
 #include <QVector>
+#include <ctime>
+
 #include "DateAndTime.h"
 #include "Patient.h"
 
@@ -45,5 +47,7 @@ public:
     QVector<DateAndTime> getTimeList() const;
     bool operator==(const Doctor &d);
     double getFees() const;
+
+    bool approve() const;
 };
 #endif

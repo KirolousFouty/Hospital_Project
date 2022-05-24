@@ -93,18 +93,20 @@ void BookAppointmentWindow::on_confirmAppointmentButton_clicked()
         for (int i = 0; i < this->arrDoc->size(); i++)
         {
 
-            if (i == 0){
+            if (i == 0)
+            {
                 QString s = ui->doctorsComboBox->currentText();
                 s.erase(s.end() - 9, s.end());
 
-                for (int j = 0; j < this->roomLog->size(); j++){
-                    if (this->roomLog->at(j).getDoc() == s && this->roomLog->at(j).getDt().getDt() == ui->timeComboBox->currentText()){
+                for (int j = 0; j < this->roomLog->size(); j++)
+                {
+                    if (this->roomLog->at(j).getDoc() == s && this->roomLog->at(j).getDt().getDt() == ui->timeComboBox->currentText())
+                    {
                         ui->appointmentStatusTitle->setText("Appointment Status: Doctor is already booked for a Room Visit. Please select another time.");
                         return;
                     }
                 }
             }
-
 
             if (this->arrDoc->at(i).getName() + "      " + QString::number(this->arrDoc->at(i).getRating()) == ui->doctorsComboBox->currentText())
             {
@@ -131,28 +133,25 @@ void BookAppointmentWindow::on_confirmAppointmentButton_clicked()
 
                 this->isPaymentSuccessfull = paywin.isPaymentSuccessfull;
 
-                if (*isPaymentSuccessfull == true){
+                if (*isPaymentSuccessfull == true)
+                {
                     Appointment a1(this->p, &(this->arrDoc->at(i)), dtTemp);
                     appointmentsLog->push_back(a1);
 
                     ui->appointmentStatusTitle->setText("Appointment Status: Booked Successfully!");
                     ui->discountDisplay->setText("$" + QString::number(this->p->getPoints()));
                     return;
-
-                }else{
+                }
+                else
+                {
 
                     ui->appointmentStatusTitle->setText("Appointment Status: Failed! Payment failed");
                     return;
                 }
 
-
-
-
                 break;
             }
         }
-
-
     }
 }
 void BookAppointmentWindow::on_selectDepartmentButton_clicked()

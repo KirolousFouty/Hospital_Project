@@ -3,8 +3,9 @@
 
 #include <QDialog>
 
-namespace Ui {
-class HelpAndPricingsWindow;
+namespace Ui
+{
+    class HelpAndPricingsWindow;
 }
 
 class HelpAndPricingsWindow : public QDialog

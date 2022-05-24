@@ -3,20 +3,20 @@
 Patient::Patient() // default constructor
 {
 
-    this->name = "Admin";
-    this->username = "Admin";
-    this->password = "Admin";
-    this->age = 19;
-    this->balance = 999999;
-    this->gender = "Male";
-    this->bloodType = "A+";
-    this->allergies = "None";
-    this->insured = true;
-    this->medicalHistory = "Excellent";
+	this->name = "Admin";
+	this->username = "Admin";
+	this->password = "Admin";
+	this->age = 19;
+	this->balance = 999999;
+	this->gender = "Male";
+	this->bloodType = "A+";
+	this->allergies = "None";
+	this->insured = true;
+	this->medicalHistory = "Excellent";
 	this->loggedIn = false;
 	this->points = 0;
-    this->patientID = 900200100 + this->userMap.size();
-    this->amountDue = 0;
+	this->patientID = 900200100 + this->userMap.size();
+	this->amountDue = 0;
 }
 Patient::Patient(QString p_medicalHistory, double p_balance, int p_points, int p_patientID, int p_age, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured) // parameterized constructor
 {
@@ -30,7 +30,7 @@ Patient::Patient(QString p_medicalHistory, double p_balance, int p_points, int p
 	this->allergies = p_allergies;
 	this->insured = p_insured;
 	this->loggedIn = false;
-    this->amountDue = 0;
+	this->amountDue = 0;
 }
 
 QString Patient::getName()
@@ -121,7 +121,6 @@ bool Patient::reg(QString p_name, QString p_username, QString p_password, int p_
 	{
 		Patient temp;
 
-
 		temp.name = p_name;
 		temp.username = p_username;
 		temp.password = p_password;
@@ -132,10 +131,10 @@ bool Patient::reg(QString p_name, QString p_username, QString p_password, int p_
 		temp.allergies = p_allergies;
 		temp.insured = p_insured;
 		temp.medicalHistory = p_medicalHistory;
-        temp.loggedIn = false;
+		temp.loggedIn = false;
 		temp.points = 0;
-        temp.patientID = 900200100 + this->userMap.size();
-        temp.amountDue = 0;
+		temp.patientID = 900200100 + this->userMap.size();
+		temp.amountDue = 0;
 
 		*this = temp;
 
@@ -202,12 +201,14 @@ void Patient::setLoggedIn(bool p_loggedIn)
 	this->loggedIn = p_loggedIn;
 }
 
-void Patient::setAmountDue(double p_amountDue){
-    this->amountDue = p_amountDue;
+void Patient::setAmountDue(double p_amountDue)
+{
+	this->amountDue = p_amountDue;
 }
 
-double Patient::getAmountDue() const{
-    return this->amountDue;
+double Patient::getAmountDue() const
+{
+	return this->amountDue;
 }
 
 void Patient::operator=(const Patient &c)
@@ -225,6 +226,5 @@ void Patient::operator=(const Patient &c)
 	this->loggedIn = c.loggedIn;
 	this->points = c.points;
 	this->patientID = c.patientID;
-    this->amountDue = c.amountDue;
-
+	this->amountDue = c.amountDue;
 }

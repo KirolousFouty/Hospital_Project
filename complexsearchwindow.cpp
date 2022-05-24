@@ -115,12 +115,10 @@ void ComplexSearchWindow::on_showAllButton_clicked()
     }
 }
 
-
 void ComplexSearchWindow::on_showByCriteriaButton_clicked()
 {
     // This function displays a specific instance of the selected type according to the written criteria
     // Very similar to the showAllButton, but it only displays when the if condition is true (which is the criteria we want)
-
 
     if (!(ui->patientRadioButton->isChecked() || ui->doctorRadioButton->isChecked() || ui->appointmentRadioButton->isChecked() || ui->roomVisitRadioButton->isChecked() || ui->homeVisitRadioButton->isChecked() || ui->emergencyVisitRadioButton->isChecked()))
     {
@@ -176,7 +174,7 @@ void ComplexSearchWindow::on_showByCriteriaButton_clicked()
         }
 
         // Return after the loop (end function, do not run the code below)
-       ui->criteriaLineEdit->setText("");
+        ui->criteriaLineEdit->setText("");
         return;
     }
     else if (ui->doctorRadioButton->isChecked())
@@ -187,10 +185,10 @@ void ComplexSearchWindow::on_showByCriteriaButton_clicked()
         for (int i = 0; i < this->arrDoc->size(); i++)
         {
 
-            if (ui->criteriaLineEdit->text() == this->arrDoc->at(i).getName() || ui->criteriaLineEdit->text() == QString::number(this->arrDoc->at(i).getRating()) || ui->criteriaLineEdit->text() == QString::number(this->arrDoc->at(i).getFees()) ||  ui->criteriaLineEdit->text() == this->arrDoc->at(i).getDepartment()){
+            if (ui->criteriaLineEdit->text() == this->arrDoc->at(i).getName() || ui->criteriaLineEdit->text() == QString::number(this->arrDoc->at(i).getRating()) || ui->criteriaLineEdit->text() == QString::number(this->arrDoc->at(i).getFees()) || ui->criteriaLineEdit->text() == this->arrDoc->at(i).getDepartment())
+            {
                 ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + "Doctor's Name: " + this->arrDoc->at(i).getName() + "  Doctor's Rating: " + QString::number(this->arrDoc->at(i).getRating()) + "  Doctor's Fees: $" + QString::number(this->arrDoc->at(i).getFees()) + '\n');
             }
-
         }
 
         ui->criteriaLineEdit->setText("");
@@ -239,7 +237,8 @@ void ComplexSearchWindow::on_showByCriteriaButton_clicked()
         return;
     }
 
-    else{
+    else
+    {
         ui->searchByTitle->setText("Please Select a Type to Search for.");
 
         ui->criteriaLineEdit->setText("");
@@ -257,7 +256,7 @@ void ComplexSearchWindow::on_selectTypeButton_clicked()
 
         // Tell them that they can search by the Patient ID
         ui->searchByTitle->setText("Search By Patient ID: ");
-       ui->criteriaLineEdit->setText("");
+        ui->criteriaLineEdit->setText("");
         return;
     }
 
@@ -267,7 +266,7 @@ void ComplexSearchWindow::on_selectTypeButton_clicked()
 
         // Tell them they can search by the Doctor Name, Patient Name, Fees, or Time
         ui->searchByTitle->setText("Search By Doctor Name, Patient Name, Fees, or Time: ");
-      ui->criteriaLineEdit->setText("");
+        ui->criteriaLineEdit->setText("");
         return;
     }
 
@@ -275,14 +274,14 @@ void ComplexSearchWindow::on_selectTypeButton_clicked()
     {
 
         ui->searchByTitle->setText("Search By Doctor Name, Department, Fees, or Rating: ");
-       ui->criteriaLineEdit->setText("");
+        ui->criteriaLineEdit->setText("");
         return;
     }
 
     else if (ui->emergencyVisitRadioButton->isChecked())
     {
         ui->searchByTitle->setText("Search by Time: ");
-      ui->criteriaLineEdit->setText("");
+        ui->criteriaLineEdit->setText("");
         return;
     }
 

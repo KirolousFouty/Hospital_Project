@@ -47,7 +47,7 @@ void doBloodTestWindow::on_checkDiscountButton_clicked()
     }
     else
     {
-    ui->discountDisplay->setText("$" + QString::number(this->p->getPoints()));
+        ui->discountDisplay->setText("$" + QString::number(this->p->getPoints()));
     }
 }
 
@@ -63,9 +63,7 @@ void doBloodTestWindow::on_showCurrentButton_clicked()
     }
 }
 
-
 void doBloodTestWindow::on_backButton_clicked()
 {
     this->close();
 }
-

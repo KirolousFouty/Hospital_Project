@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    //move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center());
+    move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center());
 
     this->p = new Patient;
     this->appointmentsLog = new QVector<Appointment>;
@@ -42,17 +42,14 @@ MainWindow::MainWindow(QWidget *parent)
     Patient Admin;
     this->p->userMap.insert(pair<QString, Patient>(Admin.getUsername(), Admin));
 
-
     paymentsLogFile.open("paymentsLogFile.txt", ios::out);
     paymentsLogFile.close();
     remove("paymentsLogFile.txt");
-
 
     PatchNotesWindow patchwin;
     patchwin.setModal(true);
 
     patchwin.exec();
-
 }
 
 MainWindow::~MainWindow()
@@ -230,15 +227,13 @@ void MainWindow::on_openEmailInboxButton_clicked()
     emailwin.exec();
 }
 
-
 void MainWindow::on_shortestPathButton_clicked()
 {
-    ShortestPathWindow pathwin;
-    pathwin.setModal(true);
+    //    ShortestPathWindow pathwin;
+    //    pathwin.setModal(true);
 
-    pathwin.exec();
+    //    pathwin.exec();
 }
-
 
 void MainWindow::on_complexSearch_clicked()
 {
@@ -254,4 +249,3 @@ void MainWindow::on_complexSearch_clicked()
 
     searchwin.exec();
 }
-

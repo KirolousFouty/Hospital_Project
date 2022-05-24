@@ -74,8 +74,10 @@ void DateAndTime::setYear(int p_year)
     this->year = p_year;
 }
 
-QString DateAndTime::getDt() const{
-    switch (this->hour){
+QString DateAndTime::getDt() const
+{
+    switch (this->hour)
+    {
     case 9:
         return "09:00 AM";
         break;

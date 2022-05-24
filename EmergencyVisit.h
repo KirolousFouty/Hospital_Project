@@ -10,20 +10,20 @@ using namespace std;
 class EmergencyVisit
 {
 protected:
-    QString patientName;
+  QString patientName;
   //  DateAndTime dt;
 
 public:
-    DateAndTime dt;
-    EmergencyVisit();
-    EmergencyVisit(QString p_patientName, DateAndTime p_dt);
-    DateAndTime getDt() const;
-    QString getPatientName();
+  DateAndTime dt;
+  EmergencyVisit();
+  EmergencyVisit(QString p_patientName, DateAndTime p_dt);
+  DateAndTime getDt() const;
+  QString getPatientName();
 
-    QString showVisit() const;
+  QString showVisit() const;
 
-    //	bool checkAvailability();
-    //	QString bookDateAndTime();
+  //	bool checkAvailability();
+  //	QString bookDateAndTime();
 };
 
 #endif

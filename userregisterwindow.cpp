@@ -43,7 +43,6 @@ void UserRegisterWindow::on_registerButton_clicked()
         return;
     }
 
-
     if (ui->balanceDisplay->text().toDouble() <= 0)
     {
         ui->registrationStatusTitle->setText("Registration Status: Balance has to be greater than zero.");
@@ -83,12 +82,12 @@ void UserRegisterWindow::on_registerButton_clicked()
         }
     }
 
-    if (this->p->userMap.count(ui->usernameDisplay->text())){
+    if (this->p->userMap.count(ui->usernameDisplay->text()))
+    {
         ui->registrationStatusTitle->setText("Registration Status: Failed! Username already exists.");
         ui->usernameDisplay->setText("");
         return;
     }
-
 
     if (this->p->reg(ui->nameDisplay->text(), ui->usernameDisplay->text(), ui->passwordDisplay->text(), ui->ageDisplay->text().toInt(), ui->balanceDisplay->text().toDouble(), ui->genderComboBox->currentText(), ui->bloodTypeComboBox->currentText(), ui->allergiesDisplay->text(), ui->insuredYesRadioButton->isChecked(), ui->medicalHistoryDisplay->text()))
     {

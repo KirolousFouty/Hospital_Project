@@ -10,9 +10,9 @@
 #include "Room.h"
 #include "HomeVisit.h"
 
-
-namespace Ui {
-class ComplexSearchWindow;
+namespace Ui
+{
+    class ComplexSearchWindow;
 }
 
 class ComplexSearchWindow : public QDialog
@@ -34,7 +34,7 @@ private slots:
     void on_backButton_clicked();
 
     void on_showAllButton_clicked();
-\
+
     void on_selectTypeButton_clicked();
 
     void on_showByCriteriaButton_clicked();

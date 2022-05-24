@@ -18,7 +18,7 @@ private:
     // Position:pair<x:double, y:double>
     QString department;
     QString doc;
-  //  DateAndTime dt;
+    //  DateAndTime dt;
     QString roomType;
 
 public:
