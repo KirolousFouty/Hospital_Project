@@ -32,11 +32,11 @@ public:
 private slots:
     void on_selectDepartmentButton_clicked();
 
-    void on_backButton_clicked();
-
     void on_confirmRoomButton_clicked();
 
     void on_selectRoomTypeButton_clicked();
+
+    void on_backButton_clicked();
 
 private:
     Ui::BookRoomWindow *ui;

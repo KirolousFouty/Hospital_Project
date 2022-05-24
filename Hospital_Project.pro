@@ -34,9 +34,9 @@ SOURCES += \
     helpandpricingswindow.cpp \
     main.cpp \
     mainwindow.cpp \
+    patchnoteswindow.cpp \
     paymentwindow.cpp \
     rechargebalancewindow.cpp \
-    searchwindow.cpp \
     shortestpathwindow.cpp \
     showpatientinformation.cpp \
     userloginwindow.cpp \
@@ -67,9 +67,9 @@ HEADERS += \
     emailinboxwindow.h \
     helpandpricingswindow.h \
     mainwindow.h \
+    patchnoteswindow.h \
     paymentwindow.h \
     rechargebalancewindow.h \
-    searchwindow.h \
     shortestpathwindow.h \
     showpatientinformation.h \
     userloginwindow.h \
@@ -85,9 +85,9 @@ FORMS += \
     emailinboxwindow.ui \
     helpandpricingswindow.ui \
     mainwindow.ui \
+    patchnoteswindow.ui \
     paymentwindow.ui \
     rechargebalancewindow.ui \
-    searchwindow.ui \
     shortestpathwindow.ui \
     showpatientinformation.ui \
     userloginwindow.ui \

@@ -15,6 +15,8 @@ BookAppointmentWindow::BookAppointmentWindow(QWidget *parent) : QDialog(parent),
     this->p = new Patient;
     this->appointmentsLog = new QVector<Appointment>;
     this->arrDoc = new QVector<Doctor>;
+    this->roomLog = new QVector<Room>;
+
     this->isPaymentSuccessfull = new bool;
     *isPaymentSuccessfull = false;
 }
@@ -90,6 +92,20 @@ void BookAppointmentWindow::on_confirmAppointmentButton_clicked()
 
         for (int i = 0; i < this->arrDoc->size(); i++)
         {
+
+            if (i == 0){
+                QString s = ui->doctorsComboBox->currentText();
+                s.erase(s.end() - 9, s.end());
+
+                for (int j = 0; j < this->roomLog->size(); j++){
+                    if (this->roomLog->at(j).getDoc() == s && this->roomLog->at(j).getDt().getDt() == ui->timeComboBox->currentText()){
+                        ui->appointmentStatusTitle->setText("Appointment Status: Doctor is already booked for a Room Visit. Please select another time.");
+                        return;
+                    }
+                }
+            }
+
+
             if (this->arrDoc->at(i).getName() + "      " + QString::number(this->arrDoc->at(i).getRating()) == ui->doctorsComboBox->currentText())
             {
 
@@ -97,16 +113,10 @@ void BookAppointmentWindow::on_confirmAppointmentButton_clicked()
                 {
                     if (this->appointmentsLog->at(j).doctorName == this->arrDoc->at(i).getName() && this->appointmentsLog->at(j).dt == dtTemp)
                     {
-                        ui->appointmentStatusTitle->setText("Appointment Status: Appointment already booked. Please try another.");
+                        ui->appointmentStatusTitle->setText("Appointment Status: Appointment already booked. Please try another time.");
                         return;
                     }
                 }
-
-//                if (this->p->getBalance() < this->arrDoc->at(i).getFees())
-//                {
-//                    ui->appointmentStatusTitle->setText("Appointment Status: Failed! Insufficient balance.");
-//                    return;
-//                }
 
                 this->p->setAmountDue(this->arrDoc->at(i).getFees());
 

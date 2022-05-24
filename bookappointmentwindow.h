@@ -8,6 +8,7 @@
 #include "Appointment.h"
 #include "Doctor.h"
 #include "paymentwindow.h"
+#include "Room.h"
 
 namespace Ui
 {
@@ -25,6 +26,7 @@ public:
     Patient *p;
     QVector<Appointment> *appointmentsLog;
     QVector<Doctor> *arrDoc;
+    QVector<Room> *roomLog;
     bool *isPaymentSuccessfull;
 
 private slots:

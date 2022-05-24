@@ -2,6 +2,7 @@
 #define DATEANDTIME_H
 
 #include <iostream>
+#include <QString>
 
 using namespace std;
 
@@ -24,6 +25,7 @@ public:
     int getDay() const;
     int getMonth() const;
     int getYear() const;
+    QString getDt() const;
 
     void setHour(int p_hour);
     void setMinute(int p_minute);

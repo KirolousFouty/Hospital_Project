@@ -1,17 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>ComplexSearchWindow</class>
- <widget name="ComplexSearchWindow" class="QDialog">
+ <widget class="QDialog" name="ComplexSearchWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>723</width>
+    <height>690</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QPushButton" name="showAllButton">
+   <property name="geometry">
+    <rect>
+     <x>452</x>
+     <y>325</y>
+     <width>191</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Show All of Selected Type</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="searchResultDisplay">
+   <property name="geometry">
+    <rect>
+     <x>72</x>
+     <y>425</y>
+     <width>581</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search Results.</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="roomVisitRadioButton">
+   <property name="geometry">
+    <rect>
+     <x>202</x>
+     <y>155</y>
+     <width>141</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Room Visit</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="patientRadioButton">
+   <property name="geometry">
+    <rect>
+     <x>72</x>
+     <y>115</y>
+     <width>110</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Patient</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="selectTypeButton">
+   <property name="geometry">
+    <rect>
+     <x>582</x>
+     <y>145</y>
+     <width>93</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="homeVisitRadioButton">
+   <property name="geometry">
+    <rect>
+     <x>382</x>
+     <y>155</y>
+     <width>141</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Home Visit</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="criteriaLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>72</x>
+     <y>285</y>
+     <width>361</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="emergencyVisitRadioButton">
+   <property name="geometry">
+    <rect>
+     <x>383</x>
+     <y>115</y>
+     <width>141</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Emergency Visit</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="selectTypeTitle">
+   <property name="geometry">
+    <rect>
+     <x>72</x>
+     <y>64</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Select Type:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="searchByTitle">
+   <property name="geometry">
+    <rect>
+     <x>72</x>
+     <y>235</y>
+     <width>571</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Search by :</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="appointmentRadioButton">
+   <property name="geometry">
+    <rect>
+     <x>202</x>
+     <y>115</y>
+     <width>141</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Appointment</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="showByCriteriaButton">
+   <property name="geometry">
+    <rect>
+     <x>452</x>
+     <y>285</y>
+     <width>191</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Show per Entered Criteria</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="complexSearchTitle">
+   <property name="geometry">
+    <rect>
+     <x>-1</x>
+     <y>5</y>
+     <width>721</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>19</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Complex Search</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="doctorRadioButton">
+   <property name="geometry">
+    <rect>
+     <x>72</x>
+     <y>155</y>
+     <width>110</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Doctor</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>71</x>
+     <y>324</y>
+     <width>361</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="searchResultsTitle">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>380</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Search Results:</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

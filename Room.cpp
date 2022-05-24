@@ -110,7 +110,7 @@ QString Room::showRoom() const
     txt = txt + "   Department: " + this->department;
     txt = txt + "   Doctor Name: " + this->doc;
     txt = txt + "   Room Type: " + this->roomType;
-    txt = txt + "   Time: " + QString::number(this->dt.getHour()) + ":" + QString::number(this->dt.getMinute()) + "0";
+    txt = txt + "   Time: " + this->dt.getDt();//QString::number(this->dt.getHour()) + ":" + QString::number(this->dt.getMinute()) + "0";
     txt = txt + "   Fees: $" + QString::number(this->getFees());
 
     return txt;
