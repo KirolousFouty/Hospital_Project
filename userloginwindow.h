@@ -3,6 +3,8 @@
 
 #include "Patient.h"
 #include "userregisterwindow.h"
+#include "usereditwindow.h"
+
 #include <QDialog>
 #include <map>
 #include <QVector>
@@ -32,6 +34,8 @@ private slots:
     void on_loginButton_clicked();
 
     void on_backButton_clicked();
+
+    void on_editButton_clicked();
 
 private:
     Ui::UserLoginWindow *ui;

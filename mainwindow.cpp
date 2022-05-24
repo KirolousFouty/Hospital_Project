@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     this->p = new Patient;
     this->appointmentsLog = new QVector<Appointment>;
+    this->cancelledAppointmentsLog = new QVector<Appointment>;
     this->arrDoc = new QVector<Doctor>;
     this->emergencyVisitLog = new QVector<EmergencyVisit>;
     this->roomLog = new QVector<Room>;
@@ -98,6 +99,7 @@ void MainWindow::on_bookAppointmentButton_clicked()
 
     bookappointmentwin.p = this->p;
     bookappointmentwin.appointmentsLog = this->appointmentsLog;
+    bookappointmentwin.cancelledAppointmentsLog = this->cancelledAppointmentsLog;
     bookappointmentwin.arrDoc = this->arrDoc;
     bookappointmentwin.roomLog = this->roomLog;
 
@@ -124,6 +126,11 @@ void MainWindow::on_showAppointmentsButton_clicked()
     for (int i = 0; i < this->appointmentsLog->size(); i++)
     {
         ui->appointmentsTitle->setText(ui->appointmentsTitle->text() + "\nAppointment #" + QString::number((i + 1)) + " " + this->appointmentsLog->at(i).showAppointment());
+    }
+
+    for (int i = 0; i < this->cancelledAppointmentsLog->size(); i++)
+    {
+        ui->appointmentsTitle->setText(ui->appointmentsTitle->text() + "\nCancelled Appointment #" + QString::number((i + 1)) + " " + this->cancelledAppointmentsLog->at(i).showAppointment());
     }
 
     for (int i = 0; i < this->roomLog->size(); i++)
@@ -219,6 +226,7 @@ void MainWindow::on_openEmailInboxButton_clicked()
 
     emailwin.p = this->p;
     emailwin.appointmentsLog = this->appointmentsLog;
+    emailwin.cancelledAppointmentsLog = this->cancelledAppointmentsLog;
     emailwin.arrDoc = this->arrDoc;
     emailwin.emergencyVisitLog = this->emergencyVisitLog;
     emailwin.roomLog = this->roomLog;

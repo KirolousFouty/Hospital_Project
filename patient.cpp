@@ -76,6 +76,13 @@ bool Patient::getInsured()
 {
 	return this->insured;
 }
+
+void Patient::setName(QString p_name)
+{
+    this->name = p_name;
+}
+
+
 void Patient::setMedicalHistory(QString p_medicalHistory)
 {
 	this->medicalHistory = p_medicalHistory;
@@ -188,7 +195,24 @@ bool Patient::getLoggedIn() const
 
 void Patient::setUsername(QString p_username)
 {
-	this->username = p_username;
+
+    Patient temp;
+
+    for (auto i : this->userMap){
+        if (i.first == this->username){
+            temp = i.second;
+        }
+    }
+
+    temp.username = p_username;
+    temp.name = p_username;
+
+    this->userMap.erase(this->userMap.find(this->username));
+
+    this->userMap.insert(pair<QString, Patient> (temp.username, temp));
+    this->username = p_username;
+
+
 }
 
 void Patient::setPassword(QString p_password)

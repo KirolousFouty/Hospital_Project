@@ -24,6 +24,7 @@ public:
 
     Patient *p;
     QVector<Appointment> *appointmentsLog;
+    QVector<Appointment> *cancelledAppointmentsLog;
     QVector<Doctor> *arrDoc;
     QVector<EmergencyVisit> *emergencyVisitLog;
     QVector<Room> *roomLog;

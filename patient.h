@@ -45,6 +45,7 @@ public:
 	bool getLoggedIn() const;
 	double getAmountDue() const;
 
+    void setName(QString p_name);
 	void setMedicalHistory(QString p_medicalHistory);
 	void setBalance(double p_balance);
 	void setPoints(int p_points);

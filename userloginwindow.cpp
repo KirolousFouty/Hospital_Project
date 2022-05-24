@@ -70,3 +70,22 @@ void UserLoginWindow::on_backButton_clicked()
 {
     this->close();
 }
+
+void UserLoginWindow::on_editButton_clicked()
+{
+    if (this->p->getLoggedIn() == false)
+    {
+        QMessageBox::about(this, "Error", "Please log in first");
+        return;
+    }
+
+
+    UserEditWindow editwin;
+    editwin.setModal(true);
+
+    editwin.p = this->p;
+
+    editwin.exec();
+
+}
+

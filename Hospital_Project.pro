@@ -28,6 +28,7 @@ SOURCES += \
     bookemergencyvisitwindow.cpp \
     bookhomevisitwindow.cpp \
     bookroomwindow.cpp \
+    cancelappointmentwindow.cpp \
     complexsearchwindow.cpp \
     dobloodtestwindow.cpp \
     emailinboxwindow.cpp \
@@ -39,6 +40,7 @@ SOURCES += \
     rechargebalancewindow.cpp \
     shortestpathwindow.cpp \
     showpatientinformation.cpp \
+    usereditwindow.cpp \
     userloginwindow.cpp \
     userregisterwindow.cpp
 
@@ -62,6 +64,7 @@ HEADERS += \
     bookemergencyvisitwindow.h \
     bookhomevisitwindow.h \
     bookroomwindow.h \
+    cancelappointmentwindow.h \
     complexsearchwindow.h \
     dobloodtestwindow.h \
     emailinboxwindow.h \
@@ -72,6 +75,7 @@ HEADERS += \
     rechargebalancewindow.h \
     shortestpathwindow.h \
     showpatientinformation.h \
+    usereditwindow.h \
     userloginwindow.h \
     userregisterwindow.h
 
@@ -80,6 +84,7 @@ FORMS += \
     bookemergencyvisitwindow.ui \
     bookhomevisitwindow.ui \
     bookroomwindow.ui \
+    cancelappointmentwindow.ui \
     complexsearchwindow.ui \
     dobloodtestwindow.ui \
     emailinboxwindow.ui \
@@ -90,6 +95,7 @@ FORMS += \
     rechargebalancewindow.ui \
     shortestpathwindow.ui \
     showpatientinformation.ui \
+    usereditwindow.ui \
     userloginwindow.ui \
     userregisterwindow.ui
 

@@ -14,6 +14,7 @@ BookAppointmentWindow::BookAppointmentWindow(QWidget *parent) : QDialog(parent),
 
     this->p = new Patient;
     this->appointmentsLog = new QVector<Appointment>;
+    this->cancelledAppointmentsLog = new QVector<Appointment>;
     this->arrDoc = new QVector<Doctor>;
     this->roomLog = new QVector<Room>;
 
@@ -214,3 +215,15 @@ void BookAppointmentWindow::on_backButton_clicked()
 {
     this->close();
 }
+
+void BookAppointmentWindow::on_cancelAppointmentButton_clicked()
+{
+    CancelAppointmentWindow cancelwin;
+    cancelwin.setModal(true);
+
+    cancelwin.appointmentsLog = this->appointmentsLog;
+    cancelwin.cancelledAppointmentsLog = this->cancelledAppointmentsLog;
+
+    cancelwin.exec();
+}
+

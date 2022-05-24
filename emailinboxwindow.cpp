@@ -8,6 +8,7 @@ EmailInboxWindow::EmailInboxWindow(QWidget *parent) : QDialog(parent),
 
     this->p = new Patient;
     this->appointmentsLog = new QVector<Appointment>;
+    this->cancelledAppointmentsLog = new QVector<Appointment>;
     this->arrDoc = new QVector<Doctor>;
     this->emergencyVisitLog = new QVector<EmergencyVisit>;
     this->roomLog = new QVector<Room>;
@@ -44,6 +45,11 @@ void EmailInboxWindow::on_refreshButton_clicked()
     for (int i = 0; i < this->appointmentsLog->size(); i++)
     {
         ui->emailInbox->setText(ui->emailInbox->text() + "\nEmail #" + QString::number(counter++) + "\tAppointment #" + QString::number((i + 1)) + " " + this->appointmentsLog->at(i).showAppointment());
+    }
+
+    for (int i = 0; i < this->cancelledAppointmentsLog->size(); i++)
+    {
+        ui->emailInbox->setText(ui->emailInbox->text() + "\nCancelled Appointment #" + QString::number((i + 1)) + " " + this->cancelledAppointmentsLog->at(i).showAppointment());
     }
 
     for (int i = 0; i < this->roomLog->size(); i++)

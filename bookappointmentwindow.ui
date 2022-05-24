@@ -125,7 +125,7 @@
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>470</y>
+     <y>460</y>
      <width>451</width>
      <height>20</height>
     </rect>
@@ -219,6 +219,19 @@
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancelAppointmentButton">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>500</y>
+     <width>491</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel a Previously Registered Appointment</string>
    </property>
   </widget>
  </widget>

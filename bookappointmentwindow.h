@@ -9,6 +9,7 @@
 #include "Doctor.h"
 #include "paymentwindow.h"
 #include "Room.h"
+#include "cancelappointmentwindow.h"
 
 namespace Ui
 {
@@ -25,6 +26,7 @@ public:
 
     Patient *p;
     QVector<Appointment> *appointmentsLog;
+    QVector<Appointment> *cancelledAppointmentsLog;
     QVector<Doctor> *arrDoc;
     QVector<Room> *roomLog;
     bool *isPaymentSuccessfull;
@@ -37,6 +39,8 @@ private slots:
     void on_selectDoctorButton_clicked();
 
     void on_backButton_clicked();
+
+    void on_cancelAppointmentButton_clicked();
 
 private:
     Ui::BookAppointmentWindow *ui;
