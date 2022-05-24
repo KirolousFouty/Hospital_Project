@@ -166,7 +166,7 @@
     <string>Appointment</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="showByCriteriaButton">
    <property name="geometry">
     <rect>
      <x>452</x>

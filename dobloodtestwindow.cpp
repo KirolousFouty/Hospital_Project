@@ -63,3 +63,9 @@ void doBloodTestWindow::on_showCurrentButton_clicked()
     }
 }
 
+
+void doBloodTestWindow::on_backButton_clicked()
+{
+    this->close();
+}
+

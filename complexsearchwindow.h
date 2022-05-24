@@ -34,10 +34,10 @@ private slots:
     void on_backButton_clicked();
 
     void on_showAllButton_clicked();
-
-    void on_pushButton_clicked();
-
+\
     void on_selectTypeButton_clicked();
+
+    void on_showByCriteriaButton_clicked();
 
 private:
     Ui::ComplexSearchWindow *ui;
