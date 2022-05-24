@@ -14,6 +14,7 @@
 #include "helpandpricingswindow.h"
 #include "emailinboxwindow.h"
 #include "shortestpathwindow.h"
+#include "complexsearchwindow.h"
 
 #include "DateAndTime.h"
 #include "HomeVisit.h"
@@ -81,10 +82,11 @@ private slots:
 
     void on_helpAndPricingsButton_clicked();
 
-
     void on_openEmailInboxButton_clicked();
 
     void on_shortestPathButton_clicked();
+
+    void on_complexSearch_clicked();
 
 private:
     Ui::MainWindow *ui;

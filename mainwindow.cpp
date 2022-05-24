@@ -217,3 +217,12 @@ void MainWindow::on_shortestPathButton_clicked()
     pathwin.exec();
 }
 
+
+void MainWindow::on_complexSearch_clicked()
+{
+    ComplexSearchWindow searchwin;
+    searchwin.setModal(true);
+
+    searchwin.exec();
+}
+

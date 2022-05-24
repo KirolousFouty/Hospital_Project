@@ -28,6 +28,7 @@ SOURCES += \
     bookemergencyvisitwindow.cpp \
     bookhomevisitwindow.cpp \
     bookroomwindow.cpp \
+    complexsearchwindow.cpp \
     dobloodtestwindow.cpp \
     emailinboxwindow.cpp \
     helpandpricingswindow.cpp \
@@ -61,6 +62,7 @@ HEADERS += \
     bookemergencyvisitwindow.h \
     bookhomevisitwindow.h \
     bookroomwindow.h \
+    complexsearchwindow.h \
     dobloodtestwindow.h \
     emailinboxwindow.h \
     helpandpricingswindow.h \
@@ -78,6 +80,7 @@ FORMS += \
     bookemergencyvisitwindow.ui \
     bookhomevisitwindow.ui \
     bookroomwindow.ui \
+    complexsearchwindow.ui \
     dobloodtestwindow.ui \
     emailinboxwindow.ui \
     helpandpricingswindow.ui \
