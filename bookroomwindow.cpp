@@ -16,6 +16,15 @@ BookRoomWindow::BookRoomWindow(QWidget *parent) : QDialog(parent),
     this->appointmentsLog = new QVector<Appointment>;
     this->arrDoc = new QVector<Doctor>;
     this->roomLog = new QVector<Room>;
+
+    ui->timesComboBox->addItem("09:00 AM");
+    ui->timesComboBox->addItem("10:00 AM");
+    ui->timesComboBox->addItem("11:00 AM");
+    ui->timesComboBox->addItem("12:00 PM");
+    ui->timesComboBox->addItem("01:00 PM");
+    ui->timesComboBox->addItem("02:00 PM");
+    ui->timesComboBox->addItem("03:00 PM");
+
 }
 
 BookRoomWindow::~BookRoomWindow()
@@ -96,6 +105,18 @@ void BookRoomWindow::on_confirmRoomButton_clicked()
             dtTemp.setHour(3);
             dtTemp.setMinute(0);
         }
+
+
+
+
+        for (int j = 0; j < this->appointmentsLog->size(); j++){
+            if (this->appointmentsLog->at(j).doctorName == s && this->appointmentsLog->at(j).dt.getDt() == ui->timesComboBox->currentText()){
+                ui->statusTitle->setText("Room Status: Doctor is already booked for an Appointment. Please select another Time or Doctor.");
+                return;
+            }
+        }
+
+
 
         for (int i = 0; i < this->roomLog->size(); i++)
         {

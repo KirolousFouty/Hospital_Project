@@ -17,14 +17,16 @@ MainWindow::MainWindow(QWidget *parent)
 
     this->p_userLoginTitle = ui->userLoginTitle;
 
-    Doctor d1("Ahmed", 121, 2.4, 1000, "Cardio");
-    Doctor d2("Tarek", 122, 2.3, 1500, "Emergency");
-    Doctor d3("Youssef", 123, 4.4, 950, "Cardio");
+    Doctor d1("Ahmed", 121, 3.4, 1050, "Cardio");
+    Doctor d2("Tarek", 122, 3.3, 1500, "Emergency");
+    Doctor d3("Youssef", 123, 4.4, 1350, "Cardio");
     Doctor d4("Ziad", 124, 3.4, 1100, "Blood");
-    Doctor d5("Ali", 125, 4.6, 900, "Neurology");
-    Doctor d6("Farah", 126, 4.5, 1900, "Neurology");
-    Doctor d7("Kiro", 127, 4.4, 1600, "Blood");
+    Doctor d5("Ali", 125, 3.6, 1200, "Neurology");
+    Doctor d6("Farah", 126, 4.5, 1950, "Neurology");
+    Doctor d7("Kiro", 127, 4.4, 1900, "Blood");
     Doctor d8("Nour", 128, 3.7, 1700, "Emergency");
+    Doctor d9("Hasan", 129, 3.3, 900, "Nutrition");
+    Doctor d10("Omar", 130, 4.2, 1300, "Nutrition");
 
     arrDoc->push_back(d1);
     arrDoc->push_back(d2);
@@ -34,6 +36,8 @@ MainWindow::MainWindow(QWidget *parent)
     arrDoc->push_back(d6);
     arrDoc->push_back(d7);
     arrDoc->push_back(d8);
+    arrDoc->push_back(d9);
+    arrDoc->push_back(d10);
 
     Patient Admin;
     this->p->userMap.insert(pair<QString, Patient>(Admin.getUsername(), Admin));
@@ -42,6 +46,12 @@ MainWindow::MainWindow(QWidget *parent)
     paymentsLogFile.open("paymentsLogFile.txt", ios::out);
     paymentsLogFile.close();
     remove("paymentsLogFile.txt");
+
+
+    PatchNotesWindow patchwin;
+    patchwin.setModal(true);
+
+    patchwin.exec();
 
 }
 
@@ -92,8 +102,11 @@ void MainWindow::on_bookAppointmentButton_clicked()
     bookappointmentwin.p = this->p;
     bookappointmentwin.appointmentsLog = this->appointmentsLog;
     bookappointmentwin.arrDoc = this->arrDoc;
+    bookappointmentwin.roomLog = this->roomLog;
 
     bookappointmentwin.exec();
+
+    this->appointmentsLog = bookappointmentwin.appointmentsLog;
 }
 
 void MainWindow::on_showAppointmentsButton_clicked()
@@ -139,6 +152,8 @@ void MainWindow::on_bookRoomButton_clicked()
     bookroomwin.roomLog = this->roomLog;
 
     bookroomwin.exec();
+
+    this->roomLog = bookroomwin.roomLog;
 }
 
 void MainWindow::on_emergencyVisitButton_clicked()
@@ -222,6 +237,13 @@ void MainWindow::on_complexSearch_clicked()
 {
     ComplexSearchWindow searchwin;
     searchwin.setModal(true);
+
+    searchwin.p = this->p;
+    searchwin.appointmentsLog = this->appointmentsLog;
+    searchwin.arrDoc = this->arrDoc;
+    searchwin.emergencyVisitLog = this->emergencyVisitLog;
+    searchwin.roomLog = this->roomLog;
+    searchwin.homeVisitLog = this->homeVisitLog;
 
     searchwin.exec();
 }

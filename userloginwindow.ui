@@ -117,9 +117,9 @@
   <widget class="QLabel" name="userLoginTitle">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>30</y>
-     <width>141</width>
+     <x>-2</x>
+     <y>31</y>
+     <width>391</width>
      <height>41</height>
     </rect>
    </property>
@@ -131,6 +131,9 @@
    </property>
    <property name="text">
     <string>User Login</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

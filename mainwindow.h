@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-//#include "userregisterwindow.h"
 #include "userloginwindow.h"
 #include "showpatientinformation.h"
 #include "bookappointmentwindow.h"
@@ -26,6 +25,7 @@
 #include "Patient.h"
 #include "OutpatientClinic.h"
 #include "Appointment.h"
+#include "patchnoteswindow.h"
 
 #include <iostream>
 #include <fstream>

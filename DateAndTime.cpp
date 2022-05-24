@@ -74,6 +74,32 @@ void DateAndTime::setYear(int p_year)
     this->year = p_year;
 }
 
+QString DateAndTime::getDt() const{
+    switch (this->hour){
+    case 9:
+        return "09:00 AM";
+        break;
+    case 10:
+        return "10:00 AM";
+        break;
+    case 11:
+        return "11:00 AM";
+        break;
+    case 12:
+        return "12:00 PM";
+        break;
+    case 1:
+        return "01:00 PM";
+        break;
+    case 2:
+        return "02:00 PM";
+        break;
+    case 3:
+        return "03:00 PM";
+        break;
+    }
+}
+
 bool DateAndTime::operator==(const DateAndTime &dt) const
 {
     //    return (this->minute == dt.minute  && this->hour == dt.hour && this->day == dt.day && this->month == dt.month && this->year == dt.year);

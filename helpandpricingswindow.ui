@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>HelpAndPricingsWindow</class>
  <widget class="QDialog" name="HelpAndPricingsWindow">
@@ -5,13 +6,102 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>458</width>
+    <height>530</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QLabel" name="helpAndPricingsTitle">
+   <property name="geometry">
+    <rect>
+     <x>-1</x>
+     <y>8</y>
+     <width>461</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Help and Pricings</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="normalTitle">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>91</y>
+     <width>301</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>
+Cost:  *varies per Doctor*
+Bonus: 10
+
+
+Cost: 5000
+Bonus: 50
+
+
+Cost: 1000, 1800, 3000 (Standard, Suit, VIP)
+Points: 30
+
+
+Cost: 900
+Points: 40
+
+
+Cost: 200
+Points: 5</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="boldTitle">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>90</y>
+     <width>301</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Service: Outpatient
+
+
+
+Service: Emergency Visit
+
+
+
+Service: Room
+
+
+
+Service: Home Visit
+
+
+
+Service: Blood Test
+
+</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

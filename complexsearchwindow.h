@@ -3,6 +3,14 @@
 
 #include <QDialog>
 
+#include "Patient.h"
+#include "Doctor.h"
+#include "Appointment.h"
+#include "EmergencyVisit.h"
+#include "Room.h"
+#include "HomeVisit.h"
+
+
 namespace Ui {
 class ComplexSearchWindow;
 }
@@ -14,6 +22,22 @@ class ComplexSearchWindow : public QDialog
 public:
     explicit ComplexSearchWindow(QWidget *parent = nullptr);
     ~ComplexSearchWindow();
+
+    Patient *p;
+    QVector<Appointment> *appointmentsLog;
+    QVector<Doctor> *arrDoc;
+    QVector<EmergencyVisit> *emergencyVisitLog;
+    QVector<Room> *roomLog;
+    QVector<HomeVisit> *homeVisitLog;
+
+private slots:
+    void on_backButton_clicked();
+
+    void on_showAllButton_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_selectTypeButton_clicked();
 
 private:
     Ui::ComplexSearchWindow *ui;

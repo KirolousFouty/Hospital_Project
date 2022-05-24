@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="bloodTestTitle">
+  <widget class="QLabel" name="paymentTitle">
    <property name="geometry">
     <rect>
      <x>0</x>
