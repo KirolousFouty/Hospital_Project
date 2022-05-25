@@ -44,7 +44,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>300</y>
+      <y>290</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -57,7 +57,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>638</y>
+      <y>618</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -70,7 +70,7 @@
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>688</y>
+      <y>710</y>
       <width>661</width>
       <height>141</height>
      </rect>
@@ -89,7 +89,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>260</y>
+      <y>250</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -102,7 +102,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>340</y>
+      <y>330</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -150,7 +150,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>420</y>
+      <y>410</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -163,7 +163,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>380</y>
+      <y>370</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -198,7 +198,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>600</y>
+      <y>580</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -211,7 +211,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>560</y>
+      <y>540</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -224,7 +224,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>480</y>
+      <y>460</y>
       <width>291</width>
       <height>29</height>
      </rect>
@@ -237,13 +237,26 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>520</y>
+      <y>500</y>
       <width>291</width>
       <height>29</height>
      </rect>
     </property>
     <property name="text">
      <string>Complex Search</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="contactUsButton">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>657</y>
+      <width>291</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Contact us! - Complaints and Suggestions</string>
     </property>
    </widget>
   </widget>

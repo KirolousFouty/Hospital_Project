@@ -89,7 +89,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Fees:                                             $500</string>
+    <string>Fees:                                             $200</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>

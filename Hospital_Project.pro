@@ -16,6 +16,7 @@ SOURCES += \
     Drugs.cpp \
     EmergencyRoom.cpp \
     EmergencyVisit.cpp \
+    Feedback.cpp \
     HomeVisit.cpp \
     Laboratory.cpp \
     MedicalTools.cpp \
@@ -30,6 +31,7 @@ SOURCES += \
     bookroomwindow.cpp \
     cancelappointmentwindow.cpp \
     complexsearchwindow.cpp \
+    contactuswindow.cpp \
     dobloodtestwindow.cpp \
     emailinboxwindow.cpp \
     helpandpricingswindow.cpp \
@@ -52,6 +54,7 @@ HEADERS += \
     Drugs.h \
     EmergencyRoom.h \
     EmergencyVisit.h \
+    Feedback.h \
     HomeVisit.h \
     Laboratory.h \
     MedicalTools.h \
@@ -66,6 +69,7 @@ HEADERS += \
     bookroomwindow.h \
     cancelappointmentwindow.h \
     complexsearchwindow.h \
+    contactuswindow.h \
     dobloodtestwindow.h \
     emailinboxwindow.h \
     helpandpricingswindow.h \
@@ -86,6 +90,7 @@ FORMS += \
     bookroomwindow.ui \
     cancelappointmentwindow.ui \
     complexsearchwindow.ui \
+    contactuswindow.ui \
     dobloodtestwindow.ui \
     emailinboxwindow.ui \
     helpandpricingswindow.ui \

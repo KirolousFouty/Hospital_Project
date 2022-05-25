@@ -49,7 +49,7 @@ void EmailInboxWindow::on_refreshButton_clicked()
 
     for (int i = 0; i < this->cancelledAppointmentsLog->size(); i++)
     {
-        ui->emailInbox->setText(ui->emailInbox->text() + "\nCancelled Appointment #" + QString::number((i + 1)) + " " + this->cancelledAppointmentsLog->at(i).showAppointment());
+        ui->emailInbox->setText(ui->emailInbox->text() + "\nEmail #" + QString::number(counter++) + "\tCancelled Appointment #" + QString::number((i + 1)) + " " + this->cancelledAppointmentsLog->at(i).showAppointment());
     }
 
     for (int i = 0; i < this->roomLog->size(); i++)

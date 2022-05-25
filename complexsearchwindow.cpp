@@ -74,7 +74,7 @@ void ComplexSearchWindow::on_showAllButton_clicked()
 
         for (int i = 0; i < this->arrDoc->size(); i++)
         {
-            ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + "Doctor's Name: " + this->arrDoc->at(i).getName() + ", Doctor's Rating: " + QString::number(this->arrDoc->at(i).getRating()) + ", Doctor's Fees: $" + QString::number(this->arrDoc->at(i).getFees()) + '\n');
+            ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + "Doctor's Name: " + this->arrDoc->at(i).getName() + ", Doctor's Department: " + this->arrDoc->at(i).getDepartment() + ", Doctor's Rating: " + QString::number(this->arrDoc->at(i).getRating()) + ", Doctor's Fees: $" + QString::number(this->arrDoc->at(i).getFees()) + '\n');
         }
 
         return;
@@ -187,7 +187,7 @@ void ComplexSearchWindow::on_showByCriteriaButton_clicked()
 
             if (ui->criteriaLineEdit->text() == this->arrDoc->at(i).getName() || ui->criteriaLineEdit->text() == QString::number(this->arrDoc->at(i).getRating()) || ui->criteriaLineEdit->text() == QString::number(this->arrDoc->at(i).getFees()) || ui->criteriaLineEdit->text() == this->arrDoc->at(i).getDepartment())
             {
-                ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + "Doctor's Name: " + this->arrDoc->at(i).getName() + "  Doctor's Rating: " + QString::number(this->arrDoc->at(i).getRating()) + "  Doctor's Fees: $" + QString::number(this->arrDoc->at(i).getFees()) + '\n');
+                ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + "Doctor's Name: " + this->arrDoc->at(i).getName() + ", Doctor's Department: " + this->arrDoc->at(i).getDepartment() + "  Doctor's Rating: " + QString::number(this->arrDoc->at(i).getRating()) + "  Doctor's Fees: $" + QString::number(this->arrDoc->at(i).getFees()) + '\n');
             }
         }
 

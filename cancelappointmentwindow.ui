@@ -43,7 +43,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Show Previously Registered Appointments</string>
+    <string>Show Previously Booked Appointments</string>
    </property>
   </widget>
   <widget class="QPushButton" name="cancelSelectedAppointmentButton">
@@ -102,6 +102,24 @@
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>260</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Back</string>
    </property>
   </widget>
  </widget>

@@ -80,46 +80,113 @@ bool Patient::getInsured()
 void Patient::setName(QString p_name)
 {
     this->name = p_name;
+
+    for (auto i : this->userMap){
+        if (i.first == this->username){
+            i.second.setName(p_name);
+        }
+    }
+
 }
 
 
 void Patient::setMedicalHistory(QString p_medicalHistory)
 {
 	this->medicalHistory = p_medicalHistory;
+
+    for (auto i : this->userMap){
+        if (i.first == this->username){
+            i.second.setMedicalHistory(p_medicalHistory);
+        }
+    }
 }
 
 void Patient::setBalance(double p_balance)
 {
 	this->balance = p_balance;
+
+    for (auto i : this->userMap){
+        if (i.first == this->username){
+            i.second.setBalance(p_balance);
+        }
+    }
 }
 
 void Patient::setPoints(int p_points)
 {
 	this->points = p_points;
+
+    for (auto i : this->userMap){
+        if (i.first == this->username){
+            i.second.setPoints(p_points);
+        }
+    }
 }
+
 void Patient::setpatientID(int p_patientID)
 {
 	this->patientID = p_patientID;
+
+    for (auto i : this->userMap){
+        if (i.first == this->username){
+            i.second.setpatientID(p_patientID);
+        }
+    }
 }
+
 void Patient::setAge(int p_age)
 {
 	this->age = p_age;
+
+    for (auto i : this->userMap){
+        if (i.first == this->username){
+            i.second.setAge(p_age);
+        }
+    }
 }
+
 void Patient::setGender(QString p_gender)
 {
 	this->gender = p_gender;
+
+    for (auto i : this->userMap){
+        if (i.first == this->username){
+            i.second.setGender(p_gender);
+        }
+    }
 }
+
 void Patient::setBloodType(QString p_bloodType)
 {
 	this->bloodType = p_bloodType;
+
+    for (auto i : this->userMap){
+        if (i.first == this->username){
+            i.second.setBloodType(p_bloodType);
+        }
+    }
 }
+
 void Patient::setAllergies(QString p_allergies)
 {
 	this->allergies = p_allergies;
+
+    for (auto i : this->userMap){
+        if (i.first == this->username){
+            i.second.setAllergies(p_allergies);
+        }
+    }
 }
+
 void Patient::setInsured(bool p_insured)
 {
 	this->insured = p_insured;
+
+    for (auto i : this->userMap){
+        if (i.first == this->username){
+            i.second.setInsured(p_insured);
+        }
+    }
 }
 
 bool Patient::reg(QString p_name, QString p_username, QString p_password, int p_age, double p_balance, QString p_gender, QString p_bloodType, QString p_allergies, bool p_insured, QString p_medicalHistory)
@@ -218,16 +285,34 @@ void Patient::setUsername(QString p_username)
 void Patient::setPassword(QString p_password)
 {
 	this->password = p_password;
+
+    for (auto i : this->userMap){
+        if (i.first == this->username){
+            i.second.setPassword(p_password);
+        }
+    }
 }
 
 void Patient::setLoggedIn(bool p_loggedIn)
 {
 	this->loggedIn = p_loggedIn;
+
+    for (auto i : this->userMap){
+        if (i.first == this->username){
+            i.second.setLoggedIn(p_loggedIn);
+        }
+    }
 }
 
 void Patient::setAmountDue(double p_amountDue)
 {
 	this->amountDue = p_amountDue;
+
+    for (auto i : this->userMap){
+        if (i.first == this->username){
+            i.second.setAmountDue(p_amountDue);
+        }
+    }
 }
 
 double Patient::getAmountDue() const

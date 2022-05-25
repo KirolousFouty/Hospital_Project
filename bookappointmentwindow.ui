@@ -231,7 +231,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Cancel a Previously Registered Appointment</string>
+    <string>Cancel a Previously Booked Appointment</string>
    </property>
   </widget>
  </widget>

@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QVector>
+#include <Patient.h>
 #include "Appointment.h"
 
 namespace Ui {
@@ -16,6 +17,8 @@ class CancelAppointmentWindow : public QDialog
 public:
     explicit CancelAppointmentWindow(QWidget *parent = nullptr);
     ~CancelAppointmentWindow();
+
+    Patient *p;
     QVector<Appointment> *appointmentsLog;
     QVector<Appointment> *cancelledAppointmentsLog;
 
@@ -23,6 +26,8 @@ private slots:
     void on_showAppointmentsButton_clicked();
 
     void on_cancelSelectedAppointmentButton_clicked();
+
+    void on_backButton_clicked();
 
 private:
     Ui::CancelAppointmentWindow *ui;

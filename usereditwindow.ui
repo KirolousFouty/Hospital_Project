@@ -71,7 +71,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Edit</string>
+    <string>Save Edits</string>
    </property>
   </widget>
   <widget class="QPushButton" name="clearFieldsButton">

@@ -15,6 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
     this->emergencyVisitLog = new QVector<EmergencyVisit>;
     this->roomLog = new QVector<Room>;
     this->homeVisitLog = new QVector<HomeVisit>;
+    this->feedbackLog = new QVector<Feedback>;
+
 
     this->p_userLoginTitle = ui->userLoginTitle;
 
@@ -257,3 +259,14 @@ void MainWindow::on_complexSearch_clicked()
 
     searchwin.exec();
 }
+
+void MainWindow::on_contactUsButton_clicked()
+{
+    ContactUsWindow contactwin;
+    contactwin.setModal(true);
+
+    contactwin.feedbackLog = this->feedbackLog;
+
+    contactwin.exec();
+}
+

@@ -221,6 +221,7 @@ void BookAppointmentWindow::on_cancelAppointmentButton_clicked()
     CancelAppointmentWindow cancelwin;
     cancelwin.setModal(true);
 
+    cancelwin.p = this->p;
     cancelwin.appointmentsLog = this->appointmentsLog;
     cancelwin.cancelledAppointmentsLog = this->cancelledAppointmentsLog;
 

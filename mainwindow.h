@@ -26,6 +26,8 @@
 #include "OutpatientClinic.h"
 #include "Appointment.h"
 #include "patchnoteswindow.h"
+#include "contactuswindow.h"
+#include "Feedback.h"
 
 #include <iostream>
 #include <fstream>
@@ -34,6 +36,7 @@
 #include <algorithm>
 #include <QLabel>
 #include <QMessageBox>
+#include <tuple>
 
 using namespace std;
 
@@ -59,6 +62,7 @@ public:
     QVector<EmergencyVisit> *emergencyVisitLog;
     QVector<Room> *roomLog;
     QVector<HomeVisit> *homeVisitLog;
+    QVector<Feedback> *feedbackLog;
     QLabel *p_userLoginTitle;
     fstream paymentsLogFile;
 
@@ -88,6 +92,8 @@ private slots:
     void on_shortestPathButton_clicked();
 
     void on_complexSearch_clicked();
+
+    void on_contactUsButton_clicked();
 
 private:
     Ui::MainWindow *ui;
