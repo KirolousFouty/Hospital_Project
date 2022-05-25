@@ -39,8 +39,32 @@ void UserEditWindow::on_editButton_clicked()
         return;
     } else{
 
+        bool ok = true;
+        QString abc = "abcdefghijklmnopqrstuvwxyz~!@#$%^&*()-_=+";
+        QString qs;
+
         if (ui->new_ageDisplay->text() != ""){
-            this->p->setAge(ui->new_ageDisplay->text().toInt());
+
+            if (ui->new_ageDisplay->text().toInt() < 18)
+            {
+                ok = false;
+                ui->new_ageDisplay->setText("");
+                ui->editStatusTitle->setText("Edit Status: User must be at least 18 years old.");
+                return;
+            }
+
+            else if (ui->new_ageDisplay->text().toInt() > 100)
+            {
+                ok = false;
+                ui->new_ageDisplay->setText("");
+                ui->editStatusTitle->setText("Edit Status: User must be younger than 100 years old.");
+                return;
+            }
+
+            else{
+                this->p->setAge(ui->new_ageDisplay->text().toInt());
+            }
+
         }
 
         if (ui->new_allergiesDisplay->text() != ""){
@@ -48,6 +72,31 @@ void UserEditWindow::on_editButton_clicked()
         }
 
         if (ui->new_balanceDisplay->text() != ""){
+
+
+                qs = ui->new_balanceDisplay->text();
+                        for (int i = 0; i < qs.length(); i++)
+                          {
+                              for (int j = 0; j < abc.length(); j++)
+                              {
+                                  if (abc[j] == qs[i])
+                                  {
+                                      ok = false;
+                                      ui->editStatusTitle->setText("Edit Status: Please enter balance as only numbers.");
+                                      ui->new_balanceDisplay->setText("");
+                                      return;
+                                  }
+                              }
+                          }
+
+            if (ui->new_balanceDisplay->text().toDouble() <= 0)
+             {
+                 ok = false;
+                 ui->new_balanceDisplay->setText("");
+                 ui->editStatusTitle->setText("Edit Status: Balance has to be greater than zero.");
+                 return;
+             }
+
             this->p->setBalance(ui->new_balanceDisplay->text().toDouble());
         }
 
@@ -116,7 +165,10 @@ void UserEditWindow::on_editButton_clicked()
         ui->new_pointsDisplay->setText("");
 
 
-        ui->editStatusTitle->setText("Edit Status: Edit done successfully!");
+        if (ok){
+            ui->editStatusTitle->setText("Edit Status: Edit done successfully!");
+        }
+
 
 
 

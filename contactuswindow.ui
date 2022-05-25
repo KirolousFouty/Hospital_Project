@@ -50,7 +50,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Please leave us your feedback below, and we would get back to you:</string>
+    <string>Please leave your feedback below, and we would get back to you:</string>
    </property>
   </widget>
   <widget class="QLabel" name="mobileNumberTitle">

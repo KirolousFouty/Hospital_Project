@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>458</width>
-    <height>530</height>
+    <width>429</width>
+    <height>560</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <rect>
      <x>-1</x>
      <y>8</y>
-     <width>461</width>
+     <width>431</width>
      <height>61</height>
     </rect>
    </property>
@@ -38,8 +38,8 @@
   <widget class="QLabel" name="normalTitle">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>91</y>
+     <x>70</x>
+     <y>101</y>
      <width>301</width>
      <height>391</height>
     </rect>
@@ -69,8 +69,8 @@ Points: 5</string>
   <widget class="QLabel" name="boldTitle">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>90</y>
+     <x>70</x>
+     <y>100</y>
      <width>301</width>
      <height>391</height>
     </rect>

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>676</width>
+    <width>591</width>
     <height>354</height>
    </rect>
   </property>
@@ -16,7 +16,7 @@
   <widget class="QLabel" name="selectTimeTitle">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>100</x>
      <y>130</y>
      <width>141</width>
      <height>20</height>
@@ -29,7 +29,7 @@
   <widget class="QLabel" name="visitStatusTitle">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>100</x>
      <y>290</y>
      <width>451</width>
      <height>20</height>
@@ -42,7 +42,7 @@
   <widget class="QComboBox" name="timeComboBox">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>260</x>
      <y>130</y>
      <width>171</width>
      <height>26</height>
@@ -87,7 +87,7 @@
   <widget class="QPushButton" name="confirmVisitButton">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>220</x>
      <y>230</y>
      <width>251</width>
      <height>29</height>
@@ -100,7 +100,7 @@
   <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>100</x>
      <y>230</y>
      <width>101</width>
      <height>29</height>
@@ -113,7 +113,7 @@
   <widget class="QLabel" name="feesTitle">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>100</x>
      <y>170</y>
      <width>141</width>
      <height>20</height>
@@ -126,7 +126,7 @@
   <widget class="QLabel" name="feesDisplay">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>260</x>
      <y>170</y>
      <width>101</width>
      <height>20</height>
@@ -142,7 +142,7 @@
   <widget class="QLabel" name="discountTitle">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>100</x>
      <y>200</y>
      <width>141</width>
      <height>20</height>
@@ -155,7 +155,7 @@
   <widget class="QLabel" name="discountDisplay">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>260</x>
      <y>200</y>
      <width>101</width>
      <height>20</height>
@@ -172,8 +172,8 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
-     <width>681</width>
+     <y>10</y>
+     <width>591</width>
      <height>61</height>
     </rect>
    </property>
@@ -193,7 +193,7 @@
   <widget class="QPushButton" name="checkDiscountButton">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>360</x>
      <y>190</y>
      <width>111</width>
      <height>29</height>

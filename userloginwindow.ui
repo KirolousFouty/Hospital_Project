@@ -66,7 +66,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>300</y>
+     <y>330</y>
      <width>281</width>
      <height>20</height>
     </rect>
@@ -80,7 +80,7 @@
     <rect>
      <x>50</x>
      <y>220</y>
-     <width>111</width>
+     <width>121</width>
      <height>29</height>
     </rect>
    </property>
@@ -92,10 +92,15 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>120</y>
+     <y>116</y>
      <width>111</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Username:</string>
@@ -105,10 +110,15 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>150</y>
+     <y>152</y>
      <width>111</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Password:</string>
@@ -118,7 +128,7 @@
    <property name="geometry">
     <rect>
      <x>-2</x>
-     <y>31</y>
+     <y>20</y>
      <width>391</width>
      <height>41</height>
     </rect>
@@ -141,7 +151,7 @@
     <rect>
      <x>50</x>
      <y>260</y>
-     <width>111</width>
+     <width>121</width>
      <height>29</height>
     </rect>
    </property>

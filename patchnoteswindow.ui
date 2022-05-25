@@ -46,7 +46,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
+     <pointsize>13</pointsize>
     </font>
    </property>
    <property name="text">
@@ -58,7 +58,6 @@
 
 - Edit User
 - Cancel Appointment
-- Medicine/Drugs + Pharmacy
 - Doctor's Approval</string>
    </property>
   </widget>

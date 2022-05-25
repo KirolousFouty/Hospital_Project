@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>452</x>
-     <y>325</y>
+     <y>335</y>
      <width>191</width>
      <height>29</height>
     </rect>
@@ -30,13 +30,13 @@
    <property name="geometry">
     <rect>
      <x>72</x>
-     <y>425</y>
+     <y>435</y>
      <width>581</width>
-     <height>261</height>
+     <height>231</height>
     </rect>
    </property>
    <property name="text">
-    <string>Search Results.</string>
+    <string>Search Results appear here.</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -46,7 +46,7 @@
    <property name="geometry">
     <rect>
      <x>202</x>
-     <y>155</y>
+     <y>165</y>
      <width>141</width>
      <height>24</height>
     </rect>
@@ -59,7 +59,7 @@
    <property name="geometry">
     <rect>
      <x>72</x>
-     <y>115</y>
+     <y>125</y>
      <width>110</width>
      <height>24</height>
     </rect>
@@ -72,7 +72,7 @@
    <property name="geometry">
     <rect>
      <x>582</x>
-     <y>145</y>
+     <y>155</y>
      <width>93</width>
      <height>29</height>
     </rect>
@@ -85,7 +85,7 @@
    <property name="geometry">
     <rect>
      <x>382</x>
-     <y>155</y>
+     <y>165</y>
      <width>141</width>
      <height>24</height>
     </rect>
@@ -98,7 +98,7 @@
    <property name="geometry">
     <rect>
      <x>72</x>
-     <y>285</y>
+     <y>295</y>
      <width>361</width>
      <height>26</height>
     </rect>
@@ -108,7 +108,7 @@
    <property name="geometry">
     <rect>
      <x>383</x>
-     <y>115</y>
+     <y>125</y>
      <width>141</width>
      <height>24</height>
     </rect>
@@ -121,7 +121,7 @@
    <property name="geometry">
     <rect>
      <x>72</x>
-     <y>64</y>
+     <y>74</y>
      <width>131</width>
      <height>31</height>
     </rect>
@@ -139,7 +139,7 @@
    <property name="geometry">
     <rect>
      <x>72</x>
-     <y>235</y>
+     <y>245</y>
      <width>571</width>
      <height>41</height>
     </rect>
@@ -157,7 +157,7 @@
    <property name="geometry">
     <rect>
      <x>202</x>
-     <y>115</y>
+     <y>125</y>
      <width>141</width>
      <height>24</height>
     </rect>
@@ -170,7 +170,7 @@
    <property name="geometry">
     <rect>
      <x>452</x>
-     <y>285</y>
+     <y>295</y>
      <width>191</width>
      <height>29</height>
     </rect>
@@ -183,7 +183,7 @@
    <property name="geometry">
     <rect>
      <x>-1</x>
-     <y>5</y>
+     <y>10</y>
      <width>721</width>
      <height>51</height>
     </rect>
@@ -195,7 +195,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Complex Search</string>
+    <string>Advanced Search</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -205,7 +205,7 @@
    <property name="geometry">
     <rect>
      <x>72</x>
-     <y>155</y>
+     <y>165</y>
      <width>110</width>
      <height>24</height>
     </rect>
@@ -218,7 +218,7 @@
    <property name="geometry">
     <rect>
      <x>71</x>
-     <y>324</y>
+     <y>334</y>
      <width>361</width>
      <height>29</height>
     </rect>
@@ -231,7 +231,7 @@
    <property name="geometry">
     <rect>
      <x>300</x>
-     <y>380</y>
+     <y>390</y>
      <width>151</width>
      <height>31</height>
     </rect>
