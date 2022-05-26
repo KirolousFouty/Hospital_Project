@@ -47,6 +47,10 @@ void ComplexSearchWindow::on_showAllButton_clicked()
             ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + "Patient Name: " + i.second.getName() + ", Patient ID: " + QString::number(i.second.getPatientID()) + ", Patient Balance: " + QString::number(i.second.getBalance()) + '\n');
         }
 
+        if (ui->searchResultDisplay->text() == ""){
+            ui->searchResultDisplay->setText("There are no patients registered.");
+        }
+
         // Return after the loop (end function, do not run the code below)
         return;
     }
@@ -63,6 +67,10 @@ void ComplexSearchWindow::on_showAllButton_clicked()
             ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + this->appointmentsLog->at(i).showAppointment() + '\n');
         }
 
+        if (ui->searchResultDisplay->text() == ""){
+            ui->searchResultDisplay->setText("There are no appointments booked.");
+        }
+
         // Return after the loop (end function, do not run the code below)
         return;
     }
@@ -77,6 +85,10 @@ void ComplexSearchWindow::on_showAllButton_clicked()
             ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + "Doctor's Name: " + this->arrDoc->at(i).getName() + ", Doctor's Department: " + this->arrDoc->at(i).getDepartment() + ", Doctor's Rating: " + QString::number(this->arrDoc->at(i).getRating()) + ", Doctor's Fees: $" + QString::number(this->arrDoc->at(i).getFees()) + '\n');
         }
 
+        if (ui->searchResultDisplay->text() == ""){
+            ui->searchResultDisplay->setText("There are no doctors registered.");
+        }
+
         return;
     }
 
@@ -87,6 +99,10 @@ void ComplexSearchWindow::on_showAllButton_clicked()
         for (int i = 0; i < this->emergencyVisitLog->size(); i++)
         {
             ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + this->emergencyVisitLog->at(i).showVisit() + '\n');
+        }
+
+        if (ui->searchResultDisplay->text() == ""){
+            ui->searchResultDisplay->setText("There are no emergency visits booked.");
         }
 
         return;
@@ -100,6 +116,11 @@ void ComplexSearchWindow::on_showAllButton_clicked()
         {
             ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + this->roomLog->at(i).showRoom() + '\n');
         }
+
+        if (ui->searchResultDisplay->text() == ""){
+            ui->searchResultDisplay->setText("There are no room visits booked.");
+        }
+
         return;
     }
 
@@ -111,6 +132,11 @@ void ComplexSearchWindow::on_showAllButton_clicked()
         {
             ui->searchResultDisplay->setText(ui->searchResultDisplay->text() + this->homeVisitLog->at(i).showHomeVisit() + '\n');
         }
+
+        if (ui->searchResultDisplay->text() == ""){
+            ui->searchResultDisplay->setText("There are no home visits booked.");
+        }
+
         return;
     }
 }
@@ -149,7 +175,7 @@ void ComplexSearchWindow::on_showByCriteriaButton_clicked()
         // If the loop ended, and no instance was found, display as Not Found.
         if (ui->searchResultDisplay->text() == "")
         {
-            ui->searchResultDisplay->setText("Not Found!");
+            ui->searchResultDisplay->setText("There is no patient registered that meets this criteria.");
         }
 
         // Return after the loop (end function, do not run the code below)
@@ -175,6 +201,11 @@ void ComplexSearchWindow::on_showByCriteriaButton_clicked()
 
         // Return after the loop (end function, do not run the code below)
         ui->criteriaLineEdit->setText("");
+
+        if (ui->searchResultDisplay->text() == ""){
+            ui->searchResultDisplay->setText("There is no appointment booked that meets this criteria.");
+        }
+
         return;
     }
     else if (ui->doctorRadioButton->isChecked())
@@ -192,6 +223,11 @@ void ComplexSearchWindow::on_showByCriteriaButton_clicked()
         }
 
         ui->criteriaLineEdit->setText("");
+
+        if (ui->searchResultDisplay->text() == ""){
+            ui->searchResultDisplay->setText("There is no doctor registered that meets this criteria.");
+        }
+
         return;
     }
 
@@ -206,6 +242,11 @@ void ComplexSearchWindow::on_showByCriteriaButton_clicked()
         }
 
         ui->criteriaLineEdit->setText("");
+
+        if (ui->searchResultDisplay->text() == ""){
+            ui->searchResultDisplay->setText("There is no emergency visit booked that meets this criteria.");
+        }
+
         return;
     }
 
@@ -221,6 +262,11 @@ void ComplexSearchWindow::on_showByCriteriaButton_clicked()
         }
 
         ui->criteriaLineEdit->setText("");
+
+        if (ui->searchResultDisplay->text() == ""){
+            ui->searchResultDisplay->setText("There is no room visit booked that meets this criteria.");
+        }
+
         return;
     }
 
@@ -234,6 +280,11 @@ void ComplexSearchWindow::on_showByCriteriaButton_clicked()
         }
 
         ui->criteriaLineEdit->setText("");
+
+        if (ui->searchResultDisplay->text() == ""){
+            ui->searchResultDisplay->setText("There is no home visit booked that meets this criteria.");
+        }
+
         return;
     }
 

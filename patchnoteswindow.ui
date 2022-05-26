@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>385</width>
-    <height>436</height>
+    <width>417</width>
+    <height>524</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>2</x>
-     <y>9</y>
+     <y>20</y>
      <width>381</width>
      <height>41</height>
     </rect>
@@ -40,8 +40,8 @@
     <rect>
      <x>40</x>
      <y>70</y>
-     <width>301</width>
-     <height>301</height>
+     <width>341</width>
+     <height>371</height>
     </rect>
    </property>
    <property name="font">
@@ -52,20 +52,23 @@
    <property name="text">
     <string>- File Handling
 - Shortest Path
-- Complex Search 
+- Complex Search
 - Payment choices
 - Send Email Function
 
 - Edit User
 - Cancel Appointment
-- Doctor's Approval</string>
+- Doctor's Approval
+
+- Extra: Help and Pricings Window
+- Extra: Contact Us Window</string>
    </property>
   </widget>
   <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>390</y>
+     <x>70</x>
+     <y>460</y>
      <width>281</width>
      <height>29</height>
     </rect>
