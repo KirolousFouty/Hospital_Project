@@ -239,10 +239,10 @@ void MainWindow::on_openEmailInboxButton_clicked()
 
 void MainWindow::on_shortestPathButton_clicked()
 {
-    //    ShortestPathWindow pathwin;
-    //    pathwin.setModal(true);
+        ShortestPathWindow pathwin;
+        pathwin.setModal(true);
 
-    //    pathwin.exec();
+        pathwin.exec();
 }
 
 void MainWindow::on_complexSearch_clicked()

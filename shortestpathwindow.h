@@ -1,119 +1,92 @@
-//#include <QDialog>
-//#include <limits.h>
-//#include <iostream>
-//#include <stdio.h>
-//#include<stdio.h>
-// using namespace std;
+#include <QDialog>
+#include <limits.h>
+#include <iostream>
+#include <stdio.h>
+#include <stdio.h>
+#include <QImage>
 
-// namespace Ui
-//{
-// class ShortestPathWindow;
-// }
+#include "AStar.h"
 
-// class ShortestPathWindow : public QDialog
-//{
-//     Q_OBJECT
+#define ROW 9
+#define COL 10
 
-// public:
-//     explicit ShortestPathWindow(QWidget *parent = nullptr);
-//     ~ShortestPathWindow();
+// Creating a shortcut for int, int pair type
+typedef pair<int, int> Pair;
 
-// private:
-//     void on_pushButton_clicked();
+// Creating a shortcut for pair<int, pair<int, int>> type
+typedef pair<double, pair<int, int>> pPair;
 
-// private:
-//     Ui::ShortestPathWindow *ui;
-// };
 
-///*void dijkstra(int G[9][9],int n,int startnode)
-//{
-//   int cost[9][9],distance[9],pred[9];
-//   int visited[9],count,mindistance,nextnode,i,j;
-//   for(i=0;i<n;i++)
-//      for(j=0;j<n;j++)
-//   if(G[i][j]==0)
-//      cost[i][j]=9999;
-//   else
-//      cost[i][j]=G[i][j];
-//   for(i=0;i<n;i++)
-//   {
-//      distance[i]=cost[startnode][i];
-//      pred[i]=startnode;
-//      visited[i]=0;
-//   }
-//   distance[startnode]=0;
-//   visited[startnode]=1;
-//   count=1;
-//   while(count<n-1)
-//   {
-//      mindistance=9999;
-//      for(i=0;i<n;i++)
-//         if(distance[i]<mindistance&&!visited[i])
-//         {
-//         mindistance=distance[i];
-//         nextnode=i;
-//         }
-//      visited[nextnode]=1;
-//      for(i=0;i<n;i++)
-//         if(!visited[i])
-//      if(mindistance+cost[nextnode][i]<distance[i])
-//      {
-//         distance[i]=mindistance+cost[nextnode][i];
-//         pred[i]=nextnode;
-//      }
-//      count++;
-//   }
+ using namespace std;
 
-//   for(i=0;i<n;i++)
-//   if(i!=startnode)
-//   {
-//      cout<<"Distance to the hospital"<<"="<<distance[i];
-//   }
-//}*/
+ namespace Ui
+{
+ class ShortestPathWindow;
+ }
 
-// int miniDist(int distance[], bool Tset[]) // finding minimum distance
-//{
-//     int minimum=INT_MAX,ind;
+ class ShortestPathWindow : public QDialog
+{
+     Q_OBJECT
 
-//    for(int k=0;k<6;k++)
-//    {
-//        if(Tset[k]==false && distance[k]<=minimum)
-//        {
-//            minimum=distance[k];
-//            ind=k;
-//        }
-//    }
-//    return ind;
-//}
+ public:
+     explicit ShortestPathWindow(QWidget *parent = nullptr);
+     ~ShortestPathWindow();
 
-// void DijkstraAlgo(int graph[6][6],int src) // adjacency matrix
-//{
-//     int distance[6]; // // array to calculate the minimum distance for each node
-//     bool Tset[6];// boolean array to mark visited and unvisited for each node
 
-//    for(int k = 0; k<6; k++)
-//    {
-//        distance[k] = INT_MAX;
-//        Tset[k] = false;
-//    }
+     int grid[ROW][COL] = {{1, 0, 1, 1, 1, 1, 0, 1, 1, 1},
+                           {1, 1, 1, 0, 1, 1, 1, 0, 1, 1},
+                           {1, 1, 1, 0, 1, 1, 0, 1, 0, 1},
+                           {0, 0, 1, 0, 1, 0, 0, 0, 0, 1},
+                           {1, 1, 1, 0, 1, 1, 1, 0, 1, 0},
+                           {1, 0, 1, 1, 1, 1, 0, 1, 0, 0},
+                           {1, 0, 0, 0, 0, 1, 0, 0, 0, 1},
+                           {1, 0, 1, 1, 1, 1, 0, 1, 1, 1},
+                           {1, 1, 1, 0, 0, 0, 1, 0, 0, 1}};
 
-//    distance[src] = 0;   // Source vertex distance is set 0
+     //     int grid[ROW][COL] = {{1, 0, 1, 1, 1, 1, 0, f, 1, 1},
+     //                         1  {1, 1, 1, 0, 1, 1, 1, 0, 1, 1},
+     //                         2  {1, 1, 1, 0, 1, 1, 0, 1, 0, 1},
+     //                         3  {0, 0, 1, 0, 1, 0, 0, 0, 0, h},
+     //                         4  {1, 1, 1, 0, 1, d, 1, i, 1, 0},
+     //                         5  {1, 0, 1, 1, b, 1, e, 1, g, 0},
+     //                         6  {1, 0, 0, 0, c, 1, 0, 0, 0, 1},
+     //                         7  {1, 0, 1, 1, 1, 1, 0, 1, 1, 1},
+     //                         8  {a, 1, 1, 0, 0, 0, 1, 0, 0, 1}};
+     //                             0  1  2  3  4  5  6  7  8  9
 
-//    for(int k = 0; k<6; k++)
-//    {
-//        int m=miniDist(distance,Tset);
-//        Tset[m]=true;
-//        for(int k = 0; k<6; k++)
-//        {
-//            // updating the distance of neighbouring vertex
-//            if(!Tset[k] && graph[m][k] && distance[m]!=INT_MAX && distance[m]+graph[m][k]<distance[k])
-//                distance[k]=distance[m]+graph[m][k];
-//        }
-//    }
-//    cout<<"Vertex\t\tDistance from source vertex"<<endl;
-//    for(int k = 0; k<6; k++)
-//    {
-//        char str=65+k;
-//        cout<<str<<"\t\t\t"<<distance[k]<<endl;
-//    }
-//}
+
+     //             a 6th october
+     //             b West elbalad
+     //             c eldokki
+     //             d masr el gedeida
+     //             e madinet nasr
+     //             f obour
+     //             g auc
+     //             h madinaty
+     //             i rehab
+
+     //             a (8,0)
+     //             b (5,4)
+     //             c (6,4)
+     //             d (4,5)
+     //             e (5,6)
+     //             f (0,7)
+     //             g (5,8)
+     //             h (3,9)
+     //             i (4,7)
+
+
+ private slots:
+     void on_selectAreaButton_clicked();
+
+     void on_backButton_clicked();
+
+     void on_showAUCButton_clicked();
+
+ private:
+
+     AStar astar;
+
+ private:
+     Ui::ShortestPathWindow *ui;
+ };

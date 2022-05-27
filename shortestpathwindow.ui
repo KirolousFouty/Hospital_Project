@@ -6,21 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>816</width>
+    <height>798</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="areasComboBox">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>70</y>
-     <width>181</width>
-     <height>24</height>
+     <x>189</x>
+     <y>445</y>
+     <width>201</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
    </property>
    <item>
     <property name="text">
@@ -63,32 +68,162 @@
     </property>
    </item>
   </widget>
-  <widget class="QLabel" name="Map">
+  <widget class="QLabel" name="resultDisplay">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>120</y>
-     <width>321</width>
-     <height>151</height>
+     <x>40</x>
+     <y>590</y>
+     <width>741</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Shortest Path Result:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="selectAreaButton">
+   <property name="geometry">
+    <rect>
+     <x>438</x>
+     <y>445</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string> Select Your Location</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="shortestPathTitle">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>10</y>
+     <width>811</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>21</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Shortest Path To Salamtak Hospital</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>740</y>
+     <width>181</width>
+     <height>29</height>
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>Back</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QLabel" name="toAUCTitle">
    <property name="geometry">
     <rect>
-     <x>259</x>
-     <y>70</y>
-     <width>91</width>
-     <height>24</height>
+     <x>190</x>
+     <y>500</y>
+     <width>201</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>To: Salamtak Hospital</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="image">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>80</y>
+     <width>592</width>
+     <height>333</height>
     </rect>
    </property>
    <property name="text">
-    <string> Select Area</string>
+    <string/>
    </property>
   </widget>
+  <widget class="QPushButton" name="showAUCButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>500</y>
+     <width>201</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Show Hospital Location</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="warningTitle">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>210</y>
+     <width>601</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Images should be here.
+They are not loaded because the file path changed.
+Please go to shortestpathwindow.cpp,
+and adjust the path of each image to its correct location in your repo.</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>warningTitle</zorder>
+  <zorder>areasComboBox</zorder>
+  <zorder>resultDisplay</zorder>
+  <zorder>selectAreaButton</zorder>
+  <zorder>shortestPathTitle</zorder>
+  <zorder>backButton</zorder>
+  <zorder>toAUCTitle</zorder>
+  <zorder>image</zorder>
+  <zorder>showAUCButton</zorder>
  </widget>
  <resources/>
  <connections/>

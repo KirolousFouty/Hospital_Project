@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    AStar.cpp \
     Appointment.cpp \
     DateAndTime.cpp \
     Department.cpp \
@@ -47,6 +48,7 @@ SOURCES += \
     userregisterwindow.cpp
 
 HEADERS += \
+    AStar.h \
     Appointment.h \
     DateAndTime.h \
     Department.h \
@@ -110,4 +112,20 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    README.md
+    README.md \
+    a.png \
+    b.jpeg \
+    b.png \
+    c.jpeg \
+    c.png \
+    d.jpeg \
+    d.png \
+    e.jpeg \
+    e.png \
+    f.jpeg \
+    f.png \
+    g.png \
+    h.jpeg \
+    h.png \
+    i.jpeg \
+    i.png
